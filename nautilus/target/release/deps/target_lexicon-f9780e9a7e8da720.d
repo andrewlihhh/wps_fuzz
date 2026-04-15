@@ -1,0 +1,15 @@
+/home/kzl/nautilus/target/release/deps/libtarget_lexicon-f9780e9a7e8da720.rmeta: /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/lib.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/data_model.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/host.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/parse_error.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/targets.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/triple.rs /home/kzl/nautilus/target/release/build/target-lexicon-03e4c7919e3a8a0e/out/host.rs
+
+/home/kzl/nautilus/target/release/deps/libtarget_lexicon-f9780e9a7e8da720.rlib: /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/lib.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/data_model.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/host.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/parse_error.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/targets.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/triple.rs /home/kzl/nautilus/target/release/build/target-lexicon-03e4c7919e3a8a0e/out/host.rs
+
+/home/kzl/nautilus/target/release/deps/target_lexicon-f9780e9a7e8da720.d: /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/lib.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/data_model.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/host.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/parse_error.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/targets.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/triple.rs /home/kzl/nautilus/target/release/build/target-lexicon-03e4c7919e3a8a0e/out/host.rs
+
+/home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/lib.rs:
+/home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/data_model.rs:
+/home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/host.rs:
+/home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/parse_error.rs:
+/home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/targets.rs:
+/home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.12.14/src/triple.rs:
+/home/kzl/nautilus/target/release/build/target-lexicon-03e4c7919e3a8a0e/out/host.rs:
+
+# env-dep:OUT_DIR=/home/kzl/nautilus/target/release/build/target-lexicon-03e4c7919e3a8a0e/out

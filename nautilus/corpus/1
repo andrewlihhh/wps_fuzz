@@ -1,0 +1,1 @@
+{"title":"structured docx generation","blocks":[{"type":"paragraph","style":"Normal","text":"rsr"},{"type":"image","altText":"embedded image"},{"type":"hyperlink","style":"Heading1","text":"sdk lowered paragraph","url":"https://example.com"},{"type":"table","rows":[["cell value","table data"],["cell value","table data"]]}]}

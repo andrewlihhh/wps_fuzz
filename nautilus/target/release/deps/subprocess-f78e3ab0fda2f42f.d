@@ -1,0 +1,12 @@
+/home/kzl/nautilus/target/release/deps/libsubprocess-f78e3ab0fda2f42f.rmeta: /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/lib.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/builder.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/communicate.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/popen.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/posix.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/os_common.rs
+
+/home/kzl/nautilus/target/release/deps/libsubprocess-f78e3ab0fda2f42f.rlib: /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/lib.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/builder.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/communicate.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/popen.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/posix.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/os_common.rs
+
+/home/kzl/nautilus/target/release/deps/subprocess-f78e3ab0fda2f42f.d: /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/lib.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/builder.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/communicate.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/popen.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/posix.rs /home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/os_common.rs
+
+/home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/lib.rs:
+/home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/builder.rs:
+/home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/communicate.rs:
+/home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/popen.rs:
+/home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/posix.rs:
+/home/kzl/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subprocess-0.2.4/src/os_common.rs:
