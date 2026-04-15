@@ -1,0 +1,17 @@
+# 测试的输入输出文件
+in_docx/
+in_xlsx/
+in_pptx/
+logs/
+out_docx/
+out_xlsx/
+out_pptx/
+*reports
+*queue
+
+# 其他不需要提交的文件
+wps_fuzz_tui/
+archive_before_materialized_queue_fix_2026-04-14_10-09-45/
+开发文档.md
+*.png
+*.deb

@@ -1,0 +1,103 @@
+{
+  "title": "Foxit DIR Lowering Demo",
+  "pages": [
+    {
+      "width": 595,
+      "height": 842,
+      "objects": [
+        {
+          "type": "text",
+          "position": [72, 72],
+          "font": "Helvetica-Bold",
+          "font_size": 22,
+          "color": [0.78, 0.24, 0.16],
+          "data": "DIR -> Foxit SDK -> PDF"
+        },
+        {
+          "type": "text",
+          "position": [72, 106],
+          "font": "Helvetica",
+          "font_size": 12,
+          "color": [0.16, 0.16, 0.16],
+          "data": "This sample DIR is read from JSON and lowered with the real Foxit Linux SDK."
+        },
+        {
+          "type": "image",
+          "position": [72, 150],
+          "size": [96, 96],
+          "path": "foxit_sdk/examples/view_demo/PDFReader_Qt/Icons/pdficon.png"
+        },
+        {
+          "type": "path",
+          "points": [[210, 150], [380, 150], [380, 245], [305, 205], [210, 245]],
+          "stroke_color": [0.2, 0.2, 0.2],
+          "fill_color": [0.96, 0.91, 0.72],
+          "stroke": true,
+          "fill": true,
+          "closed": true
+        },
+        {
+          "type": "table",
+          "position": [72, 300],
+          "size": [451, 170],
+          "font": "Helvetica",
+          "font_size": 11,
+          "text_color": [0.1, 0.1, 0.1],
+          "border_color": [0.18, 0.18, 0.18],
+          "cells": [
+            ["Layer", "DIR object", "Foxit lowering"],
+            ["page", "page metadata", "PDFDoc::InsertPage(width, height)"],
+            ["object", "text/image/path", "TextObject / ImageObject / PathObject"],
+            ["attribute", "font/color/position", "SetTextState / SetFillColor / Transform"]
+          ]
+        }
+      ]
+    },
+    {
+      "width": 595,
+      "height": 842,
+      "objects": [
+        {
+          "type": "text",
+          "position": [72, 72],
+          "font": "Times-Bold",
+          "font_size": 18,
+          "color": [0.14, 0.27, 0.59],
+          "data": "Second page from the same DIR"
+        },
+        {
+          "type": "path",
+          "points": [[72, 130], [140, 210], [212, 130], [280, 210], [352, 130]],
+          "stroke_color": [0.11, 0.31, 0.60],
+          "fill_color": [1.0, 1.0, 1.0],
+          "stroke": true,
+          "fill": false,
+          "closed": false
+        },
+        {
+          "type": "text",
+          "position": [72, 240],
+          "font": "Times-Roman",
+          "font_size": 12,
+          "color": [0.12, 0.12, 0.12],
+          "data": "Table objects are lowered as a structured combination of path borders and text cells."
+        },
+        {
+          "type": "table",
+          "position": [72, 290],
+          "size": [451, 120],
+          "font": "Times-Roman",
+          "font_size": 11,
+          "text_color": [0.1, 0.1, 0.1],
+          "border_color": [0.22, 0.22, 0.22],
+          "cells": [
+            ["Mutation level", "Example in document fuzzing"],
+            ["page-level", "duplicate / reorder / splice page"],
+            ["object-level", "insert text, image, path, table"],
+            ["attribute-level", "change coordinates, colors, fonts, payload text"]
+          ]
+        }
+      ]
+    }
+  ]
+}

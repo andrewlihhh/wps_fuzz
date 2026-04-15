@@ -1,0 +1,66 @@
+{
+  "title": "DIR Lowering Demo",
+  "pages": [
+    {
+      "size": [595, 842],
+      "objects": [
+        {
+          "type": "text",
+          "position": [72, 96],
+          "font": "Helvetica-Bold",
+          "font_size": 20,
+          "color": [0.1, 0.2, 0.6],
+          "data": "Hello from DIR"
+        },
+        {
+          "type": "text",
+          "position": [72, 128],
+          "font": "Helvetica",
+          "font_size": 11,
+          "color": [0, 0, 0],
+          "data": "This line is lowered into a real PDF through SDK calls."
+        },
+        {
+          "type": "figure",
+          "position": [72, 180],
+          "size": [220, 110],
+          "stroke_color": [0.2, 0.2, 0.2],
+          "fill_color": [0.9, 0.94, 1.0],
+          "title": "Figure placeholder lowered from DIR"
+        },
+        {
+          "type": "table",
+          "position": [72, 340],
+          "size": [300, 90],
+          "headers": ["Object", "DIR field", "SDK action"],
+          "rows": [
+            ["text", "font/data", "setFont + drawString"],
+            ["figure", "position/size", "rect + drawString"],
+            ["table", "rows/headers", "Table(...).drawOn(...)" ]
+          ]
+        }
+      ]
+    },
+    {
+      "size": [595, 842],
+      "objects": [
+        {
+          "type": "text",
+          "position": [72, 96],
+          "font": "Helvetica-Bold",
+          "font_size": 16,
+          "color": [0.6, 0.1, 0.1],
+          "data": "Second page"
+        },
+        {
+          "type": "text",
+          "position": [72, 128],
+          "font": "Helvetica",
+          "font_size": 11,
+          "color": [0, 0, 0],
+          "data": "DIR page 2 becomes canvas.showPage() + a new PDF page."
+        }
+      ]
+    }
+  ]
+}

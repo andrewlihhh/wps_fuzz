@@ -1,0 +1,646 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Foxit PDF SDK: foxit::pdf::graphics::TextState类 参考</title>
+<meta name="description" content="Check out the API references for Foxit PDF SDK for C++ by clicking here. These references apply to C++ Windows, Linux and Mac." />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Foxit PDF SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classfoxit_1_1pdf_1_1graphics_1_1_text_state.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="classfoxit_1_1pdf_1_1graphics_1_1_text_state-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">foxit::pdf::graphics::TextState类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>继承自 Object .</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a1c773899e5a83295e18d65ef3c49983a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983a">Mode</a> { <br />
+&#160;&#160;<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983aa6efa79e6a441c6479c10f806ec1bbc86">e_ModeFill</a> = 0, 
+<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983aa24bc98c38e9b22c8e39d41e49d920fcc">e_ModeStroke</a> = 1, 
+<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983aa548a9ebb1c0d380252adde2d85d63818">e_ModeFillStroke</a> = 2, 
+<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983aa68d34efc47b4592844080122dec90f65">e_ModeInvisible</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983aa0924bae9624a843b45966c85765a7e00">e_ModeFillClip</a> = 4, 
+<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983aaa6181fa625def486bf550ade0690bc56">e_ModeStrokeClip</a> = 5, 
+<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983aa49c9427ce830aabbc3e76d66e7445fe5">e_ModeFillStrokeClip</a> = 6, 
+<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983aa3114602ff250e09f4ca70be832a154f8">e_ModeClip</a> = 7
+<br />
+ }</td></tr>
+<tr class="memdesc:a1c773899e5a83295e18d65ef3c49983a"><td class="mdescLeft">&#160;</td><td class="mdescRight">文本模式的枚举。  <a href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983a">更多...</a><br /></td></tr>
+<tr class="separator:a1c773899e5a83295e18d65ef3c49983a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3533645c582b5f10d155f6d0d07042fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a3533645c582b5f10d155f6d0d07042fc">TextState</a> (<a class="el" href="namespacefoxit.html#aa6b48c8c1bde09f60970165dd3a55ca2">uint32</a> <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a7a355b3e1d5b6a8e779824abe712807d">version</a>, const <a class="el" href="classfoxit_1_1common_1_1_font.html">common::Font</a> &amp;<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#ad192f6cef3962ac1c6c0bb2362a0650f">font</a>, float <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#af08c7b349cdb8ecbd551975f2617ddb2">font_size</a>, float <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a578a6313d6d4deac4ad56a14b5155b55">charspace</a>, float <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#af503db8302046f84f0e190d4de75a613">wordspace</a>, <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983a">Mode</a> <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a658a596a7ab58ef0624a91a64548fdc3">textmode</a>, const <a class="el" href="namespacefoxit.html#ac20a9f91f759f53f5bd3ad3322b62499">PointF</a> &amp;<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a39bd9954c33522f0e5ff6404e82b2590">origin_position</a>, float <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a6cdcf759ef9e00dc8c6db954f6644721">textmatrix</a>[4])</td></tr>
+<tr class="memdesc:a3533645c582b5f10d155f6d0d07042fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">带参数的构造函数。  <a href="#a3533645c582b5f10d155f6d0d07042fc">更多...</a><br /></td></tr>
+<tr class="separator:a3533645c582b5f10d155f6d0d07042fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af27ba5479c37a9c36a2a0c20d7a85a81"><td class="memItemLeft" align="right" valign="top"><a id="af27ba5479c37a9c36a2a0c20d7a85a81"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#af27ba5479c37a9c36a2a0c20d7a85a81">TextState</a> ()</td></tr>
+<tr class="memdesc:af27ba5479c37a9c36a2a0c20d7a85a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数。 <br /></td></tr>
+<tr class="separator:af27ba5479c37a9c36a2a0c20d7a85a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fbb1721063f2034b56e4810f12837cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a2fbb1721063f2034b56e4810f12837cd">TextState</a> (const <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html">TextState</a> &amp;state)</td></tr>
+<tr class="memdesc:a2fbb1721063f2034b56e4810f12837cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用另一个文本状态对象的构造函数。  <a href="#a2fbb1721063f2034b56e4810f12837cd">更多...</a><br /></td></tr>
+<tr class="separator:a2fbb1721063f2034b56e4810f12837cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d74c3eb7a4f79237d0adf8cc50d27c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html">TextState</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a28d74c3eb7a4f79237d0adf8cc50d27c">operator=</a> (const <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html">TextState</a> &amp;state)</td></tr>
+<tr class="memdesc:a28d74c3eb7a4f79237d0adf8cc50d27c"><td class="mdescLeft">&#160;</td><td class="mdescRight">赋值操作符。  <a href="#a28d74c3eb7a4f79237d0adf8cc50d27c">更多...</a><br /></td></tr>
+<tr class="separator:a28d74c3eb7a4f79237d0adf8cc50d27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5836b0a0e9c600710326894a0d5e805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#ac5836b0a0e9c600710326894a0d5e805">Set</a> (<a class="el" href="namespacefoxit.html#aa6b48c8c1bde09f60970165dd3a55ca2">uint32</a> <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a7a355b3e1d5b6a8e779824abe712807d">version</a>, const <a class="el" href="classfoxit_1_1common_1_1_font.html">common::Font</a> &amp;<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#ad192f6cef3962ac1c6c0bb2362a0650f">font</a>, float <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#af08c7b349cdb8ecbd551975f2617ddb2">font_size</a>, float <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a578a6313d6d4deac4ad56a14b5155b55">charspace</a>, float <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#af503db8302046f84f0e190d4de75a613">wordspace</a>, <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983a">Mode</a> <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a658a596a7ab58ef0624a91a64548fdc3">textmode</a>, const <a class="el" href="namespacefoxit.html#ac20a9f91f759f53f5bd3ad3322b62499">PointF</a> &amp;<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a39bd9954c33522f0e5ff6404e82b2590">origin_position</a>, float <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a6cdcf759ef9e00dc8c6db954f6644721">textmatrix</a>[4])</td></tr>
+<tr class="memdesc:ac5836b0a0e9c600710326894a0d5e805"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置值。  <a href="#ac5836b0a0e9c600710326894a0d5e805">更多...</a><br /></td></tr>
+<tr class="separator:ac5836b0a0e9c600710326894a0d5e805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a578a6313d6d4deac4ad56a14b5155b55"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a578a6313d6d4deac4ad56a14b5155b55">charspace</a></td></tr>
+<tr class="memdesc:a578a6313d6d4deac4ad56a14b5155b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">字符间距。  <a href="#a578a6313d6d4deac4ad56a14b5155b55">更多...</a><br /></td></tr>
+<tr class="separator:a578a6313d6d4deac4ad56a14b5155b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad192f6cef3962ac1c6c0bb2362a0650f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfoxit_1_1common_1_1_font.html">common::Font</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#ad192f6cef3962ac1c6c0bb2362a0650f">font</a></td></tr>
+<tr class="memdesc:ad192f6cef3962ac1c6c0bb2362a0650f"><td class="mdescLeft">&#160;</td><td class="mdescRight">字体对象。  <a href="#ad192f6cef3962ac1c6c0bb2362a0650f">更多...</a><br /></td></tr>
+<tr class="separator:ad192f6cef3962ac1c6c0bb2362a0650f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa36474afc40891a0a1d5f08e4d26103a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#aa36474afc40891a0a1d5f08e4d26103a">font_horizontal_size</a></td></tr>
+<tr class="memdesc:aa36474afc40891a0a1d5f08e4d26103a"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备单位中的字体水平大小(只读)。如果有效，应该大于0。  <a href="#aa36474afc40891a0a1d5f08e4d26103a">更多...</a><br /></td></tr>
+<tr class="separator:aa36474afc40891a0a1d5f08e4d26103a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08c7b349cdb8ecbd551975f2617ddb2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#af08c7b349cdb8ecbd551975f2617ddb2">font_size</a></td></tr>
+<tr class="memdesc:af08c7b349cdb8ecbd551975f2617ddb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Tf"中的字体大小。如果有效，应该大于0。  <a href="#af08c7b349cdb8ecbd551975f2617ddb2">更多...</a><br /></td></tr>
+<tr class="separator:af08c7b349cdb8ecbd551975f2617ddb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc0b42c40bdb151a6ccc642c1796dea"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a4bc0b42c40bdb151a6ccc642c1796dea">font_vertical_size</a></td></tr>
+<tr class="memdesc:a4bc0b42c40bdb151a6ccc642c1796dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备单位中的字体垂直大小(只读)。如果有效，应该大于0。  <a href="#a4bc0b42c40bdb151a6ccc642c1796dea">更多...</a><br /></td></tr>
+<tr class="separator:a4bc0b42c40bdb151a6ccc642c1796dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39bd9954c33522f0e5ff6404e82b2590"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacefoxit.html#ac20a9f91f759f53f5bd3ad3322b62499">PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a39bd9954c33522f0e5ff6404e82b2590">origin_position</a></td></tr>
+<tr class="memdesc:a39bd9954c33522f0e5ff6404e82b2590"><td class="mdescLeft">&#160;</td><td class="mdescRight">原点，在<a class="el" href="classfoxit_1_1pdf_1_1_p_d_f_page.html">PDF坐标系统</a>中。  <a href="#a39bd9954c33522f0e5ff6404e82b2590">更多...</a><br /></td></tr>
+<tr class="separator:a39bd9954c33522f0e5ff6404e82b2590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cdcf759ef9e00dc8c6db954f6644721"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a6cdcf759ef9e00dc8c6db954f6644721">textmatrix</a> [4]</td></tr>
+<tr class="memdesc:a6cdcf759ef9e00dc8c6db954f6644721"><td class="mdescLeft">&#160;</td><td class="mdescRight">文本变换矩阵。  <a href="#a6cdcf759ef9e00dc8c6db954f6644721">更多...</a><br /></td></tr>
+<tr class="separator:a6cdcf759ef9e00dc8c6db954f6644721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a658a596a7ab58ef0624a91a64548fdc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983a">Mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a658a596a7ab58ef0624a91a64548fdc3">textmode</a></td></tr>
+<tr class="memdesc:a658a596a7ab58ef0624a91a64548fdc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">文本渲染模式。请参考从<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983aa6efa79e6a441c6479c10f806ec1bbc86">TextState::e_ModeFill</a>开始的值， 这应该是这些值中的一个。  <a href="#a658a596a7ab58ef0624a91a64548fdc3">更多...</a><br /></td></tr>
+<tr class="separator:a658a596a7ab58ef0624a91a64548fdc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a355b3e1d5b6a8e779824abe712807d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacefoxit.html#aa6b48c8c1bde09f60970165dd3a55ca2">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a7a355b3e1d5b6a8e779824abe712807d">version</a></td></tr>
+<tr class="memdesc:a7a355b3e1d5b6a8e779824abe712807d"><td class="mdescLeft">&#160;</td><td class="mdescRight">此类的版本。  <a href="#a7a355b3e1d5b6a8e779824abe712807d">更多...</a><br /></td></tr>
+<tr class="separator:a7a355b3e1d5b6a8e779824abe712807d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af503db8302046f84f0e190d4de75a613"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#af503db8302046f84f0e190d4de75a613">wordspace</a></td></tr>
+<tr class="memdesc:af503db8302046f84f0e190d4de75a613"><td class="mdescLeft">&#160;</td><td class="mdescRight">单词间距(仅适用于空格字符)。  <a href="#af503db8302046f84f0e190d4de75a613">更多...</a><br /></td></tr>
+<tr class="separator:af503db8302046f84f0e190d4de75a613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>此类表示PDF文本状态。 </p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a1c773899e5a83295e18d65ef3c49983a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c773899e5a83295e18d65ef3c49983a">&#9670;&nbsp;</a></span>Mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983a">foxit::pdf::graphics::TextState::Mode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文本模式的枚举。 </p>
+<p>此枚举的值应该单独使用。 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a1c773899e5a83295e18d65ef3c49983aa6efa79e6a441c6479c10f806ec1bbc86"></a>e_ModeFill&#160;</td><td class="fielddoc"><p>文本模式：填充文本。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c773899e5a83295e18d65ef3c49983aa24bc98c38e9b22c8e39d41e49d920fcc"></a>e_ModeStroke&#160;</td><td class="fielddoc"><p>文本模式：描边文本。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c773899e5a83295e18d65ef3c49983aa548a9ebb1c0d380252adde2d85d63818"></a>e_ModeFillStroke&#160;</td><td class="fielddoc"><p>文本模式：填充和描边文本。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c773899e5a83295e18d65ef3c49983aa68d34efc47b4592844080122dec90f65"></a>e_ModeInvisible&#160;</td><td class="fielddoc"><p>文本模式：既不填充也不描边文本，使其不可见。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c773899e5a83295e18d65ef3c49983aa0924bae9624a843b45966c85765a7e00"></a>e_ModeFillClip&#160;</td><td class="fielddoc"><p>文本模式：填充文本并添加到路径以进行裁剪。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c773899e5a83295e18d65ef3c49983aaa6181fa625def486bf550ade0690bc56"></a>e_ModeStrokeClip&#160;</td><td class="fielddoc"><p>文本模式：描边文本并添加到路径以进行裁剪。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c773899e5a83295e18d65ef3c49983aa49c9427ce830aabbc3e76d66e7445fe5"></a>e_ModeFillStrokeClip&#160;</td><td class="fielddoc"><p>文本模式：填充和描边文本，并添加到路径以进行裁剪。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c773899e5a83295e18d65ef3c49983aa3114602ff250e09f4ca70be832a154f8"></a>e_ModeClip&#160;</td><td class="fielddoc"><p>文本模式：将文本添加到路径以进行裁剪。 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a3533645c582b5f10d155f6d0d07042fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3533645c582b5f10d155f6d0d07042fc">&#9670;&nbsp;</a></span>TextState() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">foxit::pdf::graphics::TextState::TextState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacefoxit.html#aa6b48c8c1bde09f60970165dd3a55ca2">uint32</a>&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1common_1_1_font.html">common::Font</a> &amp;&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>font_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>charspace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>wordspace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983a">Mode</a>&#160;</td>
+          <td class="paramname"><em>textmode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacefoxit.html#ac20a9f91f759f53f5bd3ad3322b62499">PointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>origin_position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>textmatrix</em>[4]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>带参数的构造函数。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">version</td><td>此结构的版本，用于决定哪些成员有用。 目前，只有1是有效的。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>(版本1) 有效的字体对象。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font_size</td><td>(版本1) "Tf"中的字体大小，应该大于0。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">charspace</td><td>(版本1) 字符间距。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wordspace</td><td>(版本1) 单词间距(仅适用于空格字符)。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textmode</td><td>(版本1) 文本渲染模式。请参考从 <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983aa6efa79e6a441c6479c10f806ec1bbc86">TextState::e_ModeFill</a>开始的值，这应该是这些值中的一个。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">origin_position</td><td>(版本1) 原点，在<a class="el" href="classfoxit_1_1pdf_1_1_p_d_f_page.html">PDF坐标系统</a>中。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textmatrix</td><td>(版本1) 文本变换矩阵。这是一个由四个数字组成的数组。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="a2fbb1721063f2034b56e4810f12837cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fbb1721063f2034b56e4810f12837cd">&#9670;&nbsp;</a></span>TextState() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">foxit::pdf::graphics::TextState::TextState </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html">TextState</a> &amp;&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使用另一个文本状态对象的构造函数。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>另一个文本状态对象。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a28d74c3eb7a4f79237d0adf8cc50d27c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d74c3eb7a4f79237d0adf8cc50d27c">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html">TextState</a>&amp; foxit::pdf::graphics::TextState::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html">TextState</a> &amp;&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>赋值操作符。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>另一个文本状态对象，其值将被赋给当前对象。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>对当前对象本身的引用。 </dd></dl>
+
+</div>
+</div>
+<a id="ac5836b0a0e9c600710326894a0d5e805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5836b0a0e9c600710326894a0d5e805">&#9670;&nbsp;</a></span>Set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void foxit::pdf::graphics::TextState::Set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacefoxit.html#aa6b48c8c1bde09f60970165dd3a55ca2">uint32</a>&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1common_1_1_font.html">common::Font</a> &amp;&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>font_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>charspace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>wordspace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983a">Mode</a>&#160;</td>
+          <td class="paramname"><em>textmode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacefoxit.html#ac20a9f91f759f53f5bd3ad3322b62499">PointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>origin_position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>textmatrix</em>[4]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置值。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">version</td><td>此结构的版本，用于决定哪些成员有用。 目前，只有1是有效的。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>(版本1) 有效的字体对象。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font_size</td><td>(版本1) "Tf"中的字体大小。应该大于0。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">charspace</td><td>(版本1) 字符间距。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wordspace</td><td>(版本1) 单词间距(仅适用于空格字符)。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textmode</td><td>(版本1) 文本渲染模式。请参考从 <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983aa6efa79e6a441c6479c10f806ec1bbc86">TextState::e_ModeFill</a>开始的值，这应该是这些值中的一个。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">origin_position</td><td>(版本1) 原点，在<a class="el" href="classfoxit_1_1pdf_1_1_p_d_f_page.html">PDF坐标系统</a>中。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textmatrix</td><td>(版本1) 文本变换矩阵。这是一个由四个数字组成的数组。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a578a6313d6d4deac4ad56a14b5155b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a578a6313d6d4deac4ad56a14b5155b55">&#9670;&nbsp;</a></span>charspace</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float foxit::pdf::graphics::TextState::charspace</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>字符间距。 </p>
+<dl class="section version"><dt>版本</dt><dd>1</dd></dl>
+<p>对于水平书写，正值有扩展字形之间距离的效果， 而对于垂直书写，负值有此效果。 </p>
+
+</div>
+</div>
+<a id="ad192f6cef3962ac1c6c0bb2362a0650f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad192f6cef3962ac1c6c0bb2362a0650f">&#9670;&nbsp;</a></span>font</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfoxit_1_1common_1_1_font.html">common::Font</a> foxit::pdf::graphics::TextState::font</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>字体对象。 </p>
+<dl class="section version"><dt>版本</dt><dd>1 </dd></dl>
+
+</div>
+</div>
+<a id="aa36474afc40891a0a1d5f08e4d26103a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa36474afc40891a0a1d5f08e4d26103a">&#9670;&nbsp;</a></span>font_horizontal_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float foxit::pdf::graphics::TextState::font_horizontal_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设备单位中的字体水平大小(只读)。如果有效，应该大于0。 </p>
+<dl class="section version"><dt>版本</dt><dd>1 </dd></dl>
+
+</div>
+</div>
+<a id="af08c7b349cdb8ecbd551975f2617ddb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08c7b349cdb8ecbd551975f2617ddb2">&#9670;&nbsp;</a></span>font_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float foxit::pdf::graphics::TextState::font_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>"Tf"中的字体大小。如果有效，应该大于0。 </p>
+<dl class="section version"><dt>版本</dt><dd>1 </dd></dl>
+
+</div>
+</div>
+<a id="a4bc0b42c40bdb151a6ccc642c1796dea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc0b42c40bdb151a6ccc642c1796dea">&#9670;&nbsp;</a></span>font_vertical_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float foxit::pdf::graphics::TextState::font_vertical_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设备单位中的字体垂直大小(只读)。如果有效，应该大于0。 </p>
+<dl class="section version"><dt>版本</dt><dd>1 </dd></dl>
+
+</div>
+</div>
+<a id="a39bd9954c33522f0e5ff6404e82b2590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39bd9954c33522f0e5ff6404e82b2590">&#9670;&nbsp;</a></span>origin_position</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacefoxit.html#ac20a9f91f759f53f5bd3ad3322b62499">PointF</a> foxit::pdf::graphics::TextState::origin_position</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>原点，在<a class="el" href="classfoxit_1_1pdf_1_1_p_d_f_page.html">PDF坐标系统</a>中。 </p>
+<dl class="section version"><dt>版本</dt><dd>1 </dd></dl>
+
+</div>
+</div>
+<a id="a6cdcf759ef9e00dc8c6db954f6644721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cdcf759ef9e00dc8c6db954f6644721">&#9670;&nbsp;</a></span>textmatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float foxit::pdf::graphics::TextState::textmatrix[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文本变换矩阵。 </p>
+<dl class="section version"><dt>版本</dt><dd>1</dd></dl>
+<p>这是一个由四个数字组成的数组。第一个数字是输入系数a，第二个数字是 输入系数b，第三个数字是输入系数c，第四个数字是输入系数d。 </p>
+
+</div>
+</div>
+<a id="a658a596a7ab58ef0624a91a64548fdc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a658a596a7ab58ef0624a91a64548fdc3">&#9670;&nbsp;</a></span>textmode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983a">Mode</a> foxit::pdf::graphics::TextState::textmode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文本渲染模式。请参考从<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_text_state.html#a1c773899e5a83295e18d65ef3c49983aa6efa79e6a441c6479c10f806ec1bbc86">TextState::e_ModeFill</a>开始的值， 这应该是这些值中的一个。 </p>
+<dl class="section version"><dt>版本</dt><dd>1 </dd></dl>
+
+</div>
+</div>
+<a id="a7a355b3e1d5b6a8e779824abe712807d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a355b3e1d5b6a8e779824abe712807d">&#9670;&nbsp;</a></span>version</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacefoxit.html#aa6b48c8c1bde09f60970165dd3a55ca2">uint32</a> foxit::pdf::graphics::TextState::version</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>此类的版本。 </p>
+<dl class="section version"><dt>版本</dt><dd>1</dd></dl>
+<p>此类的成员将来可能会扩展。此版本可用于区分不同的扩展成员。 </p>
+
+</div>
+</div>
+<a id="af503db8302046f84f0e190d4de75a613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af503db8302046f84f0e190d4de75a613">&#9670;&nbsp;</a></span>wordspace</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float foxit::pdf::graphics::TextState::wordspace</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>单词间距(仅适用于空格字符)。 </p>
+<dl class="section version"><dt>版本</dt><dd>1</dd></dl>
+<p>对于水平书写，正值有增加单词之间间距的效果。 对于垂直书写，正值减少单词之间的间距(负值增加间距)， 因为垂直坐标从下到上增加。 如果当前对象的<em>font</em>是嵌入字体，这将不起作用。 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<html>
+<body>
+<div id="nav-path">
+<hr class="footer"/>
+<p align="right">
+	<center>
+	<img class="footer" src="logo.png" alt="Foxit Software Corporation Logo"/>
+	</center>
+	<center>
+	@2026 Foxit Software Incorporated. All rights reserved.
+	</center>
+</p>
+</div>
+</BODY></HTML>

@@ -1,0 +1,48 @@
+var classfoxit_1_1pdf_1_1_output_preview =
+[
+    [ "ColorantType", "classfoxit_1_1pdf_1_1_output_preview.html#aeec84ea7f7926c88f24e14ffbf4e4840", [
+      [ "e_ColorantTypeProcess", "classfoxit_1_1pdf_1_1_output_preview.html#aeec84ea7f7926c88f24e14ffbf4e4840a110843ed1d78abd4124b0b9ddb2fef97", null ],
+      [ "e_ColorantTypeSpot", "classfoxit_1_1pdf_1_1_output_preview.html#aeec84ea7f7926c88f24e14ffbf4e4840a9c935b27080297af126f6446607f361e", null ]
+    ] ],
+    [ "ShowType", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817", [
+      [ "e_ShowAll", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a107a1fd7bd02be920836f52921547288", null ],
+      [ "e_ShowDeviceCMYK", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a692c345fc6fd930f496748c78e529d85", null ],
+      [ "e_ShowNotDeviceCMYK", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817aaf3a690bbce15b3424d2d02e1ece2915", null ],
+      [ "e_ShowICCBasedCMYK", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a28b8592bf27a48c72440f1c538d4300c", null ],
+      [ "e_ShowSpotColor", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a5c7408f1009593d0577a091a8e58cdf5", null ],
+      [ "e_ShowDeviceCMYKAndSpot", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817aa2acdc3c658bf762abca7376fc523f61", null ],
+      [ "e_ShowNotDeviceCMYKOrSpot", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817aa3afaaef14ca8e82a7e91680469af767", null ],
+      [ "e_ShowDeviceN", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a065db18b372b002eb4b782fd2ccc9b65", null ],
+      [ "e_ShowCMYK", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817ad72516d60f28c2626bf720ae45dd3352", null ],
+      [ "e_ShowRGB", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a1a89e63a1420a47fc3c6ba9160e1259a", null ],
+      [ "e_ShowDeviceRGB", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a10a0ea7aa36a274ea24e0a2b0c699fa7", null ],
+      [ "e_ShowICCBasedRGB", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a80bd332ed153860fda94274e20e46319", null ],
+      [ "e_ShowGray", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a4dbdd235780e3c68dd5a4be7f84c7444", null ],
+      [ "e_ShowDeviceGray", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a250c76dc3bd3496e0b05894caf7f7745", null ],
+      [ "e_ShowCalGray", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817aac23d7e01099458552617a57925b4a15", null ],
+      [ "e_ShowCalibrated", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817af9dc7d033c10cad3dea5b2729f252a8e", null ],
+      [ "e_ShowLab", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817adda2d4880c9e01cb7d2de0f43e421d84", null ],
+      [ "e_ShowDevice", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a9a65557e0cb13698fdb69d7642639dd2", null ],
+      [ "e_ShowImages", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a4abd176ff5f8edb7a321ec251e5f75ba", null ],
+      [ "e_ShowSolidColor", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817ab9d9c1fa0da88b8511c83e4afd8a1012", null ],
+      [ "e_ShowSmoothShades", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a334656a76e7363316667d74a97bdc25a", null ],
+      [ "e_ShowRegistrationColor", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817adbabe41f1a4c452e37f0e451a6f61782", null ],
+      [ "e_ShowText", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a80837464db1607a337b13d9442b3d474", null ],
+      [ "e_ShowLineArt", "classfoxit_1_1pdf_1_1_output_preview.html#a0269b195975468b50ce0d86e7eb64817a3c103ac333c544667d009b2105807571", null ]
+    ] ],
+    [ "OutputPreview", "classfoxit_1_1pdf_1_1_output_preview.html#a40a8754728bee3b17483913cd91a4c9b", null ],
+    [ "OutputPreview", "classfoxit_1_1pdf_1_1_output_preview.html#a7de635ece5f478d12f4fe538316b7ab6", null ],
+    [ "~OutputPreview", "classfoxit_1_1pdf_1_1_output_preview.html#a8a03de903b764c3dd34e35e97624465d", null ],
+    [ "EnableSimulateOverprint", "classfoxit_1_1pdf_1_1_output_preview.html#ac132f1867dfab4e46016a69e1810a5e0", null ],
+    [ "GeneratePreviewBitmap", "classfoxit_1_1pdf_1_1_output_preview.html#a13043612022697eafb4314aec5e59158", null ],
+    [ "GetPlates", "classfoxit_1_1pdf_1_1_output_preview.html#a379a9cc297634b72b20e3868e45e1f25", null ],
+    [ "GetSpotPlateColor", "classfoxit_1_1pdf_1_1_output_preview.html#ae500e4822510d74ba1850b1cb6167ef4", null ],
+    [ "IsChecked", "classfoxit_1_1pdf_1_1_output_preview.html#ab1e813a13cfdcbff53c5787f17b4580a", null ],
+    [ "IsEmpty", "classfoxit_1_1pdf_1_1_output_preview.html#a39aaa869afa1325cd225f78fdbde5f90", null ],
+    [ "operator !=", "classfoxit_1_1pdf_1_1_output_preview.html#ad6c2f33e6f71c99db12ea12ce726fb71", null ],
+    [ "operator=", "classfoxit_1_1pdf_1_1_output_preview.html#a9f2cde2a9cf48b638e25b3da32d102a1", null ],
+    [ "operator==", "classfoxit_1_1pdf_1_1_output_preview.html#a22219201a3780ba87d7dba231dd23f42", null ],
+    [ "SetCheckStatus", "classfoxit_1_1pdf_1_1_output_preview.html#a237ab955e1ae6e974de919176de672d8", null ],
+    [ "SetShowType", "classfoxit_1_1pdf_1_1_output_preview.html#aeaf0b8116e0fe73226506361f35c40b1", null ],
+    [ "SetSimulationProfile", "classfoxit_1_1pdf_1_1_output_preview.html#ae57483770aa93afcffccb5e9a49a9f66", null ]
+];

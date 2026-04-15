@@ -1,0 +1,776 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Foxit PDF SDK: CFX_BinaryBuf类 参考</title>
+<meta name="description" content="Check out the API references for Foxit PDF SDK for C++ by clicking here. These references apply to C++ Windows, Linux and Mac." />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Foxit PDF SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_c_f_x___binary_buf.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="class_c_f_x___binary_buf-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">CFX_BinaryBuf类 参考<div class="ingroups"><a class="el" href="group___f_x_c_r_t.html">FXCRT</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>为更高效追加而设计的动态二进制缓冲区。  
+ <a href="class_c_f_x___binary_buf.html#details">更多...</a></p>
+<div class="dynheader">
+类 CFX_BinaryBuf 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_c_f_x___binary_buf.png" usemap="#CFX_5FBinaryBuf_map" alt=""/>
+  <map id="CFX_5FBinaryBuf_map" name="CFX_5FBinaryBuf_map">
+<area href="class_c_f_x___byte_text_buf.html" alt="CFX_ByteTextBuf" shape="rect" coords="0,56,115,80"/>
+<area href="class_c_f_x___wide_text_buf.html" alt="CFX_WideTextBuf" shape="rect" coords="125,56,240,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac4f88e097e2ad4d80dc2348d75b2b2e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#ac4f88e097e2ad4d80dc2348d75b2b2e8">CFX_BinaryBuf</a> (<a class="el" href="struct_i_f_x___allocator.html">IFX_Allocator</a> *pAllocator=0)</td></tr>
+<tr class="memdesc:ac4f88e097e2ad4d80dc2348d75b2b2e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建空缓冲区的默认构造函数。  <a href="#ac4f88e097e2ad4d80dc2348d75b2b2e8">更多...</a><br /></td></tr>
+<tr class="separator:ac4f88e097e2ad4d80dc2348d75b2b2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbb652deb2eaeeb9788177f6f4897d00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#acbb652deb2eaeeb9788177f6f4897d00">CFX_BinaryBuf</a> (<a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a> size, <a class="el" href="struct_i_f_x___allocator.html">IFX_Allocator</a> *pAllocator=0)</td></tr>
+<tr class="memdesc:acbb652deb2eaeeb9788177f6f4897d00"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建空缓冲区的默认构造函数。  <a href="#acbb652deb2eaeeb9788177f6f4897d00">更多...</a><br /></td></tr>
+<tr class="separator:acbb652deb2eaeeb9788177f6f4897d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b53a7f18667a4ab676eedc7f4c59cc6"><td class="memItemLeft" align="right" valign="top"><a id="a2b53a7f18667a4ab676eedc7f4c59cc6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a2b53a7f18667a4ab676eedc7f4c59cc6">~CFX_BinaryBuf</a> ()</td></tr>
+<tr class="memdesc:a2b53a7f18667a4ab676eedc7f4c59cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数。 <br /></td></tr>
+<tr class="separator:a2b53a7f18667a4ab676eedc7f4c59cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b72708cdb0e286a42d89d7d4b20bba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___f_x_c_r_t.html#gaa75cf67c1a1aabffd8cdf879c6cfd894">FX_BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a79b72708cdb0e286a42d89d7d4b20bba">AppendBlock</a> (const void *pBuf, <a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a> size)</td></tr>
+<tr class="memdesc:a79b72708cdb0e286a42d89d7d4b20bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加一个二进制缓冲区块。  <a href="#a79b72708cdb0e286a42d89d7d4b20bba">更多...</a><br /></td></tr>
+<tr class="separator:a79b72708cdb0e286a42d89d7d4b20bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048997ced85fef4d702fbbe463f504c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___f_x_c_r_t.html#gaa75cf67c1a1aabffd8cdf879c6cfd894">FX_BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a048997ced85fef4d702fbbe463f504c3">AppendByte</a> (<a class="el" href="group___f_x_c_r_t.html#ga67373b495022b8af2b92b7a0f0ba60a9">FX_BYTE</a> byte)</td></tr>
+<tr class="memdesc:a048997ced85fef4d702fbbe463f504c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加单个字节。  <a href="#a048997ced85fef4d702fbbe463f504c3">更多...</a><br /></td></tr>
+<tr class="separator:a048997ced85fef4d702fbbe463f504c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5d68c5058624f2f8611b104f24f3bcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___f_x_c_r_t.html#gaa75cf67c1a1aabffd8cdf879c6cfd894">FX_BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#af5d68c5058624f2f8611b104f24f3bcf">AppendFill</a> (<a class="el" href="group___f_x_c_r_t.html#ga67373b495022b8af2b92b7a0f0ba60a9">FX_BYTE</a> byte, <a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a> count)</td></tr>
+<tr class="memdesc:af5d68c5058624f2f8611b104f24f3bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">将指定字节追加指定次数。内部不是逐字节处理，而是字节填充处理。  <a href="#af5d68c5058624f2f8611b104f24f3bcf">更多...</a><br /></td></tr>
+<tr class="separator:af5d68c5058624f2f8611b104f24f3bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c9fba6d28509e8890e419cf0e87d62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#ab4c9fba6d28509e8890e419cf0e87d62">AppendString</a> (<a class="el" href="group___f_x_c_r_t.html#ga42d624b171ce74cd462d677cc9537a5a">FX_BSTR</a> str)</td></tr>
+<tr class="memdesc:ab4c9fba6d28509e8890e419cf0e87d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加一个非缓冲字节字符串。  <a href="#ab4c9fba6d28509e8890e419cf0e87d62">更多...</a><br /></td></tr>
+<tr class="separator:ab4c9fba6d28509e8890e419cf0e87d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c00f5268f11f28a5a479f7d1399226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a42c00f5268f11f28a5a479f7d1399226">AttachData</a> (void *pBuf, <a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a> size)</td></tr>
+<tr class="memdesc:a42c00f5268f11f28a5a479f7d1399226"><td class="mdescLeft">&#160;</td><td class="mdescRight">附加到缓冲区（此缓冲区将属于此对象）。缓冲区必须由FX_Alloc分配。  <a href="#a42c00f5268f11f28a5a479f7d1399226">更多...</a><br /></td></tr>
+<tr class="separator:a42c00f5268f11f28a5a479f7d1399226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a118dfbb378b3598a820457baf3346381"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a118dfbb378b3598a820457baf3346381">Clear</a> ()</td></tr>
+<tr class="memdesc:a118dfbb378b3598a820457baf3346381"><td class="mdescLeft">&#160;</td><td class="mdescRight">将二进制缓冲区设置为空。  <a href="#a118dfbb378b3598a820457baf3346381">更多...</a><br /></td></tr>
+<tr class="separator:a118dfbb378b3598a820457baf3346381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3815ffbb5a47551f123aaf8b84b27ea2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___f_x_c_r_t.html#gaa75cf67c1a1aabffd8cdf879c6cfd894">FX_BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a3815ffbb5a47551f123aaf8b84b27ea2">CopyData</a> (const void *pBuf, <a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a> size)</td></tr>
+<tr class="memdesc:a3815ffbb5a47551f123aaf8b84b27ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">从另一个缓冲区复制。  <a href="#a3815ffbb5a47551f123aaf8b84b27ea2">更多...</a><br /></td></tr>
+<tr class="separator:a3815ffbb5a47551f123aaf8b84b27ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3fc6a7a0e7fc05406af07071df0d312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#ac3fc6a7a0e7fc05406af07071df0d312">Delete</a> (int start_index, int count)</td></tr>
+<tr class="memdesc:ac3fc6a7a0e7fc05406af07071df0d312"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除由参数start_index和count定义的二进制缓冲区中的区间缓冲区。  <a href="#ac3fc6a7a0e7fc05406af07071df0d312">更多...</a><br /></td></tr>
+<tr class="separator:ac3fc6a7a0e7fc05406af07071df0d312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a809edd3485a1f9b257110e041ee231b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a809edd3485a1f9b257110e041ee231b4">DetachBuffer</a> ()</td></tr>
+<tr class="memdesc:a809edd3485a1f9b257110e041ee231b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">分离缓冲区。仅将缓冲区指针设置为 <b>NULL</b>，并将二进制缓冲区大小设置为零。  <a href="#a809edd3485a1f9b257110e041ee231b4">更多...</a><br /></td></tr>
+<tr class="separator:a809edd3485a1f9b257110e041ee231b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f497658f268efa1c3a3b40b857c8f8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___f_x_c_r_t.html#gaa75cf67c1a1aabffd8cdf879c6cfd894">FX_BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a8f497658f268efa1c3a3b40b857c8f8a">EstimateSize</a> (<a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a> size, <a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a> alloc_step=0)</td></tr>
+<tr class="memdesc:a8f497658f268efa1c3a3b40b857c8f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">更改已分配的缓冲区大小，如果alloc_step非零则设置分配步长。  <a href="#a8f497658f268efa1c3a3b40b857c8f8a">更多...</a><br /></td></tr>
+<tr class="separator:a8f497658f268efa1c3a3b40b857c8f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df1b87a81df3701bd218f1cbfeb8e90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___f_x_c_r_t.html#ga90f693f88588cd7c9da38d0ec28ad4b6">FX_LPBYTE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a3df1b87a81df3701bd218f1cbfeb8e90">GetBuffer</a> () const</td></tr>
+<tr class="memdesc:a3df1b87a81df3701bd218f1cbfeb8e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指向二进制缓冲区的字节指针。  <a href="#a3df1b87a81df3701bd218f1cbfeb8e90">更多...</a><br /></td></tr>
+<tr class="separator:a3df1b87a81df3701bd218f1cbfeb8e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0253c3907cc1e6e7c77589672eb091e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_f_x___byte_string_c.html">CFX_ByteStringC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#ac0253c3907cc1e6e7c77589672eb091e">GetByteString</a> () const</td></tr>
+<tr class="memdesc:ac0253c3907cc1e6e7c77589672eb091e"><td class="mdescLeft">&#160;</td><td class="mdescRight">从缓冲区获取字节字符串。  <a href="#ac0253c3907cc1e6e7c77589672eb091e">更多...</a><br /></td></tr>
+<tr class="separator:ac0253c3907cc1e6e7c77589672eb091e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c0e200f10cbd3bcc97cbe76158b311"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a90c0e200f10cbd3bcc97cbe76158b311">GetByteStringL</a> (CFX_ByteStringL &amp;str) const</td></tr>
+<tr class="memdesc:a90c0e200f10cbd3bcc97cbe76158b311"><td class="mdescLeft">&#160;</td><td class="mdescRight">从当前缓冲区对象获取字节字符串。  <a href="#a90c0e200f10cbd3bcc97cbe76158b311">更多...</a><br /></td></tr>
+<tr class="separator:a90c0e200f10cbd3bcc97cbe76158b311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b710d5813bd700210e35af029a5aaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a09b710d5813bd700210e35af029a5aaa">GetSize</a> () const</td></tr>
+<tr class="memdesc:a09b710d5813bd700210e35af029a5aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取二进制缓冲区的长度。  <a href="#a09b710d5813bd700210e35af029a5aaa">更多...</a><br /></td></tr>
+<tr class="separator:a09b710d5813bd700210e35af029a5aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac984adeb5ed315103e926203a113e558"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___f_x_c_r_t.html#gaa75cf67c1a1aabffd8cdf879c6cfd894">FX_BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#ac984adeb5ed315103e926203a113e558">InsertBlock</a> (<a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a> pos, const void *pBuf, <a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a> size)</td></tr>
+<tr class="memdesc:ac984adeb5ed315103e926203a113e558"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定位置插入二进制缓冲区块。  <a href="#ac984adeb5ed315103e926203a113e558">更多...</a><br /></td></tr>
+<tr class="separator:ac984adeb5ed315103e926203a113e558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e0f9df95093b2c2923dc682c9c36aa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a4e0f9df95093b2c2923dc682c9c36aa0">TakeOver</a> (<a class="el" href="class_c_f_x___binary_buf.html">CFX_BinaryBuf</a> &amp;other)</td></tr>
+<tr class="memdesc:a4e0f9df95093b2c2923dc682c9c36aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">接管另一个缓冲区。  <a href="#a4e0f9df95093b2c2923dc682c9c36aa0">更多...</a><br /></td></tr>
+<tr class="separator:a4e0f9df95093b2c2923dc682c9c36aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a81cd007b84505ee6a63f850c2755623e"><td class="memItemLeft" align="right" valign="top"><a id="a81cd007b84505ee6a63f850c2755623e"></a>
+<a class="el" href="struct_i_f_x___allocator.html">IFX_Allocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_f_x___binary_buf.html#a81cd007b84505ee6a63f850c2755623e">m_pAllocator</a></td></tr>
+<tr class="memdesc:a81cd007b84505ee6a63f850c2755623e"><td class="mdescLeft">&#160;</td><td class="mdescRight">特殊分配器指针。<b>NULL</b> 表示使用默认分配器。 <br /></td></tr>
+<tr class="separator:a81cd007b84505ee6a63f850c2755623e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>为更高效追加而设计的动态二进制缓冲区。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ac4f88e097e2ad4d80dc2348d75b2b2e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4f88e097e2ad4d80dc2348d75b2b2e8">&#9670;&nbsp;</a></span>CFX_BinaryBuf() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CFX_BinaryBuf::CFX_BinaryBuf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_f_x___allocator.html">IFX_Allocator</a> *&#160;</td>
+          <td class="paramname"><em>pAllocator</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建空缓冲区的默认构造函数。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pAllocator</td><td>分配器。默认值：<b>NULL</b>。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acbb652deb2eaeeb9788177f6f4897d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbb652deb2eaeeb9788177f6f4897d00">&#9670;&nbsp;</a></span>CFX_BinaryBuf() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CFX_BinaryBuf::CFX_BinaryBuf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_i_f_x___allocator.html">IFX_Allocator</a> *&#160;</td>
+          <td class="paramname"><em>pAllocator</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建空缓冲区的默认构造函数。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>缓冲区大小。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pAllocator</td><td>分配器。默认值：<b>NULL</b>。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a79b72708cdb0e286a42d89d7d4b20bba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b72708cdb0e286a42d89d7d4b20bba">&#9670;&nbsp;</a></span>AppendBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___f_x_c_r_t.html#gaa75cf67c1a1aabffd8cdf879c6cfd894">FX_BOOL</a> CFX_BinaryBuf::AppendBlock </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>追加一个二进制缓冲区块。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pBuf</td><td>指向二进制缓冲区块的指针。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>缓冲区块的字节大小。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b>true</b> 表示成功，而 <b>false</b> 表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a048997ced85fef4d702fbbe463f504c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a048997ced85fef4d702fbbe463f504c3">&#9670;&nbsp;</a></span>AppendByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___f_x_c_r_t.html#gaa75cf67c1a1aabffd8cdf879c6cfd894">FX_BOOL</a> CFX_BinaryBuf::AppendByte </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___f_x_c_r_t.html#ga67373b495022b8af2b92b7a0f0ba60a9">FX_BYTE</a>&#160;</td>
+          <td class="paramname"><em>byte</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>追加单个字节。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">byte</td><td>单个字节。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b>true</b> 表示成功，而 <b>false</b> 表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="af5d68c5058624f2f8611b104f24f3bcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5d68c5058624f2f8611b104f24f3bcf">&#9670;&nbsp;</a></span>AppendFill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___f_x_c_r_t.html#gaa75cf67c1a1aabffd8cdf879c6cfd894">FX_BOOL</a> CFX_BinaryBuf::AppendFill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___f_x_c_r_t.html#ga67373b495022b8af2b92b7a0f0ba60a9">FX_BYTE</a>&#160;</td>
+          <td class="paramname"><em>byte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a>&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将指定字节追加指定次数。内部不是逐字节处理，而是字节填充处理。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">byte</td><td>输入字节。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>次数。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b>true</b> 表示成功，而 <b>false</b> 表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ab4c9fba6d28509e8890e419cf0e87d62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c9fba6d28509e8890e419cf0e87d62">&#9670;&nbsp;</a></span>AppendString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFX_BinaryBuf::AppendString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___f_x_c_r_t.html#ga42d624b171ce74cd462d677cc9537a5a">FX_BSTR</a>&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>追加一个非缓冲字节字符串。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>非缓冲字节字符串。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="a42c00f5268f11f28a5a479f7d1399226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42c00f5268f11f28a5a479f7d1399226">&#9670;&nbsp;</a></span>AttachData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFX_BinaryBuf::AttachData </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>附加到缓冲区（此缓冲区将属于此对象）。缓冲区必须由FX_Alloc分配。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pBuf</td><td>指向二进制缓冲区的指针。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>缓冲区的字节大小。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="a118dfbb378b3598a820457baf3346381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a118dfbb378b3598a820457baf3346381">&#9670;&nbsp;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFX_BinaryBuf::Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将二进制缓冲区设置为空。 </p>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="a3815ffbb5a47551f123aaf8b84b27ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3815ffbb5a47551f123aaf8b84b27ea2">&#9670;&nbsp;</a></span>CopyData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___f_x_c_r_t.html#gaa75cf67c1a1aabffd8cdf879c6cfd894">FX_BOOL</a> CFX_BinaryBuf::CopyData </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从另一个缓冲区复制。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pBuf</td><td>指向二进制缓冲区的指针。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>输入缓冲区的字节大小。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b>true</b> 表示成功，而 <b>false</b> 表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ac3fc6a7a0e7fc05406af07071df0d312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3fc6a7a0e7fc05406af07071df0d312">&#9670;&nbsp;</a></span>Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFX_BinaryBuf::Delete </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除由参数start_index和count定义的二进制缓冲区中的区间缓冲区。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_index</td><td>指定要在二进制缓冲区中删除的起始位置的从零开始的索引。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>指定要删除的字节长度。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="a809edd3485a1f9b257110e041ee231b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a809edd3485a1f9b257110e041ee231b4">&#9670;&nbsp;</a></span>DetachBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFX_BinaryBuf::DetachBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>分离缓冲区。仅将缓冲区指针设置为 <b>NULL</b>，并将二进制缓冲区大小设置为零。 </p>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="a8f497658f268efa1c3a3b40b857c8f8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f497658f268efa1c3a3b40b857c8f8a">&#9670;&nbsp;</a></span>EstimateSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___f_x_c_r_t.html#gaa75cf67c1a1aabffd8cdf879c6cfd894">FX_BOOL</a> CFX_BinaryBuf::EstimateSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a>&#160;</td>
+          <td class="paramname"><em>alloc_step</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更改已分配的缓冲区大小，如果alloc_step非零则设置分配步长。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>期望的新大小。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alloc_step</td><td>新分配步长。如果alloc_step为0，则分配步长不会改变。 默认值：0。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b>true</b> 表示成功，而 <b>false</b> 表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a3df1b87a81df3701bd218f1cbfeb8e90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3df1b87a81df3701bd218f1cbfeb8e90">&#9670;&nbsp;</a></span>GetBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___f_x_c_r_t.html#ga90f693f88588cd7c9da38d0ec28ad4b6">FX_LPBYTE</a> CFX_BinaryBuf::GetBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指向二进制缓冲区的字节指针。 </p>
+<dl class="section return"><dt>返回</dt><dd>指向二进制缓冲区的字节指针。 </dd></dl>
+
+</div>
+</div>
+<a id="ac0253c3907cc1e6e7c77589672eb091e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0253c3907cc1e6e7c77589672eb091e">&#9670;&nbsp;</a></span>GetByteString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_f_x___byte_string_c.html">CFX_ByteStringC</a> CFX_BinaryBuf::GetByteString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从缓冲区获取字节字符串。 </p>
+<dl class="section return"><dt>返回</dt><dd>字节字符串。 </dd></dl>
+
+</div>
+</div>
+<a id="a90c0e200f10cbd3bcc97cbe76158b311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c0e200f10cbd3bcc97cbe76158b311">&#9670;&nbsp;</a></span>GetByteStringL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFX_BinaryBuf::GetByteStringL </td>
+          <td>(</td>
+          <td class="paramtype">CFX_ByteStringL &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从当前缓冲区对象获取字节字符串。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">str</td><td>接收来自当前缓冲区对象的字节字符串。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="a09b710d5813bd700210e35af029a5aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09b710d5813bd700210e35af029a5aaa">&#9670;&nbsp;</a></span>GetSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a> CFX_BinaryBuf::GetSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取二进制缓冲区的长度。 </p>
+<dl class="section return"><dt>返回</dt><dd>二进制缓冲区的字节长度。 </dd></dl>
+
+</div>
+</div>
+<a id="ac984adeb5ed315103e926203a113e558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac984adeb5ed315103e926203a113e558">&#9670;&nbsp;</a></span>InsertBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___f_x_c_r_t.html#gaa75cf67c1a1aabffd8cdf879c6cfd894">FX_BOOL</a> CFX_BinaryBuf::InsertBlock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___f_x_c_r_t.html#gaf687e8bc5d307cf9aafda117c72431d0">FX_STRSIZE</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在指定位置插入二进制缓冲区块。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>指定二进制缓冲区中位置的从零开始的索引。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pBuf</td><td>指向二进制缓冲区块的指针。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>缓冲区块的字节大小。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b>true</b> 表示成功，而 <b>false</b> 表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a4e0f9df95093b2c2923dc682c9c36aa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e0f9df95093b2c2923dc682c9c36aa0">&#9670;&nbsp;</a></span>TakeOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFX_BinaryBuf::TakeOver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_f_x___binary_buf.html">CFX_BinaryBuf</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>接管另一个缓冲区。 </p>
+<p>此函数附加到源CFX_BinaryBuf对象的缓冲区。源CFX_BinaryBuf对象 已分离缓冲区。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>CFX_BinaryBuf对象的引用。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<html>
+<body>
+<div id="nav-path">
+<hr class="footer"/>
+<p align="right">
+	<center>
+	<img class="footer" src="logo.png" alt="Foxit Software Corporation Logo"/>
+	</center>
+	<center>
+	@2026 Foxit Software Incorporated. All rights reserved.
+	</center>
+</p>
+</div>
+</BODY></HTML>

@@ -1,0 +1,312 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Foxit PDF SDK: foxit::pdf::AnnotationSummaryCallback类 参考</title>
+<meta name="description" content="Check out the API references for Foxit PDF SDK for C++ by clicking here. These references apply to C++ Windows, Linux and Mac." />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Foxit PDF SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classfoxit_1_1pdf_1_1_annotation_summary_callback.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classfoxit_1_1pdf_1_1_annotation_summary_callback-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">foxit::pdf::AnnotationSummaryCallback类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a7094339d367250191baac00513e77b9b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9b">AnnotationSummaryStringID</a> { <br />
+&#160;&#160;<a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9ba14f6ae3f45311ba5300e81fab3f0df74">e_AnnotationSummaryStringIDAuthor</a> = 0, 
+<a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9bad1e09a0adca0b740d3f802b873ff8aea">e_AnnotationSummaryStringIDDate</a> = 1, 
+<a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9ba2f1d79e2ed1f47e9418d0b7a4f7a0174">e_AnnotationSummaryStringIDPage</a> = 2, 
+<a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9ba31da36f14bdf267e016bcdf1e3a49ab5">e_AnnotationSummaryStringIDType</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9ba53f1c91340e935d2e6846854be17e5b6">e_AnnotationSummaryStringIDDocumentTitle</a> = 4, 
+<a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9ba931fb07788533deeebc3d46d1d900224">e_AnnotationSummaryStringIDPageTitle</a> = 5, 
+<a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9bad07acd56875daac7c7d203b773b0faa8">e_AnnotationSummaryStringIDNoAnnotations</a> = 6, 
+<a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9ba7e511b34c417c57edd890aefe154dd37">e_AnnotationSummaryStringIDNumber</a> = 7, 
+<br />
+&#160;&#160;<a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9bac4a4e5946ba281c818929cfddd05edb6">e_AnnotationSummaryStringIDSubject</a> = 8
+<br />
+ }</td></tr>
+<tr class="memdesc:a7094339d367250191baac00513e77b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于指定注释摘要时结果文档中的字符串或前缀的字符串 ID 枚举。  <a href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9b">更多...</a><br /></td></tr>
+<tr class="separator:a7094339d367250191baac00513e77b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac3249916102eb6af23ae79b2a36d0b27"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacefoxit_1_1common.html#adc6f8307f13f6a44a6d511ceacf16252">common::LocaleID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#ac3249916102eb6af23ae79b2a36d0b27">GetCurrentLocaleID</a> ()=0</td></tr>
+<tr class="memdesc:ac3249916102eb6af23ae79b2a36d0b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于指定当前区域设置 ID 的回调函数。  <a href="#ac3249916102eb6af23ae79b2a36d0b27">更多...</a><br /></td></tr>
+<tr class="separator:ac3249916102eb6af23ae79b2a36d0b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2dec7bc38ff09a75312fe8e03b446ab"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacefoxit.html#a147cc436389b9ee6b8ae1135435eb7e6">WString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#ac2dec7bc38ff09a75312fe8e03b446ab">GetLocalFontName</a> ()=0</td></tr>
+<tr class="memdesc:ac2dec7bc38ff09a75312fe8e03b446ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于指定本地使用的字体名称的回调函数。  <a href="#ac2dec7bc38ff09a75312fe8e03b446ab">更多...</a><br /></td></tr>
+<tr class="separator:ac2dec7bc38ff09a75312fe8e03b446ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe75cde08401a80f3476aa64de2007f8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacefoxit.html#a147cc436389b9ee6b8ae1135435eb7e6">WString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#afe75cde08401a80f3476aa64de2007f8">LoadString</a> (<a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9b">AnnotationSummaryStringID</a> id)=0</td></tr>
+<tr class="memdesc:afe75cde08401a80f3476aa64de2007f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于为指定情况加载本地语言字符串的回调函数。  <a href="#afe75cde08401a80f3476aa64de2007f8">更多...</a><br /></td></tr>
+<tr class="separator:afe75cde08401a80f3476aa64de2007f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d1ca23508e6dd1b5356ab5f0915b5c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#af2d1ca23508e6dd1b5356ab5f0915b5c">Release</a> ()=0</td></tr>
+<tr class="memdesc:af2d1ca23508e6dd1b5356ab5f0915b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于释放当前回调对象本身的回调函数。  <a href="#af2d1ca23508e6dd1b5356ab5f0915b5c">更多...</a><br /></td></tr>
+<tr class="separator:af2d1ca23508e6dd1b5356ab5f0915b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>此类表示在注释摘要过程中使用的回调对象，允许用户决定某些格式/数据。 此类中的所有纯虚函数都用作回调函数，应由用户实现。 实现的 <a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html">AnnotationSummaryCallback</a> 对象可以通过函数 <a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary.html#a7b2cc00b2d7624942e8d13a815c4e55e">AnnotationSummary::SetCallback</a> 设置到 AnnotationSummary 对象中。 </p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a7094339d367250191baac00513e77b9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7094339d367250191baac00513e77b9b">&#9670;&nbsp;</a></span>AnnotationSummaryStringID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9b">foxit::pdf::AnnotationSummaryCallback::AnnotationSummaryStringID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用于指定注释摘要时结果文档中的字符串或前缀的字符串 ID 枚举。 </p>
+<p>此枚举的值可以单独使用。 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a7094339d367250191baac00513e77b9ba14f6ae3f45311ba5300e81fab3f0df74"></a>e_AnnotationSummaryStringIDAuthor&#160;</td><td class="fielddoc"><p>注释摘要字符串 ID：指定在结果文档中输出作者信息时的前缀。 默认前缀是 "Author:"。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7094339d367250191baac00513e77b9bad1e09a0adca0b740d3f802b873ff8aea"></a>e_AnnotationSummaryStringIDDate&#160;</td><td class="fielddoc"><p>注释摘要字符串 ID：指定在结果文档中输出日期信息时的前缀。 默认前缀是 "Date:"。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7094339d367250191baac00513e77b9ba2f1d79e2ed1f47e9418d0b7a4f7a0174"></a>e_AnnotationSummaryStringIDPage&#160;</td><td class="fielddoc"><p>注释摘要字符串 ID：指定在结果文档中输出页面信息时的前缀。 默认前缀是 "Page:"。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7094339d367250191baac00513e77b9ba31da36f14bdf267e016bcdf1e3a49ab5"></a>e_AnnotationSummaryStringIDType&#160;</td><td class="fielddoc"><p>注释摘要字符串 ID：指定在结果文档中输出注释类型时的前缀。 默认前缀是 "Type:"。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7094339d367250191baac00513e77b9ba53f1c91340e935d2e6846854be17e5b6"></a>e_AnnotationSummaryStringIDDocumentTitle&#160;</td><td class="fielddoc"><p>注释摘要字符串 ID：指定结果文档中的文档标题。默认标题是 "Summary of comments:"。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7094339d367250191baac00513e77b9ba931fb07788533deeebc3d46d1d900224"></a>e_AnnotationSummaryStringIDPageTitle&#160;</td><td class="fielddoc"><p>注释摘要字符串 ID：指定在结果文档中输出页面标题时的前缀。默认字符串是 "Page:"。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7094339d367250191baac00513e77b9bad07acd56875daac7c7d203b773b0faa8"></a>e_AnnotationSummaryStringIDNoAnnotations&#160;</td><td class="fielddoc"><p>注释摘要字符串 ID：指定在页面没有任何注释时在结果文档中作为内容使用的字符串。 默认内容是 "No Annotations."。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7094339d367250191baac00513e77b9ba7e511b34c417c57edd890aefe154dd37"></a>e_AnnotationSummaryStringIDNumber&#160;</td><td class="fielddoc"><p>注释摘要字符串 ID：指定在结果文档中输出数量信息时的前缀。 默认前缀是 "Number:"。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7094339d367250191baac00513e77b9bac4a4e5946ba281c818929cfddd05edb6"></a>e_AnnotationSummaryStringIDSubject&#160;</td><td class="fielddoc"><p>注释摘要字符串 ID：指定在结果文档中输出主题信息时的前缀。 默认前缀是 "Subject:"。 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac3249916102eb6af23ae79b2a36d0b27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3249916102eb6af23ae79b2a36d0b27">&#9670;&nbsp;</a></span>GetCurrentLocaleID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacefoxit_1_1common.html#adc6f8307f13f6a44a6d511ceacf16252">common::LocaleID</a> foxit::pdf::AnnotationSummaryCallback::GetCurrentLocaleID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用于指定当前区域设置 ID 的回调函数。 </p>
+<p>区域设置 ID 用于决定某些信息的区域设置格式，如日期格式。</p>
+<dl class="section return"><dt>返回</dt><dd>区域设置 ID。请参考从 <a class="el" href="namespacefoxit_1_1common.html#adc6f8307f13f6a44a6d511ceacf16252a2880fae29b7d1da5d61ab543e572a090">common::e_LocaleIDUnspecified</a> 开始的值， 这应该是这些值中的一个。如果返回的区域设置 ID 不被支持，Foxit PDF SDK 将默认使用 值 <a class="el" href="namespacefoxit_1_1common.html#adc6f8307f13f6a44a6d511ceacf16252a2880fae29b7d1da5d61ab543e572a090">common::e_LocaleIDUnspecified</a>。 </dd></dl>
+
+</div>
+</div>
+<a id="ac2dec7bc38ff09a75312fe8e03b446ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2dec7bc38ff09a75312fe8e03b446ab">&#9670;&nbsp;</a></span>GetLocalFontName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacefoxit.html#a147cc436389b9ee6b8ae1135435eb7e6">WString</a> foxit::pdf::AnnotationSummaryCallback::GetLocalFontName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用于指定本地使用的字体名称的回调函数。 </p>
+<p>此函数对于用户指定结果文档中使用的字体非常有用。</p>
+<dl class="section return"><dt>返回</dt><dd>字体名称字符串。如果返回空字符串，Foxit PDF SDK 将使用 "Helvetica" 作为默认字体名称。 如果返回的字体名称无效，此名称将不起任何作用。 </dd></dl>
+
+</div>
+</div>
+<a id="afe75cde08401a80f3476aa64de2007f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe75cde08401a80f3476aa64de2007f8">&#9670;&nbsp;</a></span>LoadString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacefoxit.html#a147cc436389b9ee6b8ae1135435eb7e6">WString</a> foxit::pdf::AnnotationSummaryCallback::LoadString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9b">AnnotationSummaryStringID</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用于为指定情况加载本地语言字符串的回调函数。 </p>
+<p>此函数对于用户在结果文档中为某些字符串内容使用本地语言非常有用。 通过使用此函数，用户可以为结果文档中的指定情况重写或翻译默认输出字符串为本地语言。 这些指定情况的默认输出字符串可以在从 <a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9ba14f6ae3f45311ba5300e81fab3f0df74">AnnotationSummaryCallback::e_AnnotationSummaryStringIDAuthor</a> 开始的值的注释中找到。<br />
+ 特别地，Foxit PDF SDK 将在结果文档的格式部分添加一些必要的信息/数据， 以使结果文档中的内容更有用。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>指定摘要情况的注释摘要字符串 ID。请参考从 <a class="el" href="classfoxit_1_1pdf_1_1_annotation_summary_callback.html#a7094339d367250191baac00513e77b9ba14f6ae3f45311ba5300e81fab3f0df74">AnnotationSummaryCallback::e_AnnotationSummaryStringIDAuthor</a> 开始的值， 这应该是这些值中的一个。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>用于指定情况的字符串。 </dd></dl>
+
+</div>
+</div>
+<a id="af2d1ca23508e6dd1b5356ab5f0915b5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2d1ca23508e6dd1b5356ab5f0915b5c">&#9670;&nbsp;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void foxit::pdf::AnnotationSummaryCallback::Release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用于释放当前回调对象本身的回调函数。 </p>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<html>
+<body>
+<div id="nav-path">
+<hr class="footer"/>
+<p align="right">
+	<center>
+	<img class="footer" src="logo.png" alt="Foxit Software Corporation Logo"/>
+	</center>
+	<center>
+	@2026 Foxit Software Incorporated. All rights reserved.
+	</center>
+</p>
+</div>
+</BODY></HTML>

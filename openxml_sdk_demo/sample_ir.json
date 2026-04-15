@@ -1,0 +1,28 @@
+{
+  "title": "Open XML SDK Demo",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "This DOCX is generated from a simple IR JSON using Open XML SDK."
+    },
+    {
+      "type": "list",
+      "listStyle": "ListNumber",
+      "numId": 1,
+      "items": [
+        "Generate structured content from IR",
+        "Use SDK to produce more standard DOCX output",
+        "Keep Nautilus focused on structure search"
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        ["Component", "Role"],
+        ["Nautilus", "Generate IR / mutate structure"],
+        ["Open XML SDK", "Lower IR to DOCX"]
+      ]
+    }
+  ]
+}

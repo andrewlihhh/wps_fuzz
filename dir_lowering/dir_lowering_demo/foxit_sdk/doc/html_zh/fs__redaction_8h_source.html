@@ -1,0 +1,138 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Foxit PDF SDK: /builds/foxit/sdk/rdkcommon/sdk/doxygen/workspace/headerfiles/addon/fs_redaction.h 源文件</title>
+<meta name="description" content="Check out the API references for Foxit PDF SDK for C++ by clicking here. These references apply to C++ Windows, Linux and Mac." />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Foxit PDF SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('fs__redaction_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">fs_redaction.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fs__redaction_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef FS_REDACTION_H_</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define FS_REDACTION_H_</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fs__common_8h.html">common/fs_common.h</a>&quot;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fs__pdfdoc_8h.html">pdf/fs_pdfdoc.h</a>&quot;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fs__pdfpage_8h.html">pdf/fs_pdfpage.h</a>&quot;</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fs__annot_8h.html">pdf/annots/fs_annot.h</a>&quot;</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacefoxit.html">foxit</a> {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span>addon {</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classfoxit_1_1addon_1_1_apply_redaction_callback.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfoxit_1_1addon_1_1_apply_redaction_callback.html">ApplyRedactionCallback</a> {</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; <span class="keyword">public</span>:</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classfoxit_1_1addon_1_1_apply_redaction_callback.html#a797e858ce868c39faa4a3dd2b7b69b2c">Release</a>() = 0;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  </div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classfoxit_1_1addon_1_1_apply_redaction_callback.html#afebe6bfe72cd9dbe0756d1dc1fdce701">NeedToGenerateStreamFile</a>() = 0;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classfoxit_1_1addon_1_1_redaction.html">   62</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfoxit_1_1addon_1_1_redaction.html">Redaction</a> FS_FINAL : <span class="keyword">public</span> <a class="code" href="classfoxit_1_1_base.html">Base</a> {</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; <span class="keyword">public</span>:</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html#ae74c64c346c341e86cf4ffaabe87562c">Redaction</a>(<span class="keyword">const</span> <a class="code" href="classfoxit_1_1pdf_1_1_p_d_f_doc.html">pdf::PDFDoc</a>&amp; document);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="classfoxit_1_1addon_1_1_redaction.html#ae74c64c346c341e86cf4ffaabe87562c">Redaction</a>(<span class="keyword">const</span> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html">Redaction</a>&amp; other);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="comment">// 强烈建议用户不要使用此方法；否则可能会出现未知情况。</span></div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html#ae74c64c346c341e86cf4ffaabe87562c">Redaction</a>(<a class="code" href="namespacefoxit.html#ab87b5c89cfd651df608cdc5a711b3202">FS_HANDLE</a> handle);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="classfoxit_1_1addon_1_1_redaction.html#a7217bf22185c9fbb831a77ba4915e046">~Redaction</a>();</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="classfoxit_1_1addon_1_1_redaction.html">Redaction</a>&amp; <a class="code" href="classfoxit_1_1addon_1_1_redaction.html#a6748ded2fcf4bd84203bbcb048c540cc">operator = </a>(<span class="keyword">const</span> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html">Redaction</a>&amp; other);</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html#a594a71302cf25d245fa19062f49c7559">operator == </a>(<span class="keyword">const</span> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html">Redaction</a>&amp; other) <span class="keyword">const</span>;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html#a45fcfb547b87f1fd9fd66aa3dd543b24">operator != </a>(<span class="keyword">const</span> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html">Redaction</a>&amp; other) <span class="keyword">const</span>;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html#ad385da06ccebbc45dc41ff02f353ab0a">IsEmpty</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <a class="code" href="classfoxit_1_1pdf_1_1annots_1_1_redact.html">pdf::annots::Redact</a> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html#a09f0a0e7988dd94ca5dde9bae2a16ba1">MarkRedactAnnot</a>(<span class="keyword">const</span> <a class="code" href="classfoxit_1_1pdf_1_1_p_d_f_page.html">pdf::PDFPage</a>&amp; page, <span class="keyword">const</span> <a class="code" href="class_c_f_x___array_template.html">RectFArray</a>&amp; rects);</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html#a940cced2ae9af7190823f4d82c0d56fe">EnableFileStream</a>(<span class="keyword">const</span> <a class="code" href="class_c_f_x___wide_string.html">WString</a>&amp; temp_directory_path, <a class="code" href="classfoxit_1_1addon_1_1_apply_redaction_callback.html">ApplyRedactionCallback</a>* apply_redaction_callback);</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html#a86910c23e6e0bf81ad1d456f89abeecf">Apply</a>();</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <a class="code" href="classfoxit_1_1common_1_1_progressive.html">common::Progressive</a> <a class="code" href="classfoxit_1_1addon_1_1_redaction.html#ab8ae65a2b4a23c62923a7b43109964c5">StartApply</a>(<a class="code" href="class_i_f_x___pause.html">common::PauseCallback</a>* pause = <a class="code" href="group___f_x_c_r_t.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;};</div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}  <span class="comment">// namespace addon</span></div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}  <span class="comment">// namespace foxit</span></div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">#endif  // FS_REDACTION_H_</span></div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div><div class="ttc" id="classfoxit_1_1addon_1_1_redaction_html_a09f0a0e7988dd94ca5dde9bae2a16ba1"><div class="ttname"><a href="classfoxit_1_1addon_1_1_redaction.html#a09f0a0e7988dd94ca5dde9bae2a16ba1">foxit::addon::Redaction::MarkRedactAnnot</a></div><div class="ttdeci">pdf::annots::Redact MarkRedactAnnot(const pdf::PDFPage &amp;page, const RectFArray &amp;rects)</div><div class="ttdoc">标记要进行保护密文处理的页面内容（文本对象、图像对象和路径对象）。</div></div>
+<div class="ttc" id="fs__pdfdoc_8h_html"><div class="ttname"><a href="fs__pdfdoc_8h.html">fs_pdfdoc.h</a></div><div class="ttdoc">PDF文档相关定义和类的头文件。</div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_redaction_html_a940cced2ae9af7190823f4d82c0d56fe"><div class="ttname"><a href="classfoxit_1_1addon_1_1_redaction.html#a940cced2ae9af7190823f4d82c0d56fe">foxit::addon::Redaction::EnableFileStream</a></div><div class="ttdeci">void EnableFileStream(const WString &amp;temp_directory_path, ApplyRedactionCallback *apply_redaction_callback)</div><div class="ttdoc">在应用过程中为图像对象启用文件流。</div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_redaction_html_a6748ded2fcf4bd84203bbcb048c540cc"><div class="ttname"><a href="classfoxit_1_1addon_1_1_redaction.html#a6748ded2fcf4bd84203bbcb048c540cc">foxit::addon::Redaction::operator=</a></div><div class="ttdeci">Redaction &amp; operator=(const Redaction &amp;other)</div><div class="ttdoc">赋值操作符。</div></div>
+<div class="ttc" id="class_c_f_x___wide_string_html"><div class="ttname"><a href="class_c_f_x___wide_string.html">CFX_WideString</a></div><div class="ttdoc">宽字符串类</div><div class="ttdef"><b>Definition:</b> fx_string.h:1457</div></div>
+<div class="ttc" id="classfoxit_1_1pdf_1_1_p_d_f_doc_html"><div class="ttname"><a href="classfoxit_1_1pdf_1_1_p_d_f_doc.html">foxit::pdf::PDFDoc</a></div><div class="ttdef"><b>Definition:</b> fs_pdfdoc.h:771</div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_redaction_html_a86910c23e6e0bf81ad1d456f89abeecf"><div class="ttname"><a href="classfoxit_1_1addon_1_1_redaction.html#a86910c23e6e0bf81ad1d456f89abeecf">foxit::addon::Redaction::Apply</a></div><div class="ttdeci">bool Apply()</div><div class="ttdoc">在标记区域应用保护密文：永久删除标记区域下的文本或图形。</div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_redaction_html_a45fcfb547b87f1fd9fd66aa3dd543b24"><div class="ttname"><a href="classfoxit_1_1addon_1_1_redaction.html#a45fcfb547b87f1fd9fd66aa3dd543b24">foxit::addon::Redaction::operator !=</a></div><div class="ttdeci">bool operator !=(const Redaction &amp;other) const</div><div class="ttdoc">不相等操作符。</div></div>
+<div class="ttc" id="classfoxit_1_1pdf_1_1annots_1_1_redact_html"><div class="ttname"><a href="classfoxit_1_1pdf_1_1annots_1_1_redact.html">foxit::pdf::annots::Redact</a></div><div class="ttdef"><b>Definition:</b> fs_annot.h:5593</div></div>
+<div class="ttc" id="fs__annot_8h_html"><div class="ttname"><a href="fs__annot_8h.html">fs_annot.h</a></div><div class="ttdoc">注释相关定义和类的头文件。</div></div>
+<div class="ttc" id="class_i_f_x___pause_html"><div class="ttname"><a href="class_i_f_x___pause.html">IFX_Pause</a></div><div class="ttdef"><b>Definition:</b> fx_basic.h:3737</div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_redaction_html_a7217bf22185c9fbb831a77ba4915e046"><div class="ttname"><a href="classfoxit_1_1addon_1_1_redaction.html#a7217bf22185c9fbb831a77ba4915e046">foxit::addon::Redaction::~Redaction</a></div><div class="ttdeci">~Redaction()</div><div class="ttdoc">析构函数。</div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_apply_redaction_callback_html"><div class="ttname"><a href="classfoxit_1_1addon_1_1_apply_redaction_callback.html">foxit::addon::ApplyRedactionCallback</a></div><div class="ttdef"><b>Definition:</b> fs_redaction.h:37</div></div>
+<div class="ttc" id="classfoxit_1_1common_1_1_progressive_html"><div class="ttname"><a href="classfoxit_1_1common_1_1_progressive.html">foxit::common::Progressive</a></div><div class="ttdef"><b>Definition:</b> fs_common.h:373</div></div>
+<div class="ttc" id="class_c_f_x___array_template_html"><div class="ttname"><a href="class_c_f_x___array_template.html">CFX_ArrayTemplate&lt; RectF &gt;</a></div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_redaction_html_ab8ae65a2b4a23c62923a7b43109964c5"><div class="ttname"><a href="classfoxit_1_1addon_1_1_redaction.html#ab8ae65a2b4a23c62923a7b43109964c5">foxit::addon::Redaction::StartApply</a></div><div class="ttdeci">common::Progressive StartApply(common::PauseCallback *pause=0)</div><div class="ttdoc">开始在标记区域应用保护密文：永久删除标记区域下的文本或图形。</div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_apply_redaction_callback_html_afebe6bfe72cd9dbe0756d1dc1fdce701"><div class="ttname"><a href="classfoxit_1_1addon_1_1_apply_redaction_callback.html#afebe6bfe72cd9dbe0756d1dc1fdce701">foxit::addon::ApplyRedactionCallback::NeedToGenerateStreamFile</a></div><div class="ttdeci">virtual bool NeedToGenerateStreamFile()=0</div><div class="ttdoc">用于检查是否生成流文件的回调函数。</div></div>
+<div class="ttc" id="classfoxit_1_1pdf_1_1_p_d_f_page_html"><div class="ttname"><a href="classfoxit_1_1pdf_1_1_p_d_f_page.html">foxit::pdf::PDFPage</a></div><div class="ttdef"><b>Definition:</b> fs_pdfpage.h:421</div></div>
+<div class="ttc" id="namespacefoxit_html_ab87b5c89cfd651df608cdc5a711b3202"><div class="ttname"><a href="namespacefoxit.html#ab87b5c89cfd651df608cdc5a711b3202">foxit::FS_HANDLE</a></div><div class="ttdeci">void * FS_HANDLE</div><div class="ttdoc">句柄类型。</div><div class="ttdef"><b>Definition:</b> fs_basictypes.h:214</div></div>
+<div class="ttc" id="fs__common_8h_html"><div class="ttname"><a href="fs__common_8h.html">fs_common.h</a></div><div class="ttdoc">通用定义和类的头文件。</div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_redaction_html_a594a71302cf25d245fa19062f49c7559"><div class="ttname"><a href="classfoxit_1_1addon_1_1_redaction.html#a594a71302cf25d245fa19062f49c7559">foxit::addon::Redaction::operator==</a></div><div class="ttdeci">bool operator==(const Redaction &amp;other) const</div><div class="ttdoc">相等操作符。</div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_redaction_html_ad385da06ccebbc45dc41ff02f353ab0a"><div class="ttname"><a href="classfoxit_1_1addon_1_1_redaction.html#ad385da06ccebbc45dc41ff02f353ab0a">foxit::addon::Redaction::IsEmpty</a></div><div class="ttdeci">bool IsEmpty() const</div><div class="ttdoc">检查当前对象是否为空。</div></div>
+<div class="ttc" id="classfoxit_1_1_base_html"><div class="ttname"><a href="classfoxit_1_1_base.html">foxit::Base</a></div><div class="ttdef"><b>Definition:</b> fs_basictypes.h:449</div></div>
+<div class="ttc" id="fs__pdfpage_8h_html"><div class="ttname"><a href="fs__pdfpage_8h.html">fs_pdfpage.h</a></div><div class="ttdoc">PDF页面相关定义和类的头文件。</div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_redaction_html_ae74c64c346c341e86cf4ffaabe87562c"><div class="ttname"><a href="classfoxit_1_1addon_1_1_redaction.html#ae74c64c346c341e86cf4ffaabe87562c">foxit::addon::Redaction::Redaction</a></div><div class="ttdeci">Redaction(const pdf::PDFDoc &amp;document)</div><div class="ttdoc">构造函数，从 PDF 文档对象构造。</div></div>
+<div class="ttc" id="namespacefoxit_html"><div class="ttname"><a href="namespacefoxit.html">foxit</a></div><div class="ttdoc">Foxit命名空间。</div><div class="ttdef"><b>Definition:</b> fs_taggedpdf.h:27</div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_apply_redaction_callback_html_a797e858ce868c39faa4a3dd2b7b69b2c"><div class="ttname"><a href="classfoxit_1_1addon_1_1_apply_redaction_callback.html#a797e858ce868c39faa4a3dd2b7b69b2c">foxit::addon::ApplyRedactionCallback::Release</a></div><div class="ttdeci">virtual void Release()=0</div><div class="ttdoc">用于释放当前回调对象本身的回调函数。</div></div>
+<div class="ttc" id="group___f_x_c_r_t_html_ga070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="group___f_x_c_r_t.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdoc">空指针值。</div><div class="ttdef"><b>Definition:</b> fx_system.h:792</div></div>
+<div class="ttc" id="classfoxit_1_1addon_1_1_redaction_html"><div class="ttname"><a href="classfoxit_1_1addon_1_1_redaction.html">foxit::addon::Redaction</a></div><div class="ttdef"><b>Definition:</b> fs_redaction.h:62</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<html>
+<body>
+<div id="nav-path">
+<hr class="footer"/>
+<p align="right">
+	<center>
+	<img class="footer" src="logo.png" alt="Foxit Software Corporation Logo"/>
+	</center>
+	<center>
+	@2026 Foxit Software Incorporated. All rights reserved.
+	</center>
+</p>
+</div>
+</BODY></HTML>

@@ -1,0 +1,22 @@
+Config(
+        path_to_bin_target:                     "/home/kzl/AFLplusplus/afl-qemu-trace",
+        arguments:                              [ "/opt/kingsoft/wps-office/office6/wps", "@@"],
+        path_to_input_lowerer:                  Some("/usr/bin/dotnet"),
+        input_lowerer_args:                     [
+                "/home/kzl/wps_fuzz/openxml_sdk_demo/bin/Release/net8.0/openxml_sdk_demo.dll",
+                "@@INPUT@@",
+                "@@OUTPUT@@",
+        ],
+
+        path_to_grammar:                        "/home/kzl/nautilus/grammars/doc_ir_sdk.py",
+        path_to_workdir:                        "/home/kzl/wps_fuzz/seed_experiments/grammar_seed_exp_2026-04-14_round2/baseline_workdir",
+
+        number_of_threads:                      1,
+        timeout_in_millis:                      30000,
+
+        bitmap_size:                            65536,
+        thread_size:                            4194304,
+        number_of_generate_inputs:              20,
+        max_tree_size:                          1000,
+        number_of_deterministic_mutations:      1,
+)

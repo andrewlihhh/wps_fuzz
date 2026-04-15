@@ -1,0 +1,43 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icons/About1.png</file>
+        <file>Icons/About2.png</file>
+        <file>Icons/ASize1.png</file>
+        <file>Icons/ASize2.png</file>
+        <file>Icons/Close1.png</file>
+        <file>Icons/Close2.png</file>
+        <file>Icons/DPrint1.png</file>
+        <file>Icons/DPrint2.png</file>
+        <file>Icons/First1.png</file>
+        <file>Icons/First2.png</file>
+        <file>Icons/FitPage1.png</file>
+        <file>Icons/FitPage2.png</file>
+        <file>Icons/FitWidth1.png</file>
+        <file>Icons/FitWidth2.png</file>
+        <file>Icons/FNext1.png</file>
+        <file>Icons/FNext2.png</file>
+        <file>Icons/FPrevious1.png</file>
+        <file>Icons/FPrevious2.png</file>
+        <file>Icons/FSetting1.png</file>
+        <file>Icons/FSetting2.png</file>
+        <file>Icons/Last1.png</file>
+        <file>Icons/Last2.png</file>
+        <file>Icons/Next1.png</file>
+        <file>Icons/Next2.png</file>
+        <file>Icons/Open1.png</file>
+        <file>Icons/Open2.png</file>
+        <file>Icons/pdficon.png</file>
+        <file>Icons/Preview1.png</file>
+        <file>Icons/Preview2.png</file>
+        <file>Icons/SPrint1.png</file>
+        <file>Icons/SPrint2.png</file>
+        <file>Icons/ZAdd1.png</file>
+        <file>Icons/ZAdd2.png</file>
+        <file>Icons/ZoomAdd1.png</file>
+        <file>Icons/ZoomAdd2.png</file>
+        <file>Icons/ZoomSub1.png</file>
+        <file>Icons/ZoomSub2.png</file>
+        <file>Icons/ZSub1.png</file>
+        <file>Icons/ZSub2.png</file>
+    </qresource>
+</RCC>

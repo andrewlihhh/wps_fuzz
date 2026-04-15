@@ -1,0 +1,688 @@
+{\rtf1\adeflang1025\ansi\ansicpg936\uc2\adeff1\deff0\stshfdbch31505\stshfloch31506\stshfhich31506\stshfbi31507\deflang1033\deflangfe2052\themelang1033\themelangfe2052\themelangcs0{\fonttbl{\f0\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fbidi \fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fbidi \fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}{\f3\fbidi \froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f13\fbidi \fnil\fcharset134\fprq2{\*\panose 02010600030101010101}\'cb\'ce\'cc\'e5{\*\falt SimSun};}
+{\f13\fbidi \fnil\fcharset134\fprq2{\*\panose 02010600030101010101}\'cb\'ce\'cc\'e5{\*\falt SimSun};}{\f37\fbidi \fswiss\fcharset0\fprq2{\*\panose 020f0502020204030204}Calibri;}
+{\f39\fbidi \fnil\fcharset134\fprq2{\*\panose 02010600030101010101}@\'cb\'ce\'cc\'e5;}{\flomajor\f31500\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\fdbmajor\f31501\fbidi \fnil\fcharset134\fprq2{\*\panose 02010600030101010101}\'cb\'ce\'cc\'e5{\*\falt SimSun};}{\fhimajor\f31502\fbidi \fswiss\fcharset0\fprq2{\*\panose 020f0302020204030204}Calibri Light;}
+{\fbimajor\f31503\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\flominor\f31504\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\fdbminor\f31505\fbidi \fnil\fcharset134\fprq2{\*\panose 02010600030101010101}\'cb\'ce\'cc\'e5{\*\falt SimSun};}{\fhiminor\f31506\fbidi \fswiss\fcharset0\fprq2{\*\panose 020f0502020204030204}Calibri;}
+{\fbiminor\f31507\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f40\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\f41\fbidi \froman\fcharset204\fprq2 Times New Roman Cyr;}
+{\f43\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\f44\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}{\f45\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\f46\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}
+{\f47\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}{\f48\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}{\f50\fbidi \fswiss\fcharset238\fprq2 Arial CE;}{\f51\fbidi \fswiss\fcharset204\fprq2 Arial Cyr;}
+{\f53\fbidi \fswiss\fcharset161\fprq2 Arial Greek;}{\f54\fbidi \fswiss\fcharset162\fprq2 Arial Tur;}{\f55\fbidi \fswiss\fcharset177\fprq2 Arial (Hebrew);}{\f56\fbidi \fswiss\fcharset178\fprq2 Arial (Arabic);}
+{\f57\fbidi \fswiss\fcharset186\fprq2 Arial Baltic;}{\f58\fbidi \fswiss\fcharset163\fprq2 Arial (Vietnamese);}{\f60\fbidi \fmodern\fcharset238\fprq1 Courier New CE;}{\f61\fbidi \fmodern\fcharset204\fprq1 Courier New Cyr;}
+{\f63\fbidi \fmodern\fcharset161\fprq1 Courier New Greek;}{\f64\fbidi \fmodern\fcharset162\fprq1 Courier New Tur;}{\f65\fbidi \fmodern\fcharset177\fprq1 Courier New (Hebrew);}{\f66\fbidi \fmodern\fcharset178\fprq1 Courier New (Arabic);}
+{\f67\fbidi \fmodern\fcharset186\fprq1 Courier New Baltic;}{\f68\fbidi \fmodern\fcharset163\fprq1 Courier New (Vietnamese);}{\f172\fbidi \fnil\fcharset0\fprq2 SimSun Western{\*\falt SimSun};}
+{\f171\fbidi \fnil\fcharset204\fprq2 SimSun Cyr{\*\falt SimSun};}{\f173\fbidi \fnil\fcharset161\fprq2 SimSun Greek{\*\falt SimSun};}{\f174\fbidi \fnil\fcharset162\fprq2 SimSun Tur{\*\falt SimSun};}
+{\f177\fbidi \fnil\fcharset186\fprq2 SimSun Baltic{\*\falt SimSun};}{\f178\fbidi \fnil\fcharset163\fprq2 SimSun (Vietnamese){\*\falt SimSun};}{\f172\fbidi \fnil\fcharset0\fprq2 SimSun Western{\*\falt SimSun};}
+{\f171\fbidi \fnil\fcharset204\fprq2 SimSun Cyr{\*\falt SimSun};}{\f173\fbidi \fnil\fcharset161\fprq2 SimSun Greek{\*\falt SimSun};}{\f174\fbidi \fnil\fcharset162\fprq2 SimSun Tur{\*\falt SimSun};}
+{\f177\fbidi \fnil\fcharset186\fprq2 SimSun Baltic{\*\falt SimSun};}{\f178\fbidi \fnil\fcharset163\fprq2 SimSun (Vietnamese){\*\falt SimSun};}{\f410\fbidi \fswiss\fcharset238\fprq2 Calibri CE;}{\f411\fbidi \fswiss\fcharset204\fprq2 Calibri Cyr;}
+{\f413\fbidi \fswiss\fcharset161\fprq2 Calibri Greek;}{\f414\fbidi \fswiss\fcharset162\fprq2 Calibri Tur;}{\f415\fbidi \fswiss\fcharset177\fprq2 Calibri (Hebrew);}{\f416\fbidi \fswiss\fcharset178\fprq2 Calibri (Arabic);}
+{\f417\fbidi \fswiss\fcharset186\fprq2 Calibri Baltic;}{\f418\fbidi \fswiss\fcharset163\fprq2 Calibri (Vietnamese);}{\f432\fbidi \fnil\fcharset0\fprq2 @\'cb\'ce\'cc\'e5 Western;}{\f431\fbidi \fnil\fcharset204\fprq2 @\'cb\'ce\'cc\'e5 Cyr;}
+{\f433\fbidi \fnil\fcharset161\fprq2 @\'cb\'ce\'cc\'e5 Greek;}{\f434\fbidi \fnil\fcharset162\fprq2 @\'cb\'ce\'cc\'e5 Tur;}{\f437\fbidi \fnil\fcharset186\fprq2 @\'cb\'ce\'cc\'e5 Baltic;}{\f438\fbidi \fnil\fcharset163\fprq2 @\'cb\'ce\'cc\'e5 (Vietnamese);}
+{\flomajor\f31508\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\flomajor\f31509\fbidi \froman\fcharset204\fprq2 Times New Roman Cyr;}{\flomajor\f31511\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}
+{\flomajor\f31512\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}{\flomajor\f31513\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\flomajor\f31514\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}
+{\flomajor\f31515\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}{\flomajor\f31516\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}{\fdbmajor\f31520\fbidi \fnil\fcharset0\fprq2 SimSun Western{\*\falt SimSun};}
+{\fdbmajor\f31519\fbidi \fnil\fcharset204\fprq2 SimSun Cyr{\*\falt SimSun};}{\fdbmajor\f31521\fbidi \fnil\fcharset161\fprq2 SimSun Greek{\*\falt SimSun};}{\fdbmajor\f31522\fbidi \fnil\fcharset162\fprq2 SimSun Tur{\*\falt SimSun};}
+{\fdbmajor\f31525\fbidi \fnil\fcharset186\fprq2 SimSun Baltic{\*\falt SimSun};}{\fdbmajor\f31526\fbidi \fnil\fcharset163\fprq2 SimSun (Vietnamese){\*\falt SimSun};}{\fhimajor\f31528\fbidi \fswiss\fcharset238\fprq2 Calibri Light CE;}
+{\fhimajor\f31529\fbidi \fswiss\fcharset204\fprq2 Calibri Light Cyr;}{\fhimajor\f31531\fbidi \fswiss\fcharset161\fprq2 Calibri Light Greek;}{\fhimajor\f31532\fbidi \fswiss\fcharset162\fprq2 Calibri Light Tur;}
+{\fhimajor\f31533\fbidi \fswiss\fcharset177\fprq2 Calibri Light (Hebrew);}{\fhimajor\f31534\fbidi \fswiss\fcharset178\fprq2 Calibri Light (Arabic);}{\fhimajor\f31535\fbidi \fswiss\fcharset186\fprq2 Calibri Light Baltic;}
+{\fhimajor\f31536\fbidi \fswiss\fcharset163\fprq2 Calibri Light (Vietnamese);}{\fbimajor\f31538\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\fbimajor\f31539\fbidi \froman\fcharset204\fprq2 Times New Roman Cyr;}
+{\fbimajor\f31541\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\fbimajor\f31542\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}{\fbimajor\f31543\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}
+{\fbimajor\f31544\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}{\fbimajor\f31545\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}{\fbimajor\f31546\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}
+{\flominor\f31548\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\flominor\f31549\fbidi \froman\fcharset204\fprq2 Times New Roman Cyr;}{\flominor\f31551\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}
+{\flominor\f31552\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}{\flominor\f31553\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\flominor\f31554\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}
+{\flominor\f31555\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}{\flominor\f31556\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}{\fdbminor\f31560\fbidi \fnil\fcharset0\fprq2 SimSun Western{\*\falt SimSun};}
+{\fdbminor\f31559\fbidi \fnil\fcharset204\fprq2 SimSun Cyr{\*\falt SimSun};}{\fdbminor\f31561\fbidi \fnil\fcharset161\fprq2 SimSun Greek{\*\falt SimSun};}{\fdbminor\f31562\fbidi \fnil\fcharset162\fprq2 SimSun Tur{\*\falt SimSun};}
+{\fdbminor\f31565\fbidi \fnil\fcharset186\fprq2 SimSun Baltic{\*\falt SimSun};}{\fdbminor\f31566\fbidi \fnil\fcharset163\fprq2 SimSun (Vietnamese){\*\falt SimSun};}{\fhiminor\f31568\fbidi \fswiss\fcharset238\fprq2 Calibri CE;}
+{\fhiminor\f31569\fbidi \fswiss\fcharset204\fprq2 Calibri Cyr;}{\fhiminor\f31571\fbidi \fswiss\fcharset161\fprq2 Calibri Greek;}{\fhiminor\f31572\fbidi \fswiss\fcharset162\fprq2 Calibri Tur;}
+{\fhiminor\f31573\fbidi \fswiss\fcharset177\fprq2 Calibri (Hebrew);}{\fhiminor\f31574\fbidi \fswiss\fcharset178\fprq2 Calibri (Arabic);}{\fhiminor\f31575\fbidi \fswiss\fcharset186\fprq2 Calibri Baltic;}
+{\fhiminor\f31576\fbidi \fswiss\fcharset163\fprq2 Calibri (Vietnamese);}{\fbiminor\f31578\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\fbiminor\f31579\fbidi \froman\fcharset204\fprq2 Times New Roman Cyr;}
+{\fbiminor\f31581\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\fbiminor\f31582\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}{\fbiminor\f31583\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}
+{\fbiminor\f31584\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}{\fbiminor\f31585\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}{\fbiminor\f31586\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;
+\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red72\green72\blue72;\red239\green126\blue9;}{\*\defchp \fs21\kerning2\loch\af31506\hich\af31506\dbch\af31505 }{\*\defpap 
+\ql \li0\ri0\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 }\noqfpromote {\stylesheet{\ql \li0\ri0\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 \rtlch\fcs1 \af1\afs22\alang1025 \ltrch\fcs0 
+\fs22\lang1033\langfe2052\loch\f1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 \snext0 \sqformat \spriority1 Normal;}{\s1\ql \li120\ri0\sb63\nowidctlpar\wrapdefault\faauto\outlinelevel0\rin0\lin120\itap0 \rtlch\fcs1 \af1\afs36\alang1025 
+\ltrch\fcs0 \fs36\lang1033\langfe2052\loch\f1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 \sbasedon0 \snext0 \slink17 \sqformat \spriority1 heading 1;}{\s2\ql \li120\ri0\nowidctlpar\wrapdefault\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 
+\ab\af1\afs21\alang1025 \ltrch\fcs0 \b\fs21\lang1033\langfe2052\loch\f1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 \sbasedon0 \snext0 \slink18 \sqformat \spriority1 heading 2;}{\*\cs10 \additive \ssemihidden \sunhideused \spriority1 
+Default Paragraph Font;}{\*\ts11\tsrowd\trftsWidthB3\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\trcbpat1\trcfpat1\tblind0\tblindtype3\tsvertalt\tsbrdrt\tsbrdrl\tsbrdrb\tsbrdrr\tsbrdrdgl\tsbrdrdgr\tsbrdrh\tsbrdrv 
+\ql \li0\ri0\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \rtlch\fcs1 \af31507\afs22\alang1025 \ltrch\fcs0 \fs21\lang1033\langfe2052\kerning2\loch\f31506\hich\af31506\dbch\af31505\cgrid\langnp1033\langfenp2052 
+\snext11 \ssemihidden \sunhideused Normal Table;}{\s15\ql \li0\ri0\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 \fs20\lang1033\langfe2052\loch\f1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 
+\sbasedon0 \snext15 \slink16 \sqformat \spriority1 Body Text;}{\*\cs16 \additive \rtlch\fcs1 \af1 \ltrch\fcs0 \f1\fs22\kerning0 \sbasedon10 \slink15 \slocked \ssemihidden \'d5\'fd\'ce\'c4\'ce\'c4\'b1\'be Char;}{\*\cs17 \additive \rtlch\fcs1 \ab\af1\afs44 
+\ltrch\fcs0 \b\f1\fs44\kerning44 \sbasedon10 \slink1 \slocked \spriority9 \'b1\'ea\'cc\'e2 1 Char;}{\*\cs18 \additive \rtlch\fcs1 \ab\af31503\afs32 \ltrch\fcs0 \b\fs32\kerning0\loch\f31502\hich\af31502\dbch\af31501 
+\sbasedon10 \slink2 \slocked \ssemihidden \spriority9 \'b1\'ea\'cc\'e2 2 Char;}{\s19\ql \fi-361\li571\ri0\sb131\nowidctlpar\wrapdefault\faauto\rin0\lin571\itap0 \rtlch\fcs1 \af1\afs24\alang1025 \ltrch\fcs0 
+\fs24\lang1033\langfe2052\loch\f1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 \sbasedon0 \snext19 \sqformat \spriority1 List Paragraph;}{\s20\ql \li0\ri0\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 \rtlch\fcs1 \af0\afs24\alang1025 \ltrch\fcs0 
+\fs24\lang1033\langfe2052\loch\f0\hich\af0\dbch\af31505\cgrid\langnp1033\langfenp2052 \sbasedon0 \snext20 \sqformat \spriority1 Table Paragraph;}}{\*\listtable{\list\listtemplateid2181{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0
+\levelstartat0\levelspace0\levelindent0{\leveltext\'01{\uc1\u-3913 ?};}{\levelnumbers;}\b0\f3\fs20\cf17\charscalex99 \fi-360\li571\lin571 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace0\levelindent0{\leveltext
+\'01o;}{\levelnumbers;}\b0\f2\fs20\cf17\charscalex99 \fi-360\li1020\lin1020 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace0\levelindent0{\leveltext\'01{\uc1\u8226 ?};}{\levelnumbers;}\fi-360\li1856\lin1856 }
+{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace0\levelindent0{\leveltext\'01{\uc1\u8226 ?};}{\levelnumbers;}\fi-360\li2692\lin2692 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0
+\levelstartat0\levelspace0\levelindent0{\leveltext\'01{\uc1\u8226 ?};}{\levelnumbers;}\fi-360\li3528\lin3528 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace0\levelindent0{\leveltext
+\'01{\uc1\u8226 ?};}{\levelnumbers;}\fi-360\li4365\lin4365 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace0\levelindent0{\leveltext\'01{\uc1\u8226 ?};}{\levelnumbers;}\fi-360\li5201\lin5201 }{\listlevel
+\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace0\levelindent0{\leveltext\'01{\uc1\u8226 ?};}{\levelnumbers;}\fi-360\li6037\lin6037 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0
+\levelspace0\levelindent0{\leveltext\'01{\uc1\u8226 ?};}{\levelnumbers;}\fi-360\li6873\lin6873 }{\listname ;}\listid1026}}{\*\listoverridetable{\listoverride\listid1026\listoverridecount0\ls1}}{\*\rsidtbl \rsid4718844\rsid8987722}{\mmathPr\mmathFont34
+\mbrkBin0\mbrkBinSub0\msmallFrac0\mdispDef1\mlMargin0\mrMargin0\mdefJc1\mwrapIndent1440\mintLim0\mnaryLim1}{\info{\operator \'c1\'d6\'ba\'e8}{\creatim\yr2014\mo11\dy6\hr16\min26}{\revtim\yr2024\mo4\dy9\hr17\min17}{\version2}{\edmins1}{\nofpages4}
+{\nofwords1092}{\nofchars6226}{\nofcharsws7304}{\vern57455}}{\*\userprops {\propname Creator}\proptype30{\staticval Foxit Software Inc.}}{\*\xmlnstbl {\xmlns1 http://schemas.microsoft.com/office/word/2003/wordml}}
+\paperw11910\paperh16840\margl1680\margr1680\margt1460\margb280\gutter0\ltrsect 
+\ftnbj\aenddoc\trackmoves0\trackformatting1\donotembedsysfont0\relyonvml0\donotembedlingdata1\grfdocevents0\validatexml0\showplaceholdtext0\ignoremixedcontent0\saveinvalidxml0\showxmlerrors0\noxlattoyen\dntblnsbdb\nospaceforul\horzdoc\dghspace120
+\dgvspace120\dghorigin1701\dgvorigin1984\dghshow0\dgvshow3\jexpand\viewkind1\viewscale100\useltbaln\lnbrkrule\rsidroot4718844\noindnmbrts \fet0{\*\wgrffmtfilter 2450}\ilfomacatclnup0\ltrpar \sectd \ltrsect\sbknone\linex0\sectdefaultcl\sftnbj {\*\pnseclvl1
+\pnucrm\pnstart1\pnindent720\pnhang {\pntxta \dbch .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang {\pntxta \dbch .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang {\pntxta \dbch .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang 
+{\pntxta \dbch )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang {\pntxtb \dbch (}{\pntxta \dbch )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb \dbch (}{\pntxta \dbch )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb \dbch (}
+{\pntxta \dbch )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb \dbch (}{\pntxta \dbch )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb \dbch (}{\pntxta \dbch )}}\pard\plain \ltrpar
+\s1\ql \li120\ri0\sb63\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel0\rin0\lin120\itap0 \rtlch\fcs1 \af1\afs36\alang1025 \ltrch\fcs0 \fs36\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 
+\ltrch\fcs0 \insrsid8987722 {\*\bkmkstart Foxit Software Incorporated}{\*\bkmkend Foxit Software Incorporated}\hich\af1\dbch\af31505\loch\f1 Foxit Software Incorporated
+\par }\pard\plain \ltrpar\s15\ql \li120\ri161\sb221\sl360\slmult1\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin161\lin120\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 
+\fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+Foxit is a leading software provider of fast, affordable, and secure PDF solutions. Businesses and consumers increase productivity by using Foxit\hich\f1 \rquote \hich\af1\dbch\af31505\loch\f1 
+s cost effective solutions to securely work with PDF documents and forms. Software developers reduce costs and improve time to market with Foxit\hich\f1 \rquote \loch\f1 
+s Software Development Kits (SDKs) to incorporate robust PDF technology into their application workflows. This\hich\af1\dbch\af31505\loch\f1  \hich\af1\dbch\af31505\loch\f1 technology shares the same underlying technology that powers Google\hich\f1 
+\rquote \loch\f1 s open-source PDFium project. Winner of numerous awards, Foxit boasts over 275 million users and has sold to over 100,000 customers located in over 200 countries. Since Foxit products are\hich\af1\dbch\af31505\loch\f1  
+\hich\af1\dbch\af31505\loch\f1 ISO 32000-1/PDF 1.7 standard compliant, they are compatible with other PDF products like those from Adobe}{\rtlch\fcs1 \af1\afs12 \ltrch\fcs0 \fs12\up6\insrsid8987722 \loch\af1\dbch\af31505\hich\f1 \'ae}{\rtlch\fcs1 \af1 
+\ltrch\fcs0 \insrsid8987722 .
+\par }\pard\plain \ltrpar\s1\ql \li120\ri0\sl-405\slmult0\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel0\rin0\lin120\itap0 \rtlch\fcs1 \af1\afs36\alang1025 \ltrch\fcs0 
+\fs36\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart Product Overview}{\*\bkmkend Product Overview}\hich\af1\dbch\af31505\loch\f1 Product Overview
+\par }\pard\plain \ltrpar\s15\ql \li120\ri0\sb221\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin120\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 \fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {
+\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Foxit provides the following product offerings to our customers:
+\par }\pard\plain \ltrpar\s2\ql \li120\ri0\sb37\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 \ab\af1\afs21\alang1025 \ltrch\fcs0 
+\b\fs21\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart PDF Reading}{\*\bkmkend PDF Reading}\hich\af1\dbch\af31505\loch\f1 PDF Reading
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af3\afs20 \ltrch\fcs0 \fs20\cf17\loch\af3\hich\af3\dbch\af31505\charscalex99 \loch\af3\dbch\af31505\hich\f3 \'b7\tab}}\pard\plain \ltrpar\s19\ql \fi-360\li571\ri194\sb131\sl360\slmult1\nowidctlpar
+\tx572\wrapdefault\nocwrap\nooverflow\faauto\ls1\rin194\lin571\itap0 \rtlch\fcs1 \af1\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \ab\af1\afs20 \ltrch\fcs0 
+\b\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Foxit Reader }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+- Small, fast, and feature rich PDF viewer which allows you to open, view, and print any PDF file. Unlike other free PDF readers, Foxit Reader also includes easy to use collaboration features like the ability to add annotations, fill out forms
+\hich\af1\dbch\af31505\loch\f1 
+, and share content with social networks. It is designed to meet the PDF viewing needs of enterprise and government organizations, making it easy to deploy and manage in large enterprise environments. Foxit Reader can also be customized to specific produc
+\hich\af1\dbch\af31505\loch\f1 t\hich\af1\dbch\af31505\loch\f1  features and branding.
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af3\afs20 \ltrch\fcs0 \fs20\cf17\loch\af3\hich\af3\dbch\af31505\charscalex99 \loch\af3\dbch\af31505\hich\f3 \'b7\tab}}\pard \ltrpar\s19\ql \fi-361\li571\ri0\sl-224\slmult0\nowidctlpar
+\tx572\wrapdefault\nocwrap\nooverflow\faauto\ls1\rin0\lin571\itap0 {\rtlch\fcs1 \ab\af1\afs20 \ltrch\fcs0 \b\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Foxit MobilePDF }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1 - Allows users to work on PDF documents while on the go with}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\expnd-1\expndtw-8\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 
+\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 any
+\par }\pard\plain \ltrpar\s15\ql \li571\ri111\sb25\sl-346\slmult0\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin111\lin571\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 
+\fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+Android or iPad device. Built on the same technology as Foxit Reader, MobilePDF provides a similar PDF user experience from desktop to mobile devices. \hich\af1\dbch\af31505\loch\f1 
+More than just a PDF reader, it provides advanced display, collaboration tools, and page management capabilities.
+\par }\pard\plain \ltrpar\s2\ql \li120\ri0\sb9\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 \ab\af1\afs21\alang1025 \ltrch\fcs0 
+\b\fs21\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart Desktop PDF Editing, Creation, and Secur}{\*\bkmkend Desktop PDF Editing, Creation, and Secur}
+\hich\af1\dbch\af31505\loch\f1 Desktop PDF Editing, Creation, and Security
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af3\afs20 \ltrch\fcs0 \fs20\cf17\loch\af3\hich\af3\dbch\af31505\charscalex99 \loch\af3\dbch\af31505\hich\f3 \'b7\tab}}\pard\plain \ltrpar\s19\ql \fi-361\li571\ri0\sb131\nowidctlpar
+\tx572\wrapdefault\nocwrap\nooverflow\faauto\ls1\rin0\lin571\itap0 \rtlch\fcs1 \af1\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \ab\af1\afs20 \ltrch\fcs0 
+\b\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Foxit}{\rtlch\fcs1 \ab\af1\afs20 \ltrch\fcs0 \b\fs20\expnd0\expndtw-1\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \ab\af1\afs20 \ltrch\fcs0 \b\fs20\cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1 \hich\f1 PhantomPDF\'99
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af2\afs20 \ltrch\fcs0 \fs20\cf17\loch\af2\hich\af2\dbch\af31505\charscalex99 \hich\af2\dbch\af31505\loch\f2 o\tab}}\pard \ltrpar\s19\ql \fi-360\li1020\ri279\sb114\sl355\slmult1\nowidctlpar
+\tx1021\wrapdefault\nocwrap\nooverflow\faauto\ls1\ilvl1\rin279\lin1020\itap0 {\rtlch\fcs1 \ab\af1\afs20 \ltrch\fcs0 \b\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Foxit PhantomPDF }{\rtlch\fcs1 \ab\ai\af1\afs20 \ltrch\fcs0 
+\b\i\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Standard }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+- Expands upon PhantomPDF Express by allowing users to edit PDF document contents. Robust security features keep documents safe, including encryption and digital signature. The form design tools let users develop PDF forms. OCR su
+\hich\af1\dbch\af31505\loch\f1 pport converts scanned or image-based content into selectable and searchable}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\expnd0\expndtw2\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 
+\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 text.
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af2\afs20 \ltrch\fcs0 \fs20\cf17\loch\af2\hich\af2\dbch\af31505\charscalex99 \hich\af2\dbch\af31505\loch\f2 o\tab}}\pard \ltrpar\s19\ql \fi-360\li1020\ri293\sb7\sl355\slmult1\nowidctlpar
+\tx1021\wrapdefault\nocwrap\nooverflow\faauto\ls1\ilvl1\rin293\lin1020\itap0 {\rtlch\fcs1 \ab\af1\afs20 \ltrch\fcs0 \b\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Foxit PhantomPDF }{\rtlch\fcs1 \ab\ai\af1\afs20 \ltrch\fcs0 
+\b\i\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Business }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+- Robust for the needs of businesses, it expands upon PhantomPDF Standard by providing advanced editing and security}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\expnd-4\expndtw-24\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1\afs20 
+\ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 features. Policy protects PDF \hich\af1\dbch\af31505\loch\f1 documents through Microsoft}{\rtlch\fcs1 \af1\afs12 \ltrch\fcs0 \fs12\cf17\up6\insrsid8987722 \loch\af1\dbch\af31505\hich\f1 
+\'ae\loch\f1  }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Active Directory}{\rtlch\fcs1 \af1\afs12 \ltrch\fcs0 \fs12\cf17\up6\insrsid8987722 \loch\af1\dbch\af31505\hich\f1 \'ae\loch\f1  }{\rtlch\fcs1 
+\af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Rights Management Service. Permanently remove (redact) visible text and images to protect confidential}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 
+\fs20\expnd0\expndtw-4\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 information.
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af2\afs20 \ltrch\fcs0 \fs20\cf17\loch\af2\hich\af2\dbch\af31505\charscalex99 \hich\af2\dbch\af31505\loch\f2 o\tab}\sect }\sectd \ltrsect\margtsxn1440\linex0\sectdefaultcl\sftnbj {\listtext\pard\plain\ltrpar 
+\s19 \rtlch\fcs1 \af3\afs20 \ltrch\fcs0 \fs20\cf17\loch\af3\hich\af3\dbch\af31505\charscalex99 \loch\af3\dbch\af31505\hich\f3 \'b7\tab}\pard\plain \ltrpar\s19\ql \fi-361\li571\ri0\sb78\nowidctlpar
+\tx572\wrapdefault\nocwrap\nooverflow\faauto\ls1\rin0\lin571\itap0 \rtlch\fcs1 \af1\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \ab\af1\afs20 \ltrch\fcs0 
+\b\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Foxit Advanced PDF Editor }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 - Provides \hich\af1\dbch\af31505\loch\f1 
+paragraph editing to reflow and reformat}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\expnd-3\expndtw-19\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 your
+
+\par }\pard\plain \ltrpar\s15\ql \li571\ri666\sb7\sl340\slmult0\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin666\lin571\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 
+\fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+PDF text like a word processor. Resize page margins and spell check text to make editing PDF documents easy.
+\par }\pard\plain \ltrpar\s2\ql \li120\ri0\sb42\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 \ab\af1\afs21\alang1025 \ltrch\fcs0 
+\b\fs21\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart PDF Index and Search}{\*\bkmkend PDF Index and Search}\hich\af1\dbch\af31505\loch\f1 PDF Index and Search
+
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af3\afs20 \ltrch\fcs0 \fs20\cf17\loch\af3\hich\af3\dbch\af31505\charscalex99 \loch\af3\dbch\af31505\hich\f3 \'b7\tab}}\pard\plain \ltrpar\s19\ql \fi-360\li571\ri335\sb131\sl357\slmult1\nowidctlpar
+\tx572\wrapdefault\nocwrap\nooverflow\faauto\ls1\rin335\lin571\itap0 \rtlch\fcs1 \af1\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \ab\af1\afs20 \ltrch\fcs0 
+\b\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Foxit PDF IFilter }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+- Super-fast indexing allows users to index a large amount of PDF documents and then quickly search these documents using popular search engines. Built on Microsoft}{\rtlch\fcs1 \af1\afs12 \ltrch\fcs0 \fs12\cf17\up6\insrsid8987722 
+\loch\af1\dbch\af31505\hich\f1 \'ae}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 's IFilter indexing interface, Foxit PDF IFilter extracts data from PDF documents and retur\hich\af1\dbch\af31505\loch\f1 
+ns the index results to search engine software. It indexes PDF content, titles, subjects, authors, keywords, bookmarks, attachments, create}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\expnd-6\expndtw-34\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{
+\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 time/date,
+\par }\pard\plain \ltrpar\s15\ql \li571\ri0\sb6\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin571\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 \fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {
+\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 number of pages, and the names of the creating applications.
+\par }\pard\plain \ltrpar\s2\ql \li120\ri0\sb39\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 \ab\af1\afs21\alang1025 \ltrch\fcs0 
+\b\fs21\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart PDF Security}{\*\bkmkend PDF Security}\hich\af1\dbch\af31505\loch\f1 PDF Security
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af3\afs20 \ltrch\fcs0 \fs20\cf17\loch\af3\hich\af3\dbch\af31505\charscalex99 \loch\af3\dbch\af31505\hich\f3 \'b7\tab}}\pard\plain \ltrpar\s19\ql \fi-360\li571\ri130\sb131\sl357\slmult1\nowidctlpar
+\tx572\wrapdefault\nocwrap\nooverflow\faauto\ls1\rin130\lin571\itap0 \rtlch\fcs1 \af1\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \ab\af1\afs20 \ltrch\fcs0 
+\b\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Foxit P\hich\af1\dbch\af31505\loch\f1 DF Security Suite }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+- Delivers cost effective PDF policy protection to any}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\expnd-4\expndtw-23\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1 business running Microsoft}{\rtlch\fcs1 \af1\afs12 \ltrch\fcs0 \fs12\cf17\up6\insrsid8987722 \loch\af1\dbch\af31505\hich\f1 \'ae}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+SharePoint}{\rtlch\fcs1 \af1\afs12 \ltrch\fcs0 \fs12\cf17\up6\insrsid8987722 \loch\af1\dbch\af31505\hich\f1 \'ae\loch\f1  }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 or Exchange}{\rtlch\fcs1 \af1\afs12 
+\ltrch\fcs0 \fs12\cf17\up6\insrsid8987722 \loch\af1\dbch\af31505\hich\f1 \'ae\loch\f1  }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 with Active Directory}{\rtlch\fcs1 \af1\afs12 \ltrch\fcs0 
+\fs12\cf17\up6\insrsid8987722 \loch\af1\dbch\af31505\hich\f1 \'ae\loch\f1  }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+Rights Management Services (AD RMS). For organizations that incorporate AD RMS that need to include rights m\hich\af1\dbch\af31505\loch\f1 
+anagement to PDF files, Foxit PDF Security Suite seamlessly extends Microsoft AD RMS to provide policy protection to PDF documents in SharePoint}{\rtlch\fcs1 \af1\afs12 \ltrch\fcs0 \fs12\cf17\up6\insrsid8987722 \loch\af1\dbch\af31505\hich\f1 \'ae}{
+\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 , Exchange}{\rtlch\fcs1 \af1\afs12 \ltrch\fcs0 \fs12\cf17\up6\insrsid8987722 \loch\af1\dbch\af31505\hich\f1 \'ae}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 
+\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 , and/or desktop solutions. These protected PDF documents can be read by the AD}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\expnd-4\expndtw-20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{
+\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 RMS-
+\par }\pard\plain \ltrpar\s15\ql \li571\ri0\sb7\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin571\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 \fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {
+\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 aware Foxit Rea\hich\af1\dbch\af31505\loch\f1 der.
+\par }\pard\plain \ltrpar\s2\ql \li120\ri0\sb39\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 \ab\af1\afs21\alang1025 \ltrch\fcs0 
+\b\fs21\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart Software Development Kits (SDKs)}{\*\bkmkend Software Development Kits (SDKs)}
+\hich\af1\dbch\af31505\loch\f1 Software Development Kits (SDKs)
+\par }\pard\plain \ltrpar\s15\ql \li120\ri261\sb147\sl360\slmult1\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin261\lin120\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 
+\fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+Foxit PDF SDKs enable developers and device manufacturers to leverage Foxit's award winning PDF technology in their applications and devices. The SDKs all\hich\af1\dbch\af31505\loch\f1 
+ow developers to incorporate powerful PDF technology to view, search, and annotate PDF. The SDKs provide these capabilities in an easy to integrate, platform independent solution that allows developers to reduce time to market by developing features once 
+\hich\af1\dbch\af31505\loch\f1 a\hich\af1\dbch\af31505\loch\f1 nd then easily port these capabilities to other platforms.
+\par }\pard\plain \ltrpar\s2\ql \li120\ri0\sb74\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 \ab\af1\afs21\alang1025 \ltrch\fcs0 
+\b\fs21\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart Foxit Strengths}{\*\bkmkend Foxit Strengths}\hich\af1\dbch\af31505\loch\f1 Foxit Strengths
+\par }\pard\plain \ltrpar\s15\ql \li120\ri0\sb147\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin120\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 \fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {
+\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Customers typically choose Foxit products for their:
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af3\afs20 \ltrch\fcs0 \fs20\cf17\loch\af3\hich\af3\dbch\af31505\charscalex99 \loch\af3\dbch\af31505\hich\f3 \'b7\tab}}\pard\plain \ltrpar\s19\ql \fi-361\li571\ri0\sb102\nowidctlpar
+\tx572\wrapdefault\nocwrap\nooverflow\faauto\ls1\rin0\lin571\itap0 \rtlch\fcs1 \af1\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 
+\fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 High Performance - Speeds three times faster than any other PDF}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\expnd-2\expndtw-10\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 
+\af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 software.
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af3\afs20 \ltrch\fcs0 \fs20\cf17\loch\af3\hich\af3\dbch\af31505\charscalex99 \loch\af3\dbch\af31505\hich\f3 \'b7\tab}}\pard \ltrpar\s19\ql \fi-361\li571\ri0\sb99\nowidctlpar
+\tx572\wrapdefault\nocwrap\nooverflow\faauto\ls1\rin0\lin571\itap0 {\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Lightweight footprint - Won't exhaust system resource and deploys}{\rtlch\fcs1 \af1\afs20 
+\ltrch\fcs0 \fs20\expnd-1\expndtw-5\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 quickly.
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af3\afs20 \ltrch\fcs0 \fs20\cf17\loch\af3\hich\af3\dbch\af31505\charscalex99 \loch\af3\dbch\af31505\hich\f3 \'b7\tab}}\pard \ltrpar\s19\ql \fi-360\li571\ri569\sb100\sl352\slmult1\nowidctlpar
+\tx572\wrapdefault\nocwrap\nooverflow\faauto\ls1\rin569\lin571\itap0 {\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+Great value / affordability - The right features at the right price with email and phone support.
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af3\afs20 \ltrch\fcs0 \fs20\cf17\loch\af3\hich\af3\dbch\af31505\charscalex99 \loch\af3\dbch\af31505\hich\f3 \'b7\tab}}\pard \ltrpar\s19\ql \fi-361\li571\ri0\sl-238\slmult0\nowidctlpar
+\tx572\wrapdefault\nocwrap\nooverflow\faauto\ls1\rin0\lin571\itap0 {\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Security - Safeguards confidential}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 
+\fs20\expnd0\expndtw-4\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 information.
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af3\afs20 \ltrch\fcs0 \fs20\cf17\loch\af3\hich\af3\dbch\af31505\charscalex99 \loch\af3\dbch\af31505\hich\f3 \'b7\tab}}\pard \ltrpar\s19\ql \fi-361\li571\ri0\sb98\nowidctlpar
+\tx572\wrapdefault\nocwrap\nooverflow\faauto\ls1\rin0\lin571\itap0 {\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Customer Support - Available when y\hich\af1\dbch\af31505\loch\f1 
+ou need them to quickly satisfy customer}{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\expnd-4\expndtw-20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1\afs20 \ltrch\fcs0 \fs20\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 needs.
+
+\par {\listtext\pard\plain\ltrpar \s19 \rtlch\fcs1 \af3\afs20 \ltrch\fcs0 \fs20\cf17\loch\af3\hich\af3\dbch\af31505\charscalex99 \loch\af3\dbch\af31505\hich\f3 \'b7\tab}\sect }\sectd \ltrsect\linex0\sectdefaultcl\sftnbj \pard\plain \ltrpar
+\s1\qj \li120\ri0\sb63\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel0\rin0\lin120\itap0 \rtlch\fcs1 \af1\afs36\alang1025 \ltrch\fcs0 \fs36\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 
+\ltrch\fcs0 \insrsid8987722 {\*\bkmkstart Introduction to PDF}{\*\bkmkend Introduction to PDF}\hich\af1\dbch\af31505\loch\f1 Introduction to PDF
+\par }\pard\plain \ltrpar\s2\qj \li120\ri0\sb145\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 \ab\af1\afs21\alang1025 \ltrch\fcs0 
+\b\fs21\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart History of PDF}{\*\bkmkend History of PDF}\hich\af1\dbch\af31505\loch\f1 History of PDF
+\par }\pard\plain \ltrpar\s15\qj \li120\ri123\sb72\sl326\slmult1\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin123\lin120\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 
+\fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+PDF is a file format used to represent documents in a manner independent of application \hich\af1\dbch\af31505\loch\f1 software,}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-3\expndtw-16\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 
+\ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 hardware,}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-2\expndtw-12\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1 and}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-3\expndtw-16\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 operating}{\rtlch\fcs1 \af1 
+\ltrch\fcs0 \expnd-3\expndtw-15\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 systems.}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-3\expndtw-15\cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Each}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-3\expndtw-16\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 
+\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 PDF}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-2\expndtw-14\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 file}{
+\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-3\expndtw-16\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 encapsulates}{\rtlch\fcs1 \af1 \ltrch\fcs0 
+\expnd-2\expndtw-14\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 a}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-3\expndtw-15\cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 complete}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-3\expndtw-17\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 
+\ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 description of a fixed-layout flat document, including the text, font, graphics, and other information}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-7\expndtw-35\cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 needed to display}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd0\expndtw-4\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 
+\ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 it.
+\par }\pard \ltrpar\s15\qj \li120\ri118\sl326\slmult1\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin118\lin120\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+While Adobe Systems made the PDF specification available for free in 1993, PDF remained a proprietary format controlled by Adobe, until July 1, 2008, when it was officially released as an open standard and published by the International Organization for S
+\hich\af1\dbch\af31505\loch\f1 t\hich\af1\dbch\af31505\loch\f1 
+andardization as ISO 32000-1:2008. In 2008, Adobe published a Public Patent License to ISO 32000-1 granting royalty-free rights for all patents owned by Adobe that are necessary to make, use, sell and distribute PDF compliant implementations.
+\par }\pard\plain \ltrpar\s2\qj \li120\ri0\sl-235\slmult0\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 \ab\af1\afs21\alang1025 \ltrch\fcs0 
+\b\fs21\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart PDF Document Structure}{\*\bkmkend PDF Document Structure}\hich\af1\dbch\af31505\loch\f1 
+PDF Document Structure
+\par }\pard\plain \ltrpar\s15\qj \li120\ri117\sb70\sl326\slmult1\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin117\lin120\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 
+\fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+A PDF document is composed of one or more pages. Each page has its own specifications to indicate its appearance. All the contents in a PDF page, such as text, image, annotation and form,}{\rtlch\fcs1 \af1 \ltrch\fcs0 
+\expnd-1\expndtw-5\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1 tc.}{\rtlch\fcs1 \af1 \ltrch\fcs0 
+\expnd0\expndtw-4\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 are}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd0\expndtw-4\cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 represented}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd0\expndtw-2\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 
+\ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 as}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd0\expndtw-4\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 PDF}{
+\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd0\expndtw-4\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 objects.}{\rtlch\fcs1 \af1 \ltrch\fcs0 
+\expnd-1\expndtw-5\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 A}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd0\expndtw-2\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+ }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 PDF}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd0\expndtw-4\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1 document}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd0\expndtw-4\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 can}{\rtlch\fcs1 \af1 
+\ltrch\fcs0 \expnd-1\expndtw-5\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 be}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-1\expndtw-5\cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 considered}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd0\expndtw-3\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 
+\ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 as}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd0\expndtw-3\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 a}{
+\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-1\expndtw-5\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+hierarchy of objects contained in the body section of a PDF file (more detailed description about PDF objects is in section 4.20). Displaying a PDF document in an application involve\hich\af1\dbch\af31505\loch\f1 s loading PDF document,}{\rtlch\fcs1 \af1 
+\ltrch\fcs0 \expnd-2\expndtw-11\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 parsing}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-1\expndtw-8\cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 PDF}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-2\expndtw-10\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 
+\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 objects,}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-2\expndtw-10\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+retrieving/decoding}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-2\expndtw-11\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 pages}{\rtlch\fcs1 \af1 \ltrch\fcs0 
+\expnd-2\expndtw-10\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 content}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-2\expndtw-11\cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 and}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-2\expndtw-11\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 
+\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 displaying/printing}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-1\expndtw-8\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 
+\hich\af1\dbch\af31505\loch\f1 it}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-2\expndtw-11\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+on a device. Editing a PDF document requires parsing the document structure, making changes and reorganizing the PDF objects in a document. These operations could be done by a conforming PDF reader/editor or in your own applications through APIs provided 
+\hich\af1\dbch\af31505\loch\f1 b\hich\af1\dbch\af31505\loch\f1 y}{\rtlch\fcs1 \af1 \ltrch\fcs0 \expnd-3\expndtw-17\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+Foxit.
+\par }\pard\plain \ltrpar\s2\qj \li120\ri0\sl-232\slmult0\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 \ab\af1\afs21\alang1025 \ltrch\fcs0 
+\b\fs21\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart PDF Document Features}{\*\bkmkend PDF Document Features}\hich\af1\dbch\af31505\loch\f1 
+PDF Document Features
+\par }\pard\plain \ltrpar\s15\qj \li120\ri118\sb73\sl326\slmult1\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin118\lin120\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 
+\fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 
+PDF supports a lot of features to enhance the document capability, such as document encryption, digital signatures, java script actions, form filling, layered content, multimedia supp\hich\af1\dbch\af31505\loch\f1 
+ort and etc. These features provide users with more flexibility in displaying, exchanging and editing documents. Foxit supports all PDF features in the ISO standard. Users can use Foxit PDF SDK to fulfill these advanced features in your applications.
+
+\par \sect }\sectd \ltrsect\linex0\sectdefaultcl\sftnbj \pard\plain \ltrpar\s1\ql \li120\ri0\sb63\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel0\rin0\lin120\itap0 \rtlch\fcs1 \af1\afs36\alang1025 \ltrch\fcs0 
+\fs36\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart Support}{\*\bkmkend Support}\hich\af1\dbch\af31505\loch\f1 Support
+\par }\pard\plain \ltrpar\s2\ql \li120\ri0\sb193\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 \ab\af1\afs21\alang1025 \ltrch\fcs0 
+\b\fs21\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart Foxit support home link:}{\*\bkmkend Foxit support home link:}\hich\af1\dbch\af31505\loch\f1 
+Foxit support home link:
+\par }\pard\plain \ltrpar\s15\ql \li0\ri0\sb4\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin0\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 \fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 
+\ab\af1\afs28 \ltrch\fcs0 \b\fs28\insrsid8987722 
+\par }\pard \ltrpar\s15\ql \li120\ri0\sb1\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin120\itap0 {\field{\*\fldinst {\rtlch\fcs1 \af0\afs24 \ltrch\fcs0 \f0\fs24\insrsid8987722 \hich\af0\dbch\af31505\loch\f0 
+ HYPERLINK "http://www.foxitsoftware.com/support/" }{\rtlch\fcs1 \af0\afs24 \ltrch\fcs0 \f0\fs24\insrsid4718844 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b6400000068007400740070003a002f002f007700770077002e0066006f0078006900740073006f006600740077006100720065002e0063006f006d002f0073007500700070006f00720074002f000000795881f43b1d
+7f48af2c825dc485276300000000a5ab0003}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf2\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 http://www.foxitsoftware.com/support/}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \af1 \ltrch\fcs0 
+\cf2\insrsid8987722 
+\par }\pard \ltrpar\s15\ql \li0\ri0\sb7\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 
+\par }\pard\plain \ltrpar\s2\ql \li120\ri0\sb95\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 \ab\af1\afs21\alang1025 \ltrch\fcs0 
+\b\fs21\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart Sales contact phone number:}{\*\bkmkend Sales contact phone number:}\hich\af1\dbch\af31505\loch\f1 
+Sales contact phone number:
+\par }\pard\plain \ltrpar\s15\ql \li0\ri0\sb4\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin0\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 \fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 
+\ab\af1\afs28 \ltrch\fcs0 \b\fs28\insrsid8987722 
+\par }\pard \ltrpar\s15\ql \li120\ri0\sb1\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin120\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Phone: 1-866-680-3668
+\par }\pard \ltrpar\s15\ql \li0\ri0\sb2\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1\afs29 \ltrch\fcs0 \fs29\insrsid8987722 
+\par }\pard \ltrpar\s15\ql \li120\ri0\sb1\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin120\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Email: }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 
+\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  HYPERLINK "mailto:sales@foxitsoftware.com" }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid4718844 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b560000006d00610069006c0074006f003a00730061006c0065007300400066006f0078006900740073006f006600740077006100720065002e0063006f006d000000795881f43b1d7f48af2c825dc485276300000000
+a5ab0003}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 sales@foxitsoftware.com}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 
+\par }\pard \ltrpar\s15\ql \li0\ri0\sb9\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1\afs28 \ltrch\fcs0 \fs28\insrsid8987722 
+\par }\pard\plain \ltrpar\s2\ql \li120\ri0\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\outlinelevel1\rin0\lin120\itap0 \rtlch\fcs1 \ab\af1\afs21\alang1025 \ltrch\fcs0 
+\b\fs21\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid8987722 {\*\bkmkstart Support & General contact:}{\*\bkmkend Support & General contact:}\hich\af1\dbch\af31505\loch\f1 
+Support & General contact:
+\par }\pard\plain \ltrpar\s15\ql \li0\ri0\sb6\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin0\itap0 \rtlch\fcs1 \af1\afs20\alang1025 \ltrch\fcs0 \fs20\lang1033\langfe2052\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp2052 {\rtlch\fcs1 
+\ab\af1\afs28 \ltrch\fcs0 \b\fs28\insrsid8987722 
+\par }\pard \ltrpar\s15\ql \li120\ri0\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin120\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Phone: 1-866-MYFOXIT or 1-866-693-6948
+\par }\pard \ltrpar\s15\ql \li0\ri0\sb3\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1\afs29 \ltrch\fcs0 \fs29\insrsid8987722 
+\par }\pard \ltrpar\s15\ql \li120\ri0\nowidctlpar\tx876\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin120\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 Email:\tab }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 
+\cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1  HYPERLINK "mailto:support@foxitsoftware.com" }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid4718844 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b5a0000006d00610069006c0074006f003a0073007500700070006f0072007400400066006f0078006900740073006f006600740077006100720065002e0063006f006d000000795881f43b1d7f48af2c825dc4852763
+00000000a5ab0003}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 \hich\af1\dbch\af31505\loch\f1 support@foxitsoftware.com}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf17\insrsid8987722 
+\par }\pard \ltrpar\s15\ql \li0\ri0\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1\afs22 \ltrch\fcs0 \fs22\insrsid8987722 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \ltrpar\s15\ql \li120\ri0\sb158\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin120\itap0 {\field{\*\fldinst {\rtlch\fcs1 \af0\afs24 \ltrch\fcs0 \f0\fs24\insrsid8987722 \hich\af0\dbch\af31505\loch\f0 
+ HYPERLINK "http://www.foxitsoftware.com/" }{\rtlch\fcs1 \af0\afs24 \ltrch\fcs0 \f0\fs24\insrsid4718844 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b5400000068007400740070003a002f002f007700770077002e0066006f0078006900740073006f006600740077006100720065002e0063006f006d002f000000795881f43b1d7f48af2c825dc485276300000000a5ab
+0003}}}{\fldrslt {\rtlch\fcs1 \ab\af37\afs56 \ltrch\fcs0 \b\f37\fs56\ulth\cf18\insrsid8987722 \hich\af37\dbch\af31505\loch\f37 www.foxitsoftware.com}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \ab\af37\afs56 \ltrch\fcs0 
+\b\f37\fs56\cf18\insrsid8987722 
+\par }\pard \ltrpar\s15\ql \li0\ri0\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \ab\af37 \ltrch\fcs0 \b\f37\insrsid8987722 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }{\rtlch\fcs1 \ab\af37 \ltrch\fcs0 \b\f37\insrsid8987722 
+\par }\pard \ltrpar\s15\ql \fi5400\li0\ri0\sb9\nowidctlpar\wrapdefault\nocwrap\nooverflow\faauto\rin0\lin0\itap0\cufi3600\pararsid4718844 {\rtlch\fcs1 \ab\af37\afs15 \ltrch\fcs0 \b\f37\fs15\insrsid4718844 {\*\shppict
+{\pict{\*\picprop\shplid1025{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn pibFlags}{\sv 2}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}}\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0
+\picw6985\pich2858\picwgoal3960\pichgoal1620\pngblip\bliptag1139326045{\*\blipuid 43e8bc5da1f52d2fffe5a3712b86ebc5}89504e470d0a1a0a0000000d49484452000000c600000051080600000089f8d9a6000000097048597300000b1300000b1301009a9c18000000017352474200ae
+ce1ce90000000467414d410000b18f0bfc610500000d02494441547801ed9d8d75db3812c7ffccdb02bc152cb682732a58a682380dac990ae254b07205675710
+fb1a58a782e82a38a582c35670da06a2c310435b1f04858f0105ebe1f79e248762488ac4603e30183428844d870bf3a1ccebb2ffdce017f379c12fb5b5abf238
+dc9a5f031a0dbe360fb843a5e2c14f3811461094f9b83202f00ff3d99a4f053906811a50e6f515958a27b30a861186163ff09be9bd3b6141f061854ac5935904
+a317880dfe30afd608c5a958a352f1246b337d160832954e4cf3784291acbc3ab2688cde91dee08b795da10caa195509425c308c505c1a81f81398dd8770d354
+33aa12c61b08b2f91dd74628fe839284c2f21d954a006282d10b458307948946a512808860142e1444f5312a41240b463f50d7143fa25c7d8c4a1049214c8e3e
+95e853ec5043b59550d234861da350289b6a46558289160cce75ba41e9d4506d2582f8710c1ac07b1dd450ed0c988e7261dac4355268b06c1ef011051025189c
+ead1e234ac8f6a81dd04458d4a7e36f80de966f5cf2884388db1c127e48704e009b6c7d7e6b532bd8946a5542e918e4621040b46ef5be4cc8132ead4bcdf1a21
+58a2f22ae0e8e405d229c61f8cd118b91c6e9a65f7b10ac4ab44425b10c54410c3056383f790676584e24335955e2d528231aa313802aa90860e695f4182c199
+b30ab29050bc33175dc3aaaf1705195c6de026d9af6df0d9bc7b6768848e63b49045b3a6a842f19ab1f3f625d08ee3ff825cc776102618d26654d33bd91a95d7
+8e8429b59ee8206777ec433586942d4990cdf780caab86cb1e49345c3df19d423a7904a3f72f646e80c5680b54ce0199ce727ad05621f5f00f6111af108d21a9
+2dd6555b9c0d52ed428f6de488542ac13eac7f54ca0ef9cbd0e0dfa89c0b4b1a7f423aae1e5d211d8d4042c2b5921ae30995b3804d94b253fb2332acbd4c2976
+b02405a3ce91a8f872921c2c5f1f43dabfa88251f14522e0f31702995f309a2a14952014d2c9e47c4b3ade1b5c6eaef10de9ac39e9d0fb4773c8f992476af797
+172068249e7a1712de65ec88fce6777c32c7910a63de9f5ac37246354d63bed8bee71c31ea901389b6678ec1ee8037beceb7821c74812dd258f908c5b36f6467
+965d79a5466fb6febceecf730f2b241abebcc177739c3b48602784fd8a13c013d2a8885eb7b599c69f0641bd6281299dabc0a912fa68f50cceb5ff1f4ac1f6a0
+3753bbf4d7fca3efb5693fa941c987901416d68a2d24b0e75d60067a2df0a3af13460de972e45ade0e1accec7b37d3a4b579a129b6c7f6e15e43c2f449e74803
+6121a61eec06b9d860d1fcebf8a83d9b1fff850c6436fe9a2bd9726bdd927161d8ba8ee6f165faa9a8f0974483af3ea6548b12b0a6d383ebebdeaedff4422397
+b6327e1d0bd3203a4e95d7ceddcc77a6c1dd0a991af49b48d81710606f352b6b62fa54de6a0ec69ff2deebd3b13aae31aefbcae521f6993c1342c13d33552c69
+312f6b4e995fba76600d465a43263bd49a311a816c051dc8916d11e7331e9c7f73bded919d11a6bdf9680cc9318c701a7c9e108a532e39408dfedbe623bae60b
+1ec77620d3c75ce3bd80d6587310e0a829b51570780f3c0b44ba605adf4e6f9de7f24cc5829876be4fee784ff8140515925eb359351a524d2e636ab390efa6fc
+8b83e89bb489634c2873fe0f7be7bce24ee9fc309af198c6389db6308d7e4228fe205b1f65400dff4fd350de8e355ed61a9f831b91ad96f271ca74e2c0c87b0e
+a7e6b2f7355dc7c8768533853ab96382d1e23468f3fa3cf6050f9e2d50168a1bfebbb12fcd8d7e32f6f8127ef773cd9ad2390eb2b3d8675ef4c47c7c85f3a4ff
+add32921727379c3703c8cbe4194bbe440db5f9f0b9f89594d9fc2fdd6251474fc3e44ba99254cba9a8cbc9daa6de48653968ee54acd6f4a59134aef6fde8a3e
+95cbc4f571f46ae9fcbf564bbc73fdf6190582aee5f158381aa70ecae4e36f7a730a063b740af3a20147cf6a1b8542d9a8de2975313ea16770de17fb5fd033e8
+fd291bf26d919f3547013b0f67ff5cc73034bd4d698c53688bfbd11ef377f17538a80168569bb2a3c9132912fd6fdb35a9349b4ecb83c3d870e8b799fca9deaf
+e1d1751f53f55cb505a1e96dcaf96e312f7aeca1b009b5402a36caf3d5bc9ef6858f47825ba18570c8d750136608fd46129eb5cb5c996d149fb0e3238bc07493
+73d51684a637b760cced5c354e132a75706cc5e6c1d2b50337ce077a9946dd0908089953778e73d9f0ad2363d7f812ffc45c0bf2587f2ee65ca26594b8d3da65
+c39d552a368d2544e835bd4d690c7975c9b179c7b7635128b597f21c7abefbd0074fa3ece6bccb449fa6c54439c8b1917c1e08a473ce67a66cf6ce6f33923bd8
+df3d54895c8dfc3fb94ed3b1580c2f44d3229ddb26623ecba860f0435290e77b50ae4f8ab64848d5e604c00fdc50c3cd86c0c935dc019c22b8d0190da5600729
+2ff7120915bfc61a95821cae69a752e69a46042ee73b57afa57d774c9a1d26307fa1ef65acfd1dc385ef8cb1130ac5400bf7f376f5b4a2350046b7cad4ab5d07
+fa4ecfb804a3451e42545a8b186c5ecf02329039141bb5525e7b9d2e09721a5784b013bf56edd82ea131342219178c7c8eb7bf60c42f74f81942f4bd4d339e39
+ebc1d107cb8e7689a14f0df7dc0f0559d6d9ce93b062af4b6328c8e3add69ec3a7a13846cd130976dc7ce843b2a52e073d3d9f5e5a90b563bb423a7f239203c1
+c8505ccd12563627f6fcc7f391c211178c5ef04bcdf9b29dcb72620f05c9d3e535d7342219d318b9547bc87adb2dc2d119b40511ad8e9d943b8f41e358e7226b
+66e733a32c1a91cc2918da7bcf989bdf645be83ed6091c7de8fd0062a929157e5550a4c2a88446de73684472281892c5d576093149626e4c165f0091bd977350
+a9d43a4c56281e3cf69413ea26bbc61075be15f21072910ae1c89b3c9616e1b8a6b9762831346bcdd0c5b19db8a882e8791ddba53486a860e450f3a1859c636e
+8ca48a7f214683368ed1dc32b5453f4bcf735f0559feca799e985490811dc1989c819686467ec405e3b9ec4c384f23c7ea509eb6d01e1392b6994763088d7a23
+817d8d91c7296cc2cbb00793c3378a2f3fb91c395669da225428720cfc6ac776894e4e543014f210aad2627ed4a5a4c6e31ebe4338ab91f91e1dcad216e14261
+91d6cab99def687605a38454104b9cb4c7a791ec1ea67b2e7b1fce58e2a1d0758940d71759d1107855ce77d231e631a5427d8cf8c52bbb54ad2190edba3c385e
+19f57f8792a2373119a739e679c766be7a7291d2169e05437c1def2d22a203f16312b6f8994204c942319eabd5e2d4582d41f3b99f10cf5cda428e0dbec4b685
+6d8da1908798469e3258676bca7661fe01cfb38e2fa569394ca738a51965eb54bd8bd5127b2848d24c0ac6d47721a898b6406ccfe02b262245496c9bebfe41c6
+6ab0be06953906adf9f0e84a8a63f3a0e3e893420a23e9143c13b2c5dcd829c4b747920143916e1f5399af9226d6d016a8e6d7ca79ec66f77ebd084619a9202f
+d03c88f4d57aa8d1d3f44d0d3cbf062efbe99c32b8468e5bccc73077e4cee55873cfa9a30446666c611bedfc867ccc4d968e7aea983bda3ebfc688378bc81e96
+5ac64a216708b071167868919b97b2400f2e7369afd6ad46dc9a7e0ab24c698514533a16bdfd8fdec7c85c592e4a2d1e2d69590acd84c9922bfc6d7d87a1401a
+f91077ae5abf23a53d555f81239c399def94204114fb5a76d018b9b405112ffd4dbf54578b52393ebfbc850c6bae8f4461eca7638ef49e8618d9019f6861c980
+1995391689d1ae2ffada5bfed5e12538b80fb90543a744437a27dcae4854e2caa01aee1a5943e34c61f0199e7c7c82ad40c27b8fce84f6bd81ff9a7e39ac89e9
+76316fa7a8f73758c1c8e578372261b78579d1b2590ae530a4544c3ddc98ce66d00c8fbe0e72f4e231566bf8ce91cfd171eaa92f3932b9c43c7e9a536328e421
+79561d97b47cc7630cb9fca010563c82ac8feca7e0cfb0c6de9d879964e7e4db35f6ba84f5f528944c554a3e78ecab208b5f618ca65f892aaee85d187a7fc330
+c057462a8803ae124e730624e3db1117e2b56e84c5cff1deae32ee5f58d9aec341a6506a83b9f24a9b982fab76072e7a778bfc1c8cb5bdc9302b6b1bb1b01bdf
+a4d30987c7ba117b5c1c39de7db040e0b9d69558ed2ccf6449d936d204fddebb198443ef6f208da1900fd178340bc75bcc33f169608589e5bf267035269d9aa6
+c1394f4bc8d04e698d4ca17c1db2731ff9cb2b1c7a7f0309462e8d115d37740a36abde22beaeac2f7675a1c75e288204dc99b8468eb563a19860241bcaf4126e
+39da474c9ad082075235e43968a76f320e42896a8b9d433ff4427743a6081af141c0d0d585c638ec61ed40e007a9ce427800746ad06ffe50ad83be8a0999d3f1
+65535de8fd0d394da95c759e9e21ed4123bfac41e86669c441c2d0df74a3217e0eb5fb8f62fd9305a471a7a28463c3b76342307ba8760a7ee61d778a29cf7c60
+d4b2f929a349924d63ecc3a64e477fb3bd4c2fd2848ad7f97879e0766c65cdd7f79d3f57c2669f86f525e8989f454ca711781d8f5bc8cc27770dfa29c8937caf3932d8d1df1c406a61af959efb985fa4f7cebfdefafb80ff038e439bb01eaa99be0000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw6985\pich2858\picwgoal3960\pichgoal1620\wmetafile8\bliptag1139326045\blipupi72{\*\blipuid 43e8bc5da1f52d2fffe5a3712b86ebc5}
+010009000003df14000000001310000000000400000003010800050000000b0200000000050000000c02a3008d01030000001e00040000000701040004000000
+070104000800000026060f000600544e5050060193040000410b8600ee005100c60000000000a2008c010000000028000000c600000051000000010001000000
+0000000000000000000000000000000000000000000000000000ffffff00aaaaaa0000000bfe800003800000ffffe0fffff800002ffe800600007ffffc000000
+1fffc00003800000ffffe07ffff800017fff00180000fffffe000000fffff80003e00001ffffe0fffff80003ffff806105007ffffe000001ffffff0003f00001
+ffffc07ffffc000fffff8082732afffffe00000fffffff8003f80003ffff80fffffc003fffff8082c3567ffffe000007ffffffc001fc0003ffff007ffffc007f
+ffff803e30187ffffe00003ffffffff003ff8007ffff807ffffc00ffffff809a5f037fffff00003ffffffff801ffc001ffff007ffffc00ffffffc04f05397fff
+ff0000fffffffffc03fff800fffe003ffffc01ffffffc061854a3fffff00007ffffffffe01ffff0017fc003ffffc01ffffffc032954e3fffff0000ffffffffff
+01ffffe003fc003ffffe03ffffffc05c308c3fffff0001ffffffffff01fffffc007c003ffffc03ffffffc08392843fffff8003ffffffffff80ffffff8038003f
+fffe03ffffffc0f5312a1fffff0001ffffd5ffffc0fffffff010001ffffc07ffffffc043b5953fffff8003ffff80ffffe0fffffffe00003ffffe07ffffffe082
+f8711fffff8003fffc001fffe07fffffff00001ffffc07ffffc00025189c3fffff8003fff8000fffe0ffffffffc0003ffffe07ffff8000b1c1271fffff8007ff
+f00007fff07fffffffe0001ffffe07fffe00005be4cc1fffff8007ffe00003fff87ffffffff8001ffffe07fffe00006e9a651fffffc007ffe00001fff87fffff
+fffc001ffffe07fffc00005e2d520fffffc007ffe00000fff83ffffffffe001ffffe07fffe0000c3aaaf0fffffc007ffc00000fff81fffffffff001fffff07ff
+fe000042f19a0fffffc007ffe00000fff81fffffffff800ffffe03fffe00008429b50fffffc007ffc000007ffc0fffffffffc00fffff07fffe0000f19d420fff
+ffe007ffe00000fffc0fffffffffe00fffff03fffe00006111af07ffffc007ffc000007ffc07fffffffff007ffff03fffe00000ef9cb0fffffe003ffe000007f
+fe07fffffffff00fffff03fffe000095b38007ffffc007ffe000007ffc03fffffffff007ffff03ffff00001f43da07ffffe003ffe00000fffe03fffffffff80f
+ffff83ffff0000a9e45707ffffe001fff000007ffc01fffffffffc07ffff03ffff00007a171203ffffe003fff80000fffe00fffffffffe07ffff83ffff0000e7
+1c3103fffff001fffc0001fffc007ffffffffe07ffff01ffff00006f646703ffffe000fffe0003fffc003ffffffffe07ffff83ffff80002784fd03fffff000ff
+ff0003fffc001fffffff1607ffff01ffff000068f50c03ffffffe0ffff800ffff8020fffffff0003ffffabffffbba016d68a01ffffffc07fffd01ffff80407ff
+ffff0007fffffffffffff037d3a403ffffffe03ffffffffff80f83ffffffe003fffffffffffff8d1fceb01fffffff03ffffffffff00f007ffffff003ffffffff
+fffff065faa901fffffff83ffffffffff01fe03ffffff803fffffffffffff8327e1d01fffffff80fffffffffe01ff007fffffc01fffffffffffff0352b6b00ff
+fffffc0fffffffffe03ff803ffffff83fffffffffffff842c13d00fffffffc07ffffffffc03ffc007fffff01fffffffffffff8051dc800fffffffe03ffffffff
+807fff803fffff83fffffffffffff89e108a00ffffffff00ffffffff007fffc001ffffc1fffffffffffff810e0a800ffffffff80fffffffe00ffffe0002fffe1
+fffffffffffff8ee784f007fffffffc01ffffffc01ffffc000017ff1fffffffffffffc89634c00ffffffffe00ffffff803ffffc000003ff1fffffffffffff820
+5b1f007ffffffff001ffffc001ffffc0000005f1fffffffffffffcc87b0e007ffffffffc00ffff8003ffff80000000f8fffffffffffffc0f9e2d007ffff55554
+0005500001555500000000105555557fffd554d8675e003ffff80000000000000000000000000000000000ffff8000db5f9f003ffff800000000000000000000
+000000000000007fffc0006de486003ffff80000000000000000000000000000000000ffffc000bf564b001ffff800000000000000000000000000000000007f
+ffc0000af3a2003ffff800000000000000000000000000002aaaa0ffffc000291bf2001ffffc00000000000000000000000000007fffc07fffc00077f175003f
+fffe0000000000000000000000000000ffffe07fffc000e8b799001ffffe00000000000000000000000000007fffc07fffc00009b540001ffffe000000000000
+00000000000000007fffe07fffe0009eb5cb001fffff00000000000000000000000000007fffe07fffc000132a75000fffff8000000000000000000000000000
+7fffe07fffe000ad23630007ffffc0000000000000000000000000003fffe0000000008d2544000fffffe0000000000000000000000000003fffe0000000004f
+a3ec0007fffff0000000000000000000000000003ffff000000000923bd80007fffffe800000000000000000000000003fffe00000000060f0430003fffffff7
+5700000000000000000000001ffff000000000019c220003ffffffffff80000000000000000000003fffe00000000046042e0001ffffffffff00000000000000
+00000000000000000000000ac5400000ffffffffff800000000000000000000000000000000000545a8b00007fffffffff800000000000000000000000000000
+000000edd82e00007fffffffff800000000000000000000000000000000000c1d10700007fffffffff800000000000000000000000000000000000d69ec30000
+3fffffffff800000000000000000000000000000000000423a7f00001fffffffffc00000000000000000000000000000000000f9b29d000007ffffffffc00000
+000000000000000000000000000000b40511000001ffffffffc00000000000000000000000000000000000989bdf000000ffffffffc000000000000000000000
+000000000000006844720000001fffffffc00000000000000000000000000000000000281e3c0000000fffffffe00000000000000000000000000000000000b9
+7628000000017fffffc000000000000000000000000000000000009c636e000000000bffffe0000000000000000000000000000000000098549013100000410b
+c60088005100c60000000000a2008c010000000028000000c6000000510000000100040000000000000000000000000000000000000000000000000000000000
+ffffff000060ff00005fff00005eff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000021212121
+21212121212121211111111111111111111111111111212233332221211111111111111111111132211111111111111111111111233333333333333333311111
+23333333333333333333311111111111111111111121222222222221211111011333333333333333333333111111111111111111111111111113333333333333
+33111111111111111111113331111111111111111111111133333333333333333331111113333333333333333333311111111111111111121333333333333333
+11111100333333333333333333333321111111111111111111111111233333333333333333333111111111111111113333211111111111111111111333333333
+33333333332111112333333333333333333331111111111111111133333333333333333331111101133333333333333333333331111111111111111111111113
+33333333333333333333333211111111111111333332111111111111111111133333333333333333331111111333333333333333333332111111111111113333
+33333333333333333111110023333333333333333333333111111111111111111111233333333333333333333333333331111111111111333333311111111111
+11111133333333333333333331111111233333333333333333333211111111111123333333333333333333333111110113333333333333333333333111111111
+11111111111113333333333333333333333333333311111111111113333333111111111111111133333333333333333311111111133333333333333333333211
+11111111123333333333333333333333311111001333333333333333333333311111111111111111112333333333333333333333333333333332111111111133
+33333333211111111111133333333333333333332111111113333333333333333333331111111111233333333333333333333333311111011333333333333333
+33333332111111111111111111333333333333333333333333333333333331111111111333333333331111111111111333333333333333331111111112333333
+33333333333333111111111133333333333333333333333332111100133333333333333333333332111111111111111123333333333333333333333333333333
+33333311111111233333333333332111111111112333333333333331111111111133333333333333333333111111111333333333333333333333333332111101
+11333333333333333333333311111111111111111333333333333333333333333333333333333331111111133333333333333332111111111112133333333311
+11111111113333333333333333333311111111133333333333333333333333333311110011333333333333333333333311111111111111113333333333333333
+33333333333333333333333211111113333333333333333333211111111111333333331111111111113333333333333333333321111111333333333333333333
+33333333331111011133333333333333333333331111111111111113333333333333333333333333333333333333333311111113333333333333333333333211
+11111111133332111111111111333333333333333333331111111133333333333333333333333333331111001133333333333333333333332111111111111123
+33333333333333333333333333333333333333333111111133333333333333333333333321111111113331111111111111333333333333333333332111111133
+33333333333333333333333333111101111333333333333333333333111111111111111333333333333333333313131333333333333333333311111133333333
+33333333333333333332111111121111111111111113333333333333333333111111123333333333333333333333333333111100112333333333333333333333
+21111111111111333333333333333333211111112333333333333333332111113333333333333333333333333333322111111111111111111123333333333333
+33333321111113333333333333333333333333333321110111133333333333333333333331111111111111333333333333333311111111111113333333333333
+33311111133333333333333333333333333333321111111111111111111333333333333333333311111113333333333333333333321111111111110011233333
+33333333333333333111111111111133333333333333311111111111111133333333333333311111233333333333333333333333333333333211111111111111
+11233333333333333333333111111333333333333333333321111111111111031113333333333333333333333111111111111233333333333333111111111111
+11111333333333333333111113333333333333333333333333333333333111111111111111133333333333333333333111111333333333333333333111111111
+11111100111333333333333333333333311111111111133333333333333111111111111111111133333333333333211113333333333333333333333333333333
+33332111111111111113333333333333333333311111133333333333333333311111111111111103111233333333333333333333321111111111133333333333
+33311111111111111111111333333333333331111233333333333333333333333333333333333311111111111113333333333333333333311111133333333333
+33333311111111111111110011113333333333333333333332111111111113333333333333311111111111111111111133333333333331111133333333333333
+33333333333333333333333111111111111333333333333333333331111113333333333333333331111111111111110311113333333333333333333333111111
+11111333333333333311111111111111111111113333333333333111111333333333333333333333333333333333333311111111111233333333333333333332
+11111333333333333333333111111111111111001111333333333333333333333311111111111333333333333321111111111111111111113333333333333111
+11133333333333333333333333333333333333333111111111113333333333333333333111111133333333333333333111111111111111031111333333333333
+33333333331111111111133333333333331111111111111111111111133333333333331111113333333333333333333333333333333333333311111111113333
+33333333333333321111123333333333333333311111111111111100111133333333333333333333332111111111133333333333332111111111111111111111
+23333333333333111111333333333333333333333333333333333333332111111111333333333333333333321111113333333333333333311111111111111103
+11111333333333333333333333111111111113333333333333111111111111111111111113333333333333111111133333333333333333333333333333333333
+33321111111113333333333333333333111111333333333333333331111111111111110011112333333333333333333333211111111111333333333333311111
+11111111111111111333333333333321111113333333333333333333333333333333333333331111111133333333333333333333111111333333333333333331
+11111111111111031111133333333333333333333311111111111233333333333331111111111111111111111333333333333311111111333333333333333333
+33333333333333333333111111111333333333333333333311111133333333333333333211111111111111001111133333333333333333333331111111111133
+33333333333111111111111111111111233333333333332111111143333333333333333333333333333333333333311111112333333333333333333321111133
+33333333333333321111111111111103111113333333333333333333333111111111111333333333333311111111111111111111133333333333331111111113
+33333333333333333333333333333333333333111111133333333333333333331111113333333333333333321111111111111100111111333333333333333333
+33311111111111233333333333332111111111111111111133333333333333211111111133333333333333333333333333333333333333211111133333333333
+33333333211111333333333333333333111111111111110311111133333333333333333333321111111111133333333333333211111111111111111233333333
+33333311111111111333333333333333333333333333333333333331111113333333333333333333111111133333333333333333111111111111110011111133
+33333333333333333331111111111111333333333333332111111111111111233333333333333311111111111133333333333333333333333333333333333331
+11111333333333333333333321111123333333333333333321111111111111031111113333333333333333333332111111111111333333333333333211111111
+11111133333333333333321111111111111333333333333333333333333333331114133111111333333333333333333311111113333333333333333311111111
+11111100111111333333333333333333333333333321111133333333333333333111111111112333333333333333311111111121111133333333333333333333
+33333332111111111111113333333333333333333121213333333333333333332122212221211103111111133333333333333333333333333311111113333333
+33333333331211111113333333333333333331111111131111111433333333333333333333333333111111111111123333333333333333333333333333333333
+33333333333333333333110011111123333333333333333333333333333111111133333333333333333333223333333333333333333331111111233321111123
+33333333333333333333333333211111111111333333333333333333333333333333333333333333333333333333210311111113333333333333333333333333
+33331111113333333333333333333333333333333333333333331111111133331111111113333333333333333333333333331111111111333333333333333333
+33333333333333333333333333333333333311001111111333333333333333333333333333332111112333333333333333333333333333333333333333331111
+11133333332111111133333333333333333333333333311111111133333333333333333333333333333333333333333333333333333321031111111333333333
+33333333333333333333311111113333333333333333333333333333333333333331111111133333333211111111133333333333333333333333331111111113
+33333333333333333333333333333333333333333333333333331100111111113333333333333333333333333333331111114333333333333333333333333333
+33333333333111111133333333333111111111333333333333333333333333332111112333333333333333333333333333333333333333333333333333333103
+11111111333333333333333333333333333333111111143333333333333333333333333333333333331111111133333333333311111111111333333333333333
+33333333111111133333333333333333333333333333333333333333333333333333310011111111333333333333333333333333333333311111114333333333
+33333333333333333333333331111111133333333333333321111111112333333333333333333333311111233333333333333333333333333333333333333333
+33333333333331031111111133333333333333333333333333333333111111113333333333333333333333333333333311111111133333333333333333111111
+11111113333333333333333333111113333333333333333333333333333333333333333333333333333331001111111133333333333333333333333333333333
+31111111233333333333333333333333333333311111111133333333333333333331111111111111112133333333333333311113333333333333333333333333
+33333333333333333333333333333103111111111333333333333333333333333333333333111111111333333333333333333333333333111111111233333333
+33333333331111111111111111111113133333333332111333333333333333333333333333333333333333333333333333333200111111112333333333333333
+33333333333333333331111111113333333333333333333333334111111111233333333333333333331111111111111111111111114333333333111333333333
+33333333333333333333333333333333333333333333310311111111133333333333333333333333333333333333111111111113333333333333333333111111
+11111113333333333333333332111111111111111111111111111413333311123333333333333333333333333333333333333333333333333333320011111111
+13333333333333333333333333333333333333111111111123333333333333332111111111111133333333333333333331111111111111111111111111111111
+33332111333333333333333333333333333333333333333333333333333333031111111113333333333333333333131313131313131313111111111111111313
+13131111111111111111111313131313131313131111111111111111111111111111111111131111121212121212121212121212133333333333333333121212
+12121200111111111133333333333333333321111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111123333333333333333111111111111103111111111133333333333333333331111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111113333333
+33333333321111111111110011111111113333333333333333333111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111112333333333333333321111111111110311111111111333333333333333333111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111133333333333333332111111111111001111111111333333333333333333311111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111112121212121212121211111233333333333333333111111111111031111111111133333
+33333333333333111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+13333333333333333311111113333333333333333311111111111100111111111123333333333333333333211111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111123333333333333333321111113333333333333333311111111111103
+11111111111333333333333333333331111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111333333333333333331111111333333333333333331111111111110011111111111333333333333333333331111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111333333333333333333111111333333333333333
+33211111111111031111111111123333333333333333333311111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111133333333333333333311111133333333333333333111111111111001111111111113333333333333333333331111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111123333333333333333311111
+12333333333333333321111111111103111111111111133333333333333333333311111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111333333333333333331111111111111111111111111111111111100111111111111233333333333
+33333333333111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111333333
+33333333333111111111111111111111111111111111110311111111111113333333333333333333333311111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111133333333333333333211111111111111111111111111111111110011111111
+11111333333333333333333333333331211111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111113333333333333333311111111111111111111111111111111111031111111111111133333333333333333333333333333312221212133311111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111333333333333333321111111111111111111111111111
+11111100111111111111113333333333333333333333333333333333333333332111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111233333333333333331111111111111111111111111111111111103111111111111111333333333333333333333333333333333
+33333333111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111110011111111111111113333333333333333333333333333333333333333311111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110111111111111111111333333333333333
+33333333333333333333333331111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111001111111111111111133333333333333333333333333333333333333331111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111011111111111111111
+14333333333333333333333333333333333333333111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111100111111111111111111433333333333333333333333333333333333333111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101
+11111111111111111114333333333333333333333333333333333333321111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111110011111111111111111111133333333333333333333333333333333333
+32111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111011111111111111111111111133333333333333333333333333333333333111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111001111111111111111111111113333333333333333
+33333333333333333311111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111101111111111111111111111111111333333333333333333333333333333311111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100111111111111111111111111
+11114333333333333333333333333333332111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111110211111111111111111111111111111112133333333333333333333333331111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110011111111
+1111111111111111111111111111213333333333333333333321111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111030800000026060f000600544e50500701040000002701ffff030000000000}}}
+{\rtlch\fcs1 \ab\af37\afs15 \ltrch\fcs0 \b\f37\fs15\insrsid8987722 
+\par }{\*\themedata 504b030414000600080000002100e9de0fbfff0000001c020000130000005b436f6e74656e745f54797065735d2e786d6cac91cb4ec3301045f748fc83e52d4a
+9cb2400825e982c78ec7a27cc0c8992416c9d8b2a755fbf74cd25442a820166c2cd933f79e3be372bd1f07b5c3989ca74aaff2422b24eb1b475da5df374fd9ad
+5689811a183c61a50f98f4babebc2837878049899a52a57be670674cb23d8e90721f90a4d2fa3802cb35762680fd800ecd7551dc18eb899138e3c943d7e503b6
+b01d583deee5f99824e290b4ba3f364eac4a430883b3c092d4eca8f946c916422ecab927f52ea42b89a1cd59c254f919b0e85e6535d135a8de20f20b8c12c3b0
+0c895fcf6720192de6bf3b9e89ecdbd6596cbcdd8eb28e7c365ecc4ec1ff1460f53fe813d3cc7f5b7f020000ffff0300504b030414000600080000002100a5d6
+a7e7c0000000360100000b0000005f72656c732f2e72656c73848fcf6ac3300c87ef85bd83d17d51d2c31825762fa590432fa37d00e1287f68221bdb1bebdb4f
+c7060abb0884a4eff7a93dfeae8bf9e194e720169aaa06c3e2433fcb68e1763dbf7f82c985a4a725085b787086a37bdbb55fbc50d1a33ccd311ba548b6309512
+0f88d94fbc52ae4264d1c910d24a45db3462247fa791715fd71f989e19e0364cd3f51652d73760ae8fa8c9ffb3c330cc9e4fc17faf2ce545046e37944c69e462
+a1a82fe353bd90a865aad41ed0b5b8f9d6fd010000ffff0300504b0304140006000800000021006b799616830000008a0000001c0000007468656d652f746865
+6d652f7468656d654d616e616765722e786d6c0ccc4d0ac3201040e17da17790d93763bb284562b2cbaebbf600439c1a41c7a0d29fdbd7e5e38337cedf14d59b
+4b0d592c9c070d8a65cd2e88b7f07c2ca71ba8da481cc52c6ce1c715e6e97818c9b48d13df49c873517d23d59085adb5dd20d6b52bd521ef2cdd5eb9246a3d8b
+4757e8d3f729e245eb2b260a0238fd010000ffff0300504b0304140006000800000021002ead900ed10600008c1a0000160000007468656d652f7468656d652f
+7468656d65312e786d6cec595d8bdb46147d2ff43f08bd3bfe92fcb1c41b6cd9ceb6d94d42eca4e471d61e5b931d698c66bc1b130225792c144ad39287064a5f
+fa50da061268a1e9afd934254d217fa17746b63c638fbbc992c252b286451a9d7be7ccbd57e78ea4f3176e47d439c409272c6eb8c57305d7c1f1800d493c6eb8
+d7fbdd5ccd75b840f1105116e3863bc3dcbdb0fde107e7d1960871841db08ff9166ab8a11093ad7c9e0f6018f1736c8263b836624984049c26e3fc304147e037
+a2f952a150c94788c4ae13a308dc5e198dc8003bcf7ffdede5770fdded85f70e852962c1e5c080263de91b1b260a3b3c284a049ff18026ce21a20d17261ab2a3
+3ebe2d5c87222ee042c32da83f37bf7d3e8fb6e646546cb0d5ecbaea6f6e3737181e94d49cc9783f9bd4f37cafd2ccfc2b0015ebb84eb553e954327f0a800603
+5869ca45f7e9b7eaadb63fc76aa0f4d0e2bb5d6d978b065ef35f5ee3dcf4e5cfc02b50eadf5bc377bb0144d1c02b508af7d7f09e572d059e8157a0145f59c357
+0bcdb65735f00a1452121faca10b7ea51c2c569b41468cee58e175dfeb564b73e74b145443565d728a118bc5a65a8bd02d96740120811409123b6236c1233480
+320e1025fb097176c93884c29ba09871182e940add4219fecb9fa78e5444d016469ab5e4054cf8da90e4e3f0414226a2e17e0c5e5d0df2fad98faf9f3d718eef
+3d3dbef7cbf1fdfbc7f77e4e1d19563b281eeb56afbeffe2ef479f3a7f3df9f6d583afec78aee3fff8e9b3e7bf7f6907c24a972178f1f5e33f9f3e7ef1f0f397
+3f3cb0c09b09dad7e17d1261ee5cc647ce3516c1c254084ce6783f793b8b7e88886ed18cc71cc548ce62f1df11a181be3c431459702d6c46f046021263035e9c
+de3208f7c2642a88c5e3a53032807b8cd1164bac51b824e7d2c2dc9fc663fbe4c954c75d43e8d03677806223bf9de904b495d85c062136685ea52816688c632c
+1c798d1d606c59dd4d428cb8ee9141c2381b09e726715a885843d227fb46352d8d7648047999d90842be8dd8ecdd705a8cda56ddc6872612ee0a442de4fb981a
+61bc88a6024536977d14513de0bb48843692bd5932d0711d2e20d3634c99d31962ce6d36571258af96f44b202ff6b4efd159642213410e6c3e7711633ab2cd0e
+821045131bb647e250c77ec40fa044917395091b7c8f9977883c873ca07863ba6f106ca4fb6435b80ecaaa535a1688bc324d2cb9bc889951bfbd191d21aca406
+84dfd0f388c4278afb8aacfbffadac8390bef8e69165556755d09b09b1de513b2b32be09b72ade014b86e4ec6b771b4de3ab186e97f506f65ebadf4bb7fbbf97
+ee4df7f3bb17eca546837ccbad62ba55571bf768e3be7d4428ed8919c5bb5c6ddd3974a6611706a59d7a68c5d973dc2484437927c304066e9c2065e3244c7c42
+44d80bd104f6f745573a19f3b9eb3177268cc3b65f0d5b7d4b3c9d467b6c983eae168bf2d134150f8ec472bce067e3f0a8215274a5ba7c04cbdc2bb663f5a8bc
+20206ddf8684369949a26c21515d0cca20a90773089a85845ad93b6151b7b0a849f78b54adb1006a595660ebe4c086abe1fa1e9880113c51218a87324f69aa17
+d955c97c9799de144ca302601fb1a88065a6eb92ebc6e5c9d5a5a5f60699364868e566925091513d8c876888e7d52947df84c6dbe6babe4ca9414f8642cd07a5
+b5a451adfd1b8bd3e61aec56b581c6ba52d0d8396ab895b20f25334093863b82c77e388c26503b5c6e79111dc3cbb38148d21bfe34ca3249b868231ea60157a2
+93aa4144044e1c4aa2862b979fa581c64a4314b7620904e1cc92ab83ac9c3572907433c97834c203a1a75d1b91914e4f41e153adb05e55e6a7074b4b368574f7
+c2e191b34fa7c9350425e6578b328043c2e1ed4f318de690c0ebcc4cc896f5b7d298e6b2abbf4f5435948e233a09d1bca3e8629ec295946774d4591603ed6cbe
+6608a816927923dc1fcb06ab07d5e8a659d748396cecba271bc9c869a2b9ec9986aac8ae6957316386451b5889e5e99abcc66a1162d034bdc3a7d2bd2ab9f585
+d6adec13b22e0101cfe267e9ba6fd010346acbc90c6a92f1ba0c4bcd9e8f9abd63b1c013a8bd4993d054bfb270bb12b7ac4758a783c153757eb05bad5a181a2d
+f6952ad2eac387fe6982eddf02f168c34be029155ca5123e3c240836443db5274965036e91db627e6bc091334d48c3bd53f09b5e50f2835ca1e677725ed92be4
+6a7eb39c6bfa7eb9d8f18b8576ab74171a8b08a3a29f7e74e9c2ab283a9b7f7a51e36b9f5fa2c5dbb6730316e599fabc9257c4d5e79762c9f6f9a52f3fafb80e
+01d1b9532975ebe57aab92ab979bdd9cd76ed572f5a0d2cab52b41b5dd6d077eaddebdeb3a870aec35cb8157e9d472956210e4bc4a41d2afd57355af546a7ad5
+66ade335efceb731b0f2543ee6b180f02a5edbff000000ffff0300504b0304140006000800000021000dd1909fb60000001b010000270000007468656d652f74
+68656d652f5f72656c732f7468656d654d616e616765722e786d6c2e72656c73848f4d0ac2301484f78277086f6fd3ba109126dd88d0add40384e4350d363f24
+51eced0dae2c082e8761be9969bb979dc9136332de3168aa1a083ae995719ac16db8ec8e4052164e89d93b64b060828e6f37ed1567914b284d262452282e3198
+720e274a939cd08a54f980ae38a38f56e422a3a641c8bbd048f7757da0f19b017cc524bd62107bd5001996509affb3fd381a89672f1f165dfe514173d9850528
+a2c6cce0239baa4c04ca5bbabac4df000000ffff0300504b01022d0014000600080000002100e9de0fbfff0000001c0200001300000000000000000000000000
+000000005b436f6e74656e745f54797065735d2e786d6c504b01022d0014000600080000002100a5d6a7e7c0000000360100000b000000000000000000000000
+00300100005f72656c732f2e72656c73504b01022d00140006000800000021006b799616830000008a0000001c00000000000000000000000000190200007468
+656d652f7468656d652f7468656d654d616e616765722e786d6c504b01022d00140006000800000021002ead900ed10600008c1a000016000000000000000000
+00000000d60200007468656d652f7468656d652f7468656d65312e786d6c504b01022d00140006000800000021000dd1909fb60000001b010000270000000000
+0000000000000000db0900007468656d652f7468656d652f5f72656c732f7468656d654d616e616765722e786d6c2e72656c73504b050600000000050005005d010000d60a00000000}
+{\*\colorschememapping 3c3f786d6c2076657273696f6e3d22312e302220656e636f64696e673d225554462d3822207374616e64616c6f6e653d22796573223f3e0d0a3c613a636c724d
+617020786d6c6e733a613d22687474703a2f2f736368656d61732e6f70656e786d6c666f726d6174732e6f72672f64726177696e676d6c2f323030362f6d6169
+6e22206267313d226c743122207478313d22646b3122206267323d226c743222207478323d22646b322220616363656e74313d22616363656e74312220616363
+656e74323d22616363656e74322220616363656e74333d22616363656e74332220616363656e74343d22616363656e74342220616363656e74353d22616363656e74352220616363656e74363d22616363656e74362220686c696e6b3d22686c696e6b2220666f6c486c696e6b3d22666f6c486c696e6b222f3e}
+{\*\latentstyles\lsdstimax371\lsdlockeddef0\lsdsemihiddendef0\lsdunhideuseddef0\lsdqformatdef0\lsdprioritydef99{\lsdlockedexcept \lsdqformat1 \lsdpriority1 \lsdlocked0 Normal;\lsdqformat1 \lsdpriority1 \lsdlocked0 heading 1;
+\lsdqformat1 \lsdpriority1 \lsdlocked0 heading 2;\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 3;\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 4;
+\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 5;\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 6;\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 7;
+\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 8;\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 9;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 1;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 5;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 6;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 7;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 8;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 9;
+\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 1;\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 2;\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 3;
+\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 4;\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 5;\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 6;
+\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 7;\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 8;\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 9;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Normal Indent;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 footnote text;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 annotation text;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 header;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 footer;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index heading;\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority35 \lsdlocked0 caption;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 table of figures;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 envelope address;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 envelope return;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 footnote reference;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 annotation reference;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 line number;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 page number;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 endnote reference;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 endnote text;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 table of authorities;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 macro;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 toa heading;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Bullet;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Number;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List 3;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List 5;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Bullet 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Bullet 3;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Bullet 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Bullet 5;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Number 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Number 3;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Number 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Number 5;\lsdqformat1 \lsdpriority10 \lsdlocked0 Title;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Closing;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Signature;\lsdsemihidden1 \lsdunhideused1 \lsdpriority1 \lsdlocked0 Default Paragraph Font;\lsdsemihidden1 \lsdqformat1 \lsdpriority1 \lsdlocked0 Body Text;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text Indent;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Continue;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Continue 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Continue 3;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Continue 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Continue 5;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Message Header;\lsdqformat1 \lsdpriority11 \lsdlocked0 Subtitle;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Salutation;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Date;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text First Indent;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text First Indent 2;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Note Heading;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text Indent 2;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text Indent 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Block Text;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Hyperlink;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 FollowedHyperlink;
+\lsdqformat1 \lsdpriority22 \lsdlocked0 Strong;\lsdqformat1 \lsdpriority20 \lsdlocked0 Emphasis;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Document Map;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Plain Text;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 E-mail Signature;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Top of Form;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Bottom of Form;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Normal (Web);
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Acronym;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Address;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Cite;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Code;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Definition;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Keyboard;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Preformatted;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Sample;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Typewriter;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Variable;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Normal Table;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 annotation subject;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 No List;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Outline List 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Outline List 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Outline List 3;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Simple 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Simple 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Simple 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Classic 1;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Classic 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Classic 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Classic 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Colorful 1;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Colorful 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Colorful 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Columns 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Columns 2;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Columns 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Columns 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Columns 5;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 1;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 5;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 6;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 7;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 8;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 1;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 5;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 6;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 7;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 8;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table 3D effects 1;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table 3D effects 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table 3D effects 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Contemporary;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Elegant;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Professional;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Subtle 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Subtle 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Web 1;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Web 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Web 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Balloon Text;\lsdpriority39 \lsdlocked0 Table Grid;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Theme;\lsdsemihidden1 \lsdlocked0 Placeholder Text;\lsdqformat1 \lsdpriority1 \lsdlocked0 No Spacing;\lsdpriority60 \lsdlocked0 Light Shading;\lsdpriority61 \lsdlocked0 Light List;
+\lsdpriority62 \lsdlocked0 Light Grid;\lsdpriority63 \lsdlocked0 Medium Shading 1;\lsdpriority64 \lsdlocked0 Medium Shading 2;\lsdpriority65 \lsdlocked0 Medium List 1;\lsdpriority66 \lsdlocked0 Medium List 2;\lsdpriority67 \lsdlocked0 Medium Grid 1;
+\lsdpriority68 \lsdlocked0 Medium Grid 2;\lsdpriority69 \lsdlocked0 Medium Grid 3;\lsdpriority70 \lsdlocked0 Dark List;\lsdpriority71 \lsdlocked0 Colorful Shading;\lsdpriority72 \lsdlocked0 Colorful List;\lsdpriority73 \lsdlocked0 Colorful Grid;
+\lsdpriority60 \lsdlocked0 Light Shading Accent 1;\lsdpriority61 \lsdlocked0 Light List Accent 1;\lsdpriority62 \lsdlocked0 Light Grid Accent 1;\lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 1;\lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 1;
+\lsdpriority65 \lsdlocked0 Medium List 1 Accent 1;\lsdsemihidden1 \lsdlocked0 Revision;\lsdqformat1 \lsdpriority1 \lsdlocked0 List Paragraph;\lsdqformat1 \lsdpriority29 \lsdlocked0 Quote;\lsdqformat1 \lsdpriority30 \lsdlocked0 Intense Quote;
+\lsdpriority66 \lsdlocked0 Medium List 2 Accent 1;\lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 1;\lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 1;\lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 1;\lsdpriority70 \lsdlocked0 Dark List Accent 1;
+\lsdpriority71 \lsdlocked0 Colorful Shading Accent 1;\lsdpriority72 \lsdlocked0 Colorful List Accent 1;\lsdpriority73 \lsdlocked0 Colorful Grid Accent 1;\lsdpriority60 \lsdlocked0 Light Shading Accent 2;\lsdpriority61 \lsdlocked0 Light List Accent 2;
+\lsdpriority62 \lsdlocked0 Light Grid Accent 2;\lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 2;\lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 2;\lsdpriority65 \lsdlocked0 Medium List 1 Accent 2;\lsdpriority66 \lsdlocked0 Medium List 2 Accent 2;
+\lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 2;\lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 2;\lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 2;\lsdpriority70 \lsdlocked0 Dark List Accent 2;\lsdpriority71 \lsdlocked0 Colorful Shading Accent 2;
+\lsdpriority72 \lsdlocked0 Colorful List Accent 2;\lsdpriority73 \lsdlocked0 Colorful Grid Accent 2;\lsdpriority60 \lsdlocked0 Light Shading Accent 3;\lsdpriority61 \lsdlocked0 Light List Accent 3;\lsdpriority62 \lsdlocked0 Light Grid Accent 3;
+\lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 3;\lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 3;\lsdpriority65 \lsdlocked0 Medium List 1 Accent 3;\lsdpriority66 \lsdlocked0 Medium List 2 Accent 3;
+\lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 3;\lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 3;\lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 3;\lsdpriority70 \lsdlocked0 Dark List Accent 3;\lsdpriority71 \lsdlocked0 Colorful Shading Accent 3;
+\lsdpriority72 \lsdlocked0 Colorful List Accent 3;\lsdpriority73 \lsdlocked0 Colorful Grid Accent 3;\lsdpriority60 \lsdlocked0 Light Shading Accent 4;\lsdpriority61 \lsdlocked0 Light List Accent 4;\lsdpriority62 \lsdlocked0 Light Grid Accent 4;
+\lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 4;\lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 4;\lsdpriority65 \lsdlocked0 Medium List 1 Accent 4;\lsdpriority66 \lsdlocked0 Medium List 2 Accent 4;
+\lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 4;\lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 4;\lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 4;\lsdpriority70 \lsdlocked0 Dark List Accent 4;\lsdpriority71 \lsdlocked0 Colorful Shading Accent 4;
+\lsdpriority72 \lsdlocked0 Colorful List Accent 4;\lsdpriority73 \lsdlocked0 Colorful Grid Accent 4;\lsdpriority60 \lsdlocked0 Light Shading Accent 5;\lsdpriority61 \lsdlocked0 Light List Accent 5;\lsdpriority62 \lsdlocked0 Light Grid Accent 5;
+\lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 5;\lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 5;\lsdpriority65 \lsdlocked0 Medium List 1 Accent 5;\lsdpriority66 \lsdlocked0 Medium List 2 Accent 5;
+\lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 5;\lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 5;\lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 5;\lsdpriority70 \lsdlocked0 Dark List Accent 5;\lsdpriority71 \lsdlocked0 Colorful Shading Accent 5;
+\lsdpriority72 \lsdlocked0 Colorful List Accent 5;\lsdpriority73 \lsdlocked0 Colorful Grid Accent 5;\lsdpriority60 \lsdlocked0 Light Shading Accent 6;\lsdpriority61 \lsdlocked0 Light List Accent 6;\lsdpriority62 \lsdlocked0 Light Grid Accent 6;
+\lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 6;\lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 6;\lsdpriority65 \lsdlocked0 Medium List 1 Accent 6;\lsdpriority66 \lsdlocked0 Medium List 2 Accent 6;
+\lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 6;\lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 6;\lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 6;\lsdpriority70 \lsdlocked0 Dark List Accent 6;\lsdpriority71 \lsdlocked0 Colorful Shading Accent 6;
+\lsdpriority72 \lsdlocked0 Colorful List Accent 6;\lsdpriority73 \lsdlocked0 Colorful Grid Accent 6;\lsdqformat1 \lsdpriority19 \lsdlocked0 Subtle Emphasis;\lsdqformat1 \lsdpriority21 \lsdlocked0 Intense Emphasis;
+\lsdqformat1 \lsdpriority31 \lsdlocked0 Subtle Reference;\lsdqformat1 \lsdpriority32 \lsdlocked0 Intense Reference;\lsdqformat1 \lsdpriority33 \lsdlocked0 Book Title;\lsdsemihidden1 \lsdunhideused1 \lsdpriority37 \lsdlocked0 Bibliography;
+\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority39 \lsdlocked0 TOC Heading;\lsdpriority41 \lsdlocked0 Plain Table 1;\lsdpriority42 \lsdlocked0 Plain Table 2;\lsdpriority43 \lsdlocked0 Plain Table 3;\lsdpriority44 \lsdlocked0 Plain Table 4;
+\lsdpriority45 \lsdlocked0 Plain Table 5;\lsdpriority40 \lsdlocked0 Grid Table Light;\lsdpriority46 \lsdlocked0 Grid Table 1 Light;\lsdpriority47 \lsdlocked0 Grid Table 2;\lsdpriority48 \lsdlocked0 Grid Table 3;\lsdpriority49 \lsdlocked0 Grid Table 4;
+\lsdpriority50 \lsdlocked0 Grid Table 5 Dark;\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful;\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful;\lsdpriority46 \lsdlocked0 Grid Table 1 Light Accent 1;\lsdpriority47 \lsdlocked0 Grid Table 2 Accent 1;
+\lsdpriority48 \lsdlocked0 Grid Table 3 Accent 1;\lsdpriority49 \lsdlocked0 Grid Table 4 Accent 1;\lsdpriority50 \lsdlocked0 Grid Table 5 Dark Accent 1;\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful Accent 1;
+\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful Accent 1;\lsdpriority46 \lsdlocked0 Grid Table 1 Light Accent 2;\lsdpriority47 \lsdlocked0 Grid Table 2 Accent 2;\lsdpriority48 \lsdlocked0 Grid Table 3 Accent 2;
+\lsdpriority49 \lsdlocked0 Grid Table 4 Accent 2;\lsdpriority50 \lsdlocked0 Grid Table 5 Dark Accent 2;\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful Accent 2;\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful Accent 2;
+\lsdpriority46 \lsdlocked0 Grid Table 1 Light Accent 3;\lsdpriority47 \lsdlocked0 Grid Table 2 Accent 3;\lsdpriority48 \lsdlocked0 Grid Table 3 Accent 3;\lsdpriority49 \lsdlocked0 Grid Table 4 Accent 3;
+\lsdpriority50 \lsdlocked0 Grid Table 5 Dark Accent 3;\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful Accent 3;\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful Accent 3;\lsdpriority46 \lsdlocked0 Grid Table 1 Light Accent 4;
+\lsdpriority47 \lsdlocked0 Grid Table 2 Accent 4;\lsdpriority48 \lsdlocked0 Grid Table 3 Accent 4;\lsdpriority49 \lsdlocked0 Grid Table 4 Accent 4;\lsdpriority50 \lsdlocked0 Grid Table 5 Dark Accent 4;
+\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful Accent 4;\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful Accent 4;\lsdpriority46 \lsdlocked0 Grid Table 1 Light Accent 5;\lsdpriority47 \lsdlocked0 Grid Table 2 Accent 5;
+\lsdpriority48 \lsdlocked0 Grid Table 3 Accent 5;\lsdpriority49 \lsdlocked0 Grid Table 4 Accent 5;\lsdpriority50 \lsdlocked0 Grid Table 5 Dark Accent 5;\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful Accent 5;
+\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful Accent 5;\lsdpriority46 \lsdlocked0 Grid Table 1 Light Accent 6;\lsdpriority47 \lsdlocked0 Grid Table 2 Accent 6;\lsdpriority48 \lsdlocked0 Grid Table 3 Accent 6;
+\lsdpriority49 \lsdlocked0 Grid Table 4 Accent 6;\lsdpriority50 \lsdlocked0 Grid Table 5 Dark Accent 6;\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful Accent 6;\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful Accent 6;
+\lsdpriority46 \lsdlocked0 List Table 1 Light;\lsdpriority47 \lsdlocked0 List Table 2;\lsdpriority48 \lsdlocked0 List Table 3;\lsdpriority49 \lsdlocked0 List Table 4;\lsdpriority50 \lsdlocked0 List Table 5 Dark;
+\lsdpriority51 \lsdlocked0 List Table 6 Colorful;\lsdpriority52 \lsdlocked0 List Table 7 Colorful;\lsdpriority46 \lsdlocked0 List Table 1 Light Accent 1;\lsdpriority47 \lsdlocked0 List Table 2 Accent 1;\lsdpriority48 \lsdlocked0 List Table 3 Accent 1;
+\lsdpriority49 \lsdlocked0 List Table 4 Accent 1;\lsdpriority50 \lsdlocked0 List Table 5 Dark Accent 1;\lsdpriority51 \lsdlocked0 List Table 6 Colorful Accent 1;\lsdpriority52 \lsdlocked0 List Table 7 Colorful Accent 1;
+\lsdpriority46 \lsdlocked0 List Table 1 Light Accent 2;\lsdpriority47 \lsdlocked0 List Table 2 Accent 2;\lsdpriority48 \lsdlocked0 List Table 3 Accent 2;\lsdpriority49 \lsdlocked0 List Table 4 Accent 2;
+\lsdpriority50 \lsdlocked0 List Table 5 Dark Accent 2;\lsdpriority51 \lsdlocked0 List Table 6 Colorful Accent 2;\lsdpriority52 \lsdlocked0 List Table 7 Colorful Accent 2;\lsdpriority46 \lsdlocked0 List Table 1 Light Accent 3;
+\lsdpriority47 \lsdlocked0 List Table 2 Accent 3;\lsdpriority48 \lsdlocked0 List Table 3 Accent 3;\lsdpriority49 \lsdlocked0 List Table 4 Accent 3;\lsdpriority50 \lsdlocked0 List Table 5 Dark Accent 3;
+\lsdpriority51 \lsdlocked0 List Table 6 Colorful Accent 3;\lsdpriority52 \lsdlocked0 List Table 7 Colorful Accent 3;\lsdpriority46 \lsdlocked0 List Table 1 Light Accent 4;\lsdpriority47 \lsdlocked0 List Table 2 Accent 4;
+\lsdpriority48 \lsdlocked0 List Table 3 Accent 4;\lsdpriority49 \lsdlocked0 List Table 4 Accent 4;\lsdpriority50 \lsdlocked0 List Table 5 Dark Accent 4;\lsdpriority51 \lsdlocked0 List Table 6 Colorful Accent 4;
+\lsdpriority52 \lsdlocked0 List Table 7 Colorful Accent 4;\lsdpriority46 \lsdlocked0 List Table 1 Light Accent 5;\lsdpriority47 \lsdlocked0 List Table 2 Accent 5;\lsdpriority48 \lsdlocked0 List Table 3 Accent 5;
+\lsdpriority49 \lsdlocked0 List Table 4 Accent 5;\lsdpriority50 \lsdlocked0 List Table 5 Dark Accent 5;\lsdpriority51 \lsdlocked0 List Table 6 Colorful Accent 5;\lsdpriority52 \lsdlocked0 List Table 7 Colorful Accent 5;
+\lsdpriority46 \lsdlocked0 List Table 1 Light Accent 6;\lsdpriority47 \lsdlocked0 List Table 2 Accent 6;\lsdpriority48 \lsdlocked0 List Table 3 Accent 6;\lsdpriority49 \lsdlocked0 List Table 4 Accent 6;
+\lsdpriority50 \lsdlocked0 List Table 5 Dark Accent 6;\lsdpriority51 \lsdlocked0 List Table 6 Colorful Accent 6;\lsdpriority52 \lsdlocked0 List Table 7 Colorful Accent 6;}}{\*\datastore 010500000200000018000000
+4d73786d6c322e534158584d4c5265616465722e362e3000000000000000000000060000
+d0cf11e0a1b11ae1000000000000000000000000000000003e000300feff090006000000000000000000000001000000010000000000000000100000feffffff00000000feffffff0000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffdfffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffff52006f006f007400200045006e00740072007900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016000500ffffffffffffffffffffffff0c6ad98892f1d411a65f0040963251e500000000000000000000000040e4
+37b15e8ada01feffffff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff00000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000105000000000000}}

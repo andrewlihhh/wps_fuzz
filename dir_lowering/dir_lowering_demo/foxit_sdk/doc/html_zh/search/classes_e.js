@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['ocr',['OCR',['../classfoxit_1_1addon_1_1ocr_1_1_o_c_r.html',1,'foxit::addon::ocr']]],
+  ['ocrcallback',['OCRCallback',['../classfoxit_1_1addon_1_1ocr_1_1_o_c_r_callback.html',1,'foxit::addon::ocr']]],
+  ['ocrconfig',['OCRConfig',['../classfoxit_1_1addon_1_1ocr_1_1_o_c_r_config.html',1,'foxit::addon::ocr']]],
+  ['ocrengine',['OCREngine',['../classfoxit_1_1addon_1_1ocr_1_1_o_c_r_engine.html',1,'foxit::addon::ocr']]],
+  ['ocrprogresscallback',['OCRProgressCallback',['../classfoxit_1_1addon_1_1ocr_1_1_o_c_r_progress_callback.html',1,'foxit::addon::ocr']]],
+  ['ocrsettingdata',['OCRSettingData',['../classfoxit_1_1addon_1_1ocr_1_1_o_c_r_setting_data.html',1,'foxit::addon::ocr']]],
+  ['ocrsettingdataarray',['OCRSettingDataArray',['../classfoxit_1_1addon_1_1ocr_1_1_o_c_r_setting_data_array.html',1,'foxit::addon::ocr']]],
+  ['ocrsuspectinfo',['OCRSuspectInfo',['../classfoxit_1_1addon_1_1ocr_1_1_o_c_r_suspect_info.html',1,'foxit::addon::ocr']]],
+  ['ocrsuspectinfoarray',['OCRSuspectInfoArray',['../classfoxit_1_1addon_1_1ocr_1_1_o_c_r_suspect_info_array.html',1,'foxit::addon::ocr']]],
+  ['ofdconvertparam',['OFDConvertParam',['../classfoxit_1_1addon_1_1conversion_1_1_o_f_d_convert_param.html',1,'foxit::addon::conversion']]],
+  ['ofddoc',['OFDDoc',['../classfoxit_1_1addon_1_1ofd_1_1_o_f_d_doc.html',1,'foxit::addon::ofd']]],
+  ['ofdpage',['OFDPage',['../classfoxit_1_1addon_1_1ofd_1_1_o_f_d_page.html',1,'foxit::addon::ofd']]],
+  ['ofdrenderer',['OFDRenderer',['../classfoxit_1_1addon_1_1ofd_1_1_o_f_d_renderer.html',1,'foxit::addon::ofd']]],
+  ['office2pdf',['Office2PDF',['../classfoxit_1_1addon_1_1conversion_1_1office2pdf_1_1_office2_p_d_f.html',1,'foxit::addon::conversion::office2pdf']]],
+  ['office2pdfsettingdata',['Office2PDFSettingData',['../classfoxit_1_1addon_1_1conversion_1_1office2pdf_1_1_office2_p_d_f_setting_data.html',1,'foxit::addon::conversion::office2pdf']]],
+  ['optimizer',['Optimizer',['../classfoxit_1_1addon_1_1optimization_1_1_optimizer.html',1,'foxit::addon::optimization']]],
+  ['optimizersettings',['OptimizerSettings',['../classfoxit_1_1addon_1_1optimization_1_1_optimizer_settings.html',1,'foxit::addon::optimization']]],
+  ['optimizescannedpdfsettings',['OptimizeScannedPDFSettings',['../classfoxit_1_1addon_1_1optimization_1_1_optimize_scanned_p_d_f_settings.html',1,'foxit::addon::optimization']]],
+  ['outputpreview',['OutputPreview',['../classfoxit_1_1pdf_1_1_output_preview.html',1,'foxit::pdf']]]
+];

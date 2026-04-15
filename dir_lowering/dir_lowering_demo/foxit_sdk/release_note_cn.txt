@@ -1,0 +1,1829 @@
+# 福昕 PDF SDK v11.1
+
+发布日期：2026 年 3 月 31 日
+
+## 不兼容变更
+
+以下变更在从 v11.0 升级时需要修改代码。未做调整的项目将无法编译或可能出现异常行为。
+
+### `ActionCallback` — 接口参数变更与新增纯虚方法
+
+`ActionCallback` 类有 **1 处接口参数变更** 和 **7 个新增纯虚方法**，所有子类必须更新。
+
+**参数变更** — `GetPageWindowRect` 新增 `document` 和 `page_index` 参数：
+
+```cpp
+// v11.0
+virtual RectF GetPageWindowRect() = 0;
+
+// v11.1
+virtual RectF GetPageWindowRect(const foxit::pdf::PDFDoc& document, int page_index) = 0;
+```
+
+**新增纯虚方法** — 如不需要相关功能，实现为空函数体即可：
+
+```cpp
+virtual void NotifyBeginDoJob(const pdf::PDFDoc& document,
+    JavascriptModifyItemInfo::JavascriptEventType event_type) = 0;
+virtual void NotifyAfterDataChange(const pdf::PDFDoc& document,
+    JavascriptModifyItemInfo modify_item_info) = 0;
+virtual void NotifyEndDoJob(const pdf::PDFDoc& document,
+    JavascriptModifyItemInfo::JavascriptEventType event_type) = 0;
+virtual bool InitModifyItem(const pdf::PDFDoc& document,
+    ModifyItemType item_type, int page_index, const WString& dict_name) = 0;
+virtual void ResetModifyItem(const pdf::PDFDoc& document) = 0;
+virtual int GetVisiblePageCount(const pdf::PDFDoc& document) = 0;
+virtual int GetVisiblePage(const pdf::PDFDoc& document, int index) = 0;
+```
+
+### `DocProviderCallback` — 新增纯虚方法（XFA）
+
+新增一个纯虚方法，`DocProviderCallback` 的所有子类必须实现：
+
+```cpp
+virtual void NotifyWidgetChangeInfo(const XFADoc& doc, XFAWidgetModifyInfo change_info) = 0;
+```
+
+仅影响使用 XFA 模块的项目。如不需要相关功能，实现为空函数体即可。
+
+### `IconProviderCallback::GetIcon` — 接口参数变更（静默失效）
+
+`GetIcon` 方法参数已变更。由于该方法不是纯虚函数，编译不会报错，但已有子类的重写方法将**静默失效**，不再被 SDK 调用：
+
+```cpp
+// v11.0
+virtual PDFPage GetIcon(Annot::Type annot_type, const char* icon_name, ARGB color);
+
+// v11.1
+virtual PDFPage GetIcon(Annot::Type annot_type, const char* icon_name, ARGB color,
+                        foxit::pdf::objects::PDFDictionary* annot_dict);
+```
+
+**所需操作：** 更新重写方法的参数列表，加入新的 `annot_dict` 参数。建议开启 `-Woverloaded-virtual`（GCC/Clang）或 `/W4`（MSVC）以在编译期检测此类问题。
+
+### `OCRCallback` — 新增纯虚方法
+
+已有的 `OCRCallback` 类新增纯虚方法 `IsImageIgnored`：
+
+```cpp
+// v11.0
+class OCRCallback {
+  virtual bool NeedToCancelNow(const wchar_t* info) = 0;
+};
+
+// v11.1
+class OCRCallback {
+  virtual bool NeedToCancelNow(const wchar_t* info) = 0;
+  virtual bool IsImageIgnored(foxit::pdf::graphics::ImageObject* image_object) = 0; // 新增
+};
+```
+
+**所需操作：** 所有 `OCRCallback` 子类必须实现 `IsImageIgnored`。返回 `false` 可保持原有行为（不忽略任何图像）。
+
+### `OCRConfig` 构造函数与 `Set()` — 参数变更
+
+参数化构造函数和 `Set()` 方法新增 3 个必填参数：
+
+```cpp
+// v11.0（5 个参数）
+OCRConfig(bool is_detect_pictures, bool is_remove_noise, bool is_correct_skew,
+          bool is_enable_text_extraction_mode, bool is_sequentially_process);
+
+// v11.1（8 个参数）
+OCRConfig(bool is_detect_pictures, bool is_remove_noise, bool is_correct_skew,
+          bool is_enable_text_extraction_mode, bool is_sequentially_process,
+          bool is_auto_overwrite_resolution, int resolution_to_overwrite, int confidence);
+```
+
+**所需操作：** 补充 3 个新参数。使用 `true, 300, 0` 可保持与原有默认行为一致。也可改用默认构造函数（自动初始化所有字段为默认值）。
+
+### `OCR::OCRPDFPage` / `OCRPDFDocument` / `OCRConvertTo` / `OCRPDFDocuments` — 新增参数
+
+所有 OCR 处理方法新增 `OCRProgressCallback*` 参数：
+
+```cpp
+// v11.0
+void OCRPDFPage(PDFPage pdf_page, bool is_editable);
+void OCRPDFPage(PDFPage pdf_page, bool is_editable, const OCRConfig& config);
+// OCRPDFDocument、OCRConvertTo、OCRPDFDocuments 同理
+
+// v11.1
+void OCRPDFPage(PDFPage pdf_page, bool is_editable, OCRProgressCallback* callback = NULL);
+void OCRPDFPage(PDFPage pdf_page, bool is_editable, const OCRConfig& config, OCRProgressCallback* callback = NULL);
+```
+
+- **C++**：有默认值 `NULL`，现有调用无需修改。
+- **C# / Python / Java / Node.js / Go**：绑定层**不继承** C++ 默认参数值，现有调用必须显式传入新参数（传 `null` / `None` / `nil` 可保持原有行为）。
+
+### PDF 转 Office — API 参数变更
+
+以下转换 API 在本版本中存在不兼容变更。详细迁移指南及代码示例，请参阅 **Conversion SDK v3.1.0 Release Note** 中的「不兼容变更」章节（包含在 Conversion SDK 包中）。
+
+1. `PDF2WordSettingData` — 新增必选参数 `max_blank_paragraphs_per_page_bottom`；`enable_generate_headers_and_footers` 默认值从 `false` 改为 `true`
+2. `PDF2PowerPointSettingData` — 新增必选参数 `enable_adapt_to_largest_page`
+3. `PDF2ExcelSettingData` — 新增必选参数 `enable_aggressive_table_repair` 和 `include_watermarks`
+4. `PDF2OfficeSettingData` — 新增必选参数 `enable_matching_system_fonts`
+5. PDF 转 Word 现在默认保留文档内部导航链接
+
+---
+
+## 新增功能与增强
+
+### 平台
+
+- 新增 Node.js v21 和 v22 支持（扩展原有 v18-20 范围）
+- 新增 Node.js macOS 平台支持
+- 新增中文开发者接口文档
+
+---
+
+### 转换
+
+- 新增 Windows 平台 WPS 引擎转 PDF 能力：`Convert::FromWord/Excel/PowerPoint(..., e_Office2PdfEngineWps)`
+- 新增 PDF 转 Word 系统字体精准匹配开关：`PDF2OfficeSettingData::enable_matching_system_fonts`
+- 更新 PDF 转 Word 默认保留文档内部导航链接
+- 新增 PDF 转 PPT 页面尺寸自适应策略：`PDF2PowerPointSettingData::enable_adapt_to_largest_page`
+- 新增 Linux Office2PDF 字体嵌入开关：`Office2PDFSettingData::is_embed_font`
+- 新增转换 SDK 版本查询接口：`Office2PDF::GetVersion()` / `PDF2Office::GetVersion()`
+- 更新 `Office2PDF::ConvertFromWord` 支持 DOC（Word 97-2003）格式
+
+---
+
+### OCR
+
+- 新增进度回调：`OCRProgressCallback` 类，通过 `ProgressNotify(int current_rate)` 上报进度
+- 新增阿拉伯语支持：`OCREngine::SetLanguages("Arabic")`
+- 新增配置参数：`OCRConfig::confidence`（置信度阈值）和 `OCRConfig::resolution_to_overwrite`（分辨率覆盖）
+- 新增命令行多进程并行 OCR 工具：`ocr_win64.exe` / `ocr_linux64`
+- 新增图像过滤回调：`OCRCallback::IsImageIgnored(ImageObject*)`
+
+---
+
+### 渲染
+
+- 新增叠印渲染支持：`Renderer::SetOverprint(bool is_to_enable_overprint)`
+
+---
+
+### 签名与安全
+
+- 新增签名前自修改追踪回调：`ActionCallback` 中增加 `InitModifyItem()`、`ResetModifyItem()`、`NotifyBeginDoJob()`、`NotifyAfterDataChange()`、`NotifyEndDoJob()`；新增 `DocProviderCallback::NotifyWidgetChangeInfo()` 用于 XFA Widget 变更追踪
+- 新增 `CertChainResolverCallback` 和 `TrustedCertStoreCallback`，支持跨 CA 体系的 LTV 启用（在 `LTVVerifier` 中使用）
+- 新增 `Redaction::EnableFileStream()`，通过文件流落盘降低高密文标记量场景下的内存峰值
+
+---
+
+### 表单与注释
+
+- 新增 29 个 XFA 事件类型至 `XFADoc::EventType`，支持细粒度事件处理（Click、Change、Enter、Exit、PreSign、PostSign、PreSave、PostSave 等）
+- 更新 `IconProviderCallback::GetIcon`，新增 `annot_dict` 参数以访问注释字典
+
+---
+
+### 文档与页面
+
+- 更新 `ActionCallback::GetPageWindowRect`，新增 `document` 和 `page_index` 参数，支持 JS 图层（OCG）控制
+- 新增 `ActionCallback::GetVisiblePageCount()` 和 `ActionCallback::GetVisiblePage()`，用于查询多页视图中的可见页面
+- 新增结构化标签删除方法：`PDFDoc::RemoveStructTree()`、`PDFStructTree::RemoveChild()`、`StructElement::RemoveChild()`
+- 新增 `Font::IsCharSupported(uint32 unicode, const PDFDoc& document)`，用于字符支持检测
+- 新增 `Library::AddExternalFontPath()` 和 `Library::MatchExternalFontsOnly()`，用于外部字体路径管理
+
+---
+
+### 3D
+
+- 新增 `PDF3DContext::Add3DAnnot()`，支持在指定页面插入 3D 注释（文件路径和 ReaderCallback 两种模式）
+- 新增 3D 预设视图与模型树交互能力：`PDF3DAnnotInstance::ApplyPresetView()`、`GetPresetViewList()`、`ModelNode` 类及节点显隐控制
+
+---
+
+### 优化
+
+- 新增透明度优化，支持低/中/高分辨率模式：`OptimizerSettings::SetTransparencyMode()`
+
+---
+
+## 问题修复
+
+### 转换
+
+- 修复 PDF 转 Word 页面四角生成裁切线，导致第三方翻译软件处理后无法打开的问题
+- 改进 PDF 转 Word 跨应用渲染一致性（Microsoft Office 与 WPS Office 之间）
+- 修复 PDF 转 Excel 单元格文本被放入形状内而非直接在单元格中的问题
+- 修复 PDF 转 Excel 表格边框以位图形式覆盖在表格上方的问题
+- 修复 PDF 转 Excel 转换耗时过长、单元格以图片形式呈现的问题
+- 修复 PDF 转 PPT 页面尺寸异常，内容缩小到左上角的问题
+- 修复 `Office2PDF::ConvertFromWord` 处理特定 DOCX 文件时崩溃的问题
+- 修复 Word 转 PDF 字符间距不正确导致错误换行的问题
+- 修复 Word 转 PDF 加粗文本显示过度加粗的问题
+- 修复 Word 转 PDF 末尾文本丢失的问题
+- 修复 Word 转 PDF 图形形状偏差和文本错误换行的问题
+- 修复特定 OFD 文件转换为 PDF 后文字内容丢失的问题
+
+### OCR
+
+- [Linux] 修复因缺少中文字体导致 `OCRConvertTo` 失败（`ERR_FREN_NO_PAGES`）的问题
+- 修复特定文件执行 `OCRConvertTo` 报错（`ERR_IMAGE_LIBJPEG_LIBRARY_RAISED_ERROR`）的问题
+- 修复 44 页文档执行 `OCRConvertTo` 仅输出第一页的问题
+
+### 渲染
+
+- 修复 Bitmap DIBFormat 中 CMYK 转 ARGB 色彩转换不正确的问题
+- [性能] 修复多文档打开时逐步渲染耗时递增（17s→24s→30s→40s）的问题
+- 修复 `OutputPreview::SetSimulationProfile()` 未正确反映不同 ICC 配置文件的问题
+- 修复特定 PDF 在 OutputPreview 渲染中文本缺失的问题
+- 修复特定 PDF 页面与 Adobe 渲染结果不一致的问题
+- 修复使用 `e_DIBRgb` 创建的 `Bitmap` 通过 `Image::SaveAs` 保存时崩溃的问题
+- 修复向特定文档页面添加 `PathObject` 后渲染异常的问题
+- 修复通过 buffer 构造的 `Bitmap` 调用 `delete()` 未释放内存的问题
+
+### 打印
+
+- 修复 PrintManager 输出色彩偏差和不均匀点阵的问题
+- 修复多线程使用 PrintManager 时偶发崩溃的问题
+- 修复 `FXPM_AddPDFFromFileToJob` 和 `FXPM_SetJobDocumentName` 不支持中日韩路径的问题
+- 修复 `FXPM_SetJobDuplex(1)` 未启用双面打印的问题
+- 修复混合方向页面内容未随页面方向旋转的问题
+- 修复 `SetRotation()` 导致横向 PDF 以纵向文本方向打印的问题
+- 修复通过 `AddPDFFromFile` 添加多个文件时 PrintJob 仅打印第一个文件的问题
+
+### 表单
+
+- 修复 XFA `ExportData`/`ImportData` 循环操作导致表头和数字签名损坏的问题
+- 修复 XFA TextField Widget 增殖导致打开时间逐步增长直至崩溃的问题
+- 修复 C# ViewDemo 对特定 XFA 文档渲染空白页的问题
+- 修复 JavaScript 图层（OCG）显隐控制无效的问题
+- [回归] 修复 v11 中 `ActionCallback` 触发回归，部分回调在字段修改后不再触发的问题
+- 修复"继承缩放"书签目标仅对第一个书签生效的问题
+
+### 文档与页面
+
+- 修复 `StartEmbedAllFonts` 后调用 `SaveAs`（`e_SaveFlagLinearized`）崩溃的问题
+- 修复 `Html2PDF` 超时后 `fxhtml2pdf` 成为僵尸进程的问题
+- [性能] 修复 25,000 页 PDF 执行 `StartSplitByFileSize` 耗时超过 1 小时的问题
+- 修复高密文标记量连续处理场景下 Redaction 内存峰值过高的问题
+- [Windows] 修复 `ComplianceEngine::SetTempFolderPath()` 将临时文件写入可执行文件目录而非系统临时目录的问题
+- 修复 C# `TextPage.GetTextInRect` 对特定字符返回问号的问题
+- 修复 `GetEditingTextCaretPosition` 返回错误位置导致输入法候选窗口偏移的问题
+
+### 其他
+
+- 修复多进程并行 Optimizer 图像压缩产生视觉伪影的问题
+- 修复特定 3D PDF 点击 3D 注释区域后显示空白的问题
+- 改进 AutoTagging 对 Figure 类型图像的识别准确度（相对于 Adobe Auto-Tag）
+- 修复 Comparison 对 OCR 文档内容匹配不正确的问题
+
+---
+
+# 福昕 PDF SDK v11.0
+
+发布日期：2025 年 7 月 31 日
+
+## 新增功能与增强
+
+### 平台
+
+- 新增 Go 语言支持（Linux x32/x64、macOS x64）
+  *注：当前 Go 库暂不支持 OCR、Compliance 和 Preflight 功能。*
+- 新增 Python 库 Linux ARM 架构支持
+- 更新 Python 库使用 ABI3 稳定接口，确保 Python 3.11 及后续小版本的兼容性
+- 新增 Foxit.SDK.Dotnet NuGet 包的 Linux ARM 和 macOS ARM64 架构支持
+- 新增 .NET Core 的 Linux ARM 架构支持
+- 新增 PDF Print Manager 的强名称签名（.NET Framework 和 .NET Core）
+- 新增 `SetLogFile()` 重载，支持基于流的日志输出
+- 新增 `FlushLog()` 方法，支持即时日志写出
+
+---
+
+### 转换
+
+- 新增 `to_hide_header` 和 `to_hide_footer` 参数，控制 HTML 转换时页眉页脚的可见性
+- 新增 `to_deny_local_file_access` 参数，增强 HTML 转换安全性
+
+---
+
+### OCR
+
+- 新增 `OCRConvertTo()`，支持直接转换为输出格式（DOCX、RTF 等）
+- 新增 `OCRCallback` 类和 `SetOCRCallback()` 方法，用于监控和取消 OCR 任务
+- 新增 `is_sequentially_process` 参数，支持在顺序和并行处理模式之间切换
+
+---
+
+### 渲染
+
+- 新增 `SetScreenDPIScale()`，用于高 DPI 下注释缩放
+- 新增 `SetRenderLayer()`，控制渲染图层
+- 新增 `ClearClips()`，重置裁剪区域
+- 更新 `StartRenderBitmap()` 支持透明背景渲染
+- 新增 `ContentFlag` 枚举值，支持仅高亮渲染
+- 新增 `SetForegroundColor()` 和 `SetForegroundColorMode()`，用于文本和路径颜色控制
+- 新增 WebP 图像格式支持（`ImageType.e_WEBP`）
+- 新增 `ConvertToMono()`，用于 1-bit 单色转换
+
+---
+
+### 签名与安全
+
+- 增强文档级线程安全性；`Library::Initialize()` 新增可选参数 `bool enable_js_xfa_threadsafety`，用于 JavaScript 和 XFA 的线程安全控制
+- 新增 `Sanitize()` 方法，用于检测和清除隐藏或敏感信息
+- 新增 `RemoveHiddenInfo()` 方法，支持选择性清理元数据、脚本及其他嵌入数据
+- 新增 `EnableHandleTransparency()` 方法，在 PDF/A 转换中移除透明度以满足合规要求
+- 新增 `UnregisterSignatureCallback()`，恢复 SDK 默认签名处理程序
+- 更新 `AddPagingSealSignature()`，新增 `to_check_permission` 标志用于权限验证
+
+---
+
+### 文档与页面
+
+- 新增 `e_TypeInlines` 和 `e_TypeEmptyMarkedContent` 图形对象类型
+- 新增 `CreateFromName()` 和 `CreateFromNameW()`，用于按名称创建 PDF 对象
+- 新增 `PDFArray::AddReference()`，用于插入间接引用条目
+- 更新 `CreateFromString()` 支持长度参数
+- 新增 `PageBasicInfoArray` 和 `GetAllPageBasicInfo()`，用于轻量级批量获取页面信息
+- 新增 `e_ExtractPagesOptionBookmark` 和 `e_InsertDocOptionBookmark` 枚举，支持书签感知的页面提取和插入
+- 更新 `InsertDocument()` 支持可选的 `bookmark_title` 参数
+- 新增 `TextState::font_vertical_size` 和 `font_horizontal_size`，支持按方向设置字体大小
+- 新增 `Font(StreamCallback* stream)` 构造函数，支持字体流输入
+- 新增 `SplitTextsInRectangle()`，用于在指定矩形区域内按字符级别拆分文本
+- 新增 `GetNewPageBasicInfo()` 回调，用于获取新页面中已渲染表格高度
+- 新增 `LayerNode::GetAnnots()`，获取与图层关联的注释
+- 新增 `LayerTree::GetOCGsByPageIndex()`，按页面索引获取 OCG
+- 新增 `SetOCGStateAction` 类，用于批量图层显隐控制
+
+---
+
+### 表单
+
+- 更新 `StartRecognizeForm()`，新增重载以控制提示文本生成
+- 新增 `GetXMLContent()`，访问 XFA 内部 XML 内容
+- 更新 `ExportData()` 支持基于流的输出
+- 更新 `DocProviderCallback::SetFocus()`，新增 `re-layout` 参数用于布局变更通知
+
+---
+
+### 优化
+
+- 新增 `SetTileSize()`，用于 JPEG 2000 分块控制
+- 新增 `e_ImageCompressQualityLossless` 选项，支持 JPEG 2000 无损压缩
+- 新增 `e_ImageCompressZip` 选项，支持 ZIP 压缩
+- 新增 `MonoImageSettings` 额外单色压缩选项
+- 新增 `OptimizeScannedPDF()`，用于扫描密集文档压缩
+- 新增 `ComputeAuditSpace()`，在优化前计算可优化空间
+- 新增清理枚举，支持细粒度移除嵌入资源
+- 新增 `SetSubsetAllEmFonts()`，用于未嵌入字体的子集化
+
+---
+
+## 问题修复
+
+### 渲染
+
+- 修复透明度对象导致 PDF/A1-b 转换验证失败的问题
+- 修复拉平特定文件导致空白页的问题
+- 修复步长为 5000 的渐进式渲染导致内容缺失的问题
+- 修复特定文件无法渲染的问题
+- 修复印前预览对特定文档显示文本不完整的问题
+- 修复 `getGraphicsObjectPosition` 返回 0 且透明度设置失败的问题
+
+### 转换
+
+- 修复 HTML 转 PDF 输出中图片缺失的问题
+- 修复特定 HTML 内容无法转换为 PDF 的问题
+- 修复带固定页眉页脚的 HTML 转 PDF 输出不正确的问题
+
+### OCR
+
+- 修复 PDF OCR 转换耗时过长且无输出的问题
+- 修复 OCR 结果出现重影效果的问题
+- 修复使用辅助效果接口进行 OCR 后效果差且 Word 转换失败的问题
+- [Linux] 修复 OCR 语言不包含中文时仍要求中文字符集的问题
+
+### 表单
+
+- 修复处理 30 页后调用 `foxit::pdf::interform::Field::SetValue` 崩溃的问题
+- 修复特定文档中创建的批注位置与显示位置不一致的问题
+- 修复生成的打字机注释在福昕高级 PDF 编辑器中编辑后显示红色边框的问题
+- 修复未设置 `BorderInfo` 时屏幕注释显示黑色边框的问题
+
+### 文档与页面
+
+- 修复导入由 Web SDK 或福昕高级 PDF 编辑器创建的 XFDF 后度量标记值和单位不显示的问题
+- 修复 `AddText` 添加阿拉伯文文本与预期渲染不匹配的问题
+- 修复 Type3 文本对象转换为图像对象后显示空白内容的问题
+- 修复路径元素极少的扫描文档被错误识别为非扫描文档的问题
+- 修复特定文档 `PDFPage` 解析返回空（在其他查看器中可正常打开）的问题
+- 修复 `UpdateHeaderFooter` 仅更新一个页眉页脚并删除其他的问题
+- 修复 C# `bookMark.Title` 包含尾部空字符的问题
+- 修复 `StartImportPages` 导入空白页的问题
+- 修复特定文档执行 `StartImportPages` 永不结束的问题
+- [iOS] 修复填写特殊位置表单时崩溃的问题
+- [性能] 修复 `TextPage` 构造函数相较 v9.0 的性能回退
+- 修复文本搜索与替换报 `"any unknown error occurs"` 错误的问题
+
+### 其他
+
+- 修复证书主体信息中中文字符显示乱码的问题
+- 修复 Optimizer 图像压缩进度率仅上报 0 或 100 的问题
+- 修复 `@foxitsoftware/foxit-pdf-sdk-node` 包 TypeScript 声明文件语法错误的问题
+- 修复 C++ `pdfprint` 并发调用时显示参数错误的问题
+
+---
+
+# 福昕 PDF SDK v10.1.0
+
+发布日期：2024 年 12 月 16 日
+
+## 新增功能与增强
+
+### PDF3D
+
+- 支持获取和预设 3D 视图
+- 支持重置默认视图
+  新增 API：
+  - `GetPresetViewList()`
+  - `ApplyPresetView()`
+  - `ResetDefaultView()`
+
+### 合规性
+
+- 引入预检功能，支持 PDF/E 和 PDF/X 标准
+  新增类：
+  - `Preflight`
+  - `PDFXCompliance`
+  - `PDFECompliance`
+
+### 页面分析
+
+- 检测扫描页面
+  新增 API：
+  - `PDFPage::IsScanned()`
+
+### OCR
+
+- 增强 OCR 配置选项，包括基于图片的文字提取模式、倾斜校正、图像去噪及 CPU 核心使用模式
+  新增类：
+  - `foxit::addon::ocr::OCRConfig`
+  更新 API：
+  - `Initialize(...is_shared_cpu_cores_mode)`
+
+### 注释
+
+- 支持执行链接注释中基于 JavaScript 的子操作
+- 新增边框和填充颜色的独立透明度设置
+- 新增通过唯一 ID 获取注释的能力
+  更新 API：
+  - `ExecuteJavaScriptAction(JavaScriptAction)`
+  新增 API：
+  - `SetBorderOpacity()`、`GetBorderOpacity()`
+  - `SetFillOpacity()`、`GetFillOpacity()`
+  - `GetAnnotsByIdArray()`
+
+### 图像
+
+- 获取图像方向
+- 从 Type3 文本对象创建图像对象
+- 从页面图像对象克隆 1bpp 位图
+  新增 API：
+  - `GetOrientation()`
+  - `ImageObject::CreateFromType3TextObject()`
+  - `ImageObject::CloneBitmap(page, graphics_objects)`
+
+### 字体
+
+- 改进字体映射，新增基于字体族名称的重载回调
+  新增 API：
+  - `FontMapperCallback::MapFont()`
+
+### 渲染
+
+- 在 Linux 上支持将 PDF 渲染到 PDF 打印设备
+- 支持将 PDF 页面渲染为 1bpp 位图
+  新增 API：
+  - `Renderer(print_param, dest_pdf_path)`
+
+### 搜索
+
+- TextSearch 支持正则表达式
+  更新 API：
+  - `TextSearch::SetPattern(key_words, is_regex_search)`
+
+### 文本
+
+- 在添加文本前，计算 RichTextStyle 字符串所需的 PDF Rect 大小
+- RichTextStyle 的 `char_space` 和 `word_space` 允许负值
+  新增 API：
+  - `PDFPage::CalculateNewRectForText()`
+  更新 API：
+  - `Page::AddText` RichTextStyle
+
+### 水印
+
+- 新增平铺水印行为标志，包括打印/显示设置
+  更新 API：
+  - `TiledWatermarkSettings(flags)`
+
+### PrintManager
+
+- 增强打印任务的边距处理
+  新增 API：
+  - `SetJobPrintUnitType()`、`GetJobPrintUnitType()`
+  - `SetJobLeftMargin()`、`GetJobLeftMargin()`
+  - `SetJobRightMargin()`、`GetJobRightMargin()`
+  - `SetJobTopMargin()`、`GetJobTopMargin()`
+  - `SetJobBottomMargin()`、`GetJobBottomMargin()`
+
+### DWG2PDF
+
+- 跟踪转换进度并控制输出日志
+- 支持颜色转换策略
+  新增类：
+  - `DWG2PDFProgressCallback`
+  更新 API：
+  - `DWG2PDFSettingData::is_output_progress`
+  - `DWG2PDFSettingData::progress_callback`
+  - `DWG2PDFSettingData::color_policy`
+
+### LibreOffice2pdf
+
+- 在 Linux 上支持通过二进制引擎进行多线程转换
+  更新 API：
+  - `Convert::From[Word][Excel][PowerPoint](...fx_binary_engine_path, LibreOffice_User_Profile)`
+
+### Foxit PDF2Office
+
+- 支持使用二进制程序进行库初始化，提升转换灵活性
+- 引入更多转换选项，如插入分页符、移除尾部空格、输出图片
+- 支持受限 PDF 文件的转换
+  更新 API：
+  - `PDF2Office::Initialize(library_path, fx_binary_program_path)`
+  - `PDF2WordSettingData(...enable_generate_page_rendered_break)`
+  - `PDF2OfficeSettingData(...enable_trailing_space, include_images)`
+  新增类和 API：
+  - `ConvertCheckCallback`
+  - `SetConvertCheckCallback(convert_check_callback)`
+
+### Foxit Office2PDF
+
+- 正式集成 Foxit Office2PDF 作为附加组件
+- 在 Word2PDF 中支持大纲转换
+- 在 Excel2PDF 中引入工作簿转换选项
+  新增类：
+  - `Word2PDFConfig`
+  - `Excel2PDFConfig`
+
+### API 性能提升
+
+- 显著提升 Optimizer 对大量路径文档的处理性能，同一文档的处理时间从 7 分钟缩短至 1 秒
+- 大幅增强 `StartImportPagesFromFilePath` 导入含 AcroForms 文件的效率，1000 页 AcroForm 文件的处理时间从近 14 小时缩短至约 20 秒
+
+## 弃用功能
+
+- 弃用 `ImageObject::CloneBitmap(Graphics_Objects)` API
+
+## 问题修复
+
+### 表格相关
+
+- 修复使用 `AddTableToPage()` 合并单元格时出错的问题
+- 修复使用 `insertTablePagesToDocument` 插入表格时填充颜色未覆盖整个单元格的问题
+
+### 页面操作与导入
+
+- 修复使用 `StartImportPages()` 拆分页面导致内容错乱的问题
+- 修复使用 `ImportFromXML()` 时因 XML 文件格式检测不正确导致数据导入失败的问题
+- 修复使用 `RemovePage()` 移除 AcroForm 页面后表单数据残留的问题
+- 修复因 `CropBox` 处理不一致导致插入新 PDF 页面失败的问题
+
+### 文本处理
+
+- 修复使用 `GetPageText()` 提取含中文字符的文本时出错的问题
+- 通过优化文本提取算法，修复 `GetPageText()` 的文本提取顺序问题
+- 修复使用 `AddText()` 添加阿拉伯文时的显示错误
+- 修正使用 `SetText()` 设置阿拉伯文时的 RTL 显示顺序问题
+
+### 表单处理
+
+- 修复 `PDFPage::Flatten()` 无法扁平化静态 XFA 表单字段数据的问题
+- 修复动态 XFA 表单字段扁平化为 PDF 时状态未正确保留的问题
+- 修复触发特定回调事件后动态 XFA 文档无法加载的问题
+- 修复整数精度不足导致表单字段计算结果不正确的问题
+
+### 搜索功能
+
+- 修复因搜索关键词顺序计算错误导致返回不正确搜索结果的问题
+- 修复调用 `ReplaceNext()` 时的异常问题
+
+### 渲染与显示
+
+- 修复印前预览中因填充和描边颜色处理不当导致虚线显示不正确的问题
+- 修复因分离注释和页面渲染导致的印前预览异常
+- 修复路径中含软遮罩图案填充的背景图像显示问题
+- 修复通过 `AddImage()` 插入的图像因缺少旋转处理而镜像的问题
+- 修正调用 `SetMatrix()` 后因忽略裁剪路径导致图形对象不可见的问题
+
+### 崩溃修复
+
+- 修复打开含 3D 元素的 PDF 文件时崩溃的问题
+- 修复使用 `Renderer` 类批量将 PDF 转为 PostScript 时崩溃的问题
+- 修复 Linux 上因并发访问创建新 `PDFDoc` 对象时崩溃的问题
+
+### 注释与水印
+
+- 修复含缺失目标 (Dest) 信息的 PDF 文件中无法正确获取注释操作的问题
+- 修复调用 `StartExtractPages()` 后水印未写入提取页面的问题
+
+### 打印相关
+
+- [Demo] 修复 `pdfprint` Demo 中打印含软遮罩背景的 PDF 时内存问题
+- [PrintManager] 修正使用 Demo 打印功能时 `GetJobStatus()` 显示"Unknown"状态的问题
+- [PrintManager] 修复因打印机未调用 `GetJob()` 函数导致打印任务等待或无法完成的问题
+
+### 优化与性能
+
+- 修复因字体流处理不正确导致优化时数据丢失的问题
+- 修复 DWG 转 PDF 时因缺失字体资源导致文字乱码的问题
+- 修正 TIFF 图像中因强制 CMYK 转 RGB 导致的颜色不一致问题
+- 修复 TIFF 转 PDF 时因 TIFF 数据写入问题导致的内容丢失
+- 修复 `LTVVerifier::Verify()` 逻辑问题导致验证结果中数据丢失和异常
+- 修复因布局识别引擎问题导致的表格识别错误
+
+---
+
+# 福昕 PDF SDK v10.0.0
+
+发布日期：2024 年 3 月 18 日
+
+本版本为主要版本更新。
+
+## 新增功能与增强
+
+- 支持显示 OFD 文件：新增头文件 `fs_ofddoc.h`、`fs_ofdpage.h` 和 `fs_ofdrenderer.h` 用于处理 OFD 文档、页面和渲染操作，并在 `common::Library` 类中新增 `InitializeOFDEngine` 和 `ReleaseOFDEngine`
+- 支持 PDF 与 OFD 互转：引入 `addon::conversion::Convert::ToOFD` 和 `addon::conversion::Convert::FromOFD` 函数及 `conversion::OFDConvertParam` 类
+- 支持 DWG2PDF：新增 `addon::conversion::Convert::FromDWG` 函数及 `conversion::DWG2PDFSettingData` 类
+- 引入 Windows 3D 渲染：新增头文件 `fs_pdf3d.h` 用于渲染 3D PDF 文档
+- 支持段落编辑：新增头文件 `fs_paragraphediting.h`，支持段落合并、拆分等高级操作
+- 增量式密文标注：引入 `Redaction::StartApply` 用于增量密文标注和进度监控
+- 分离灰度和彩色图像设置：弃用 `SetColorGrayImageSettings`，新增 `SetColorImageSettings` 和 `SetGrayscaleImageSettings` 分别设置图像压缩
+- Linux OCR 附加组件多进程支持
+- 合规性附加组件多线程支持
+- 支持生成页眉页脚：更新 `PDF2WordSettingData` 新增 `enable_generate_headers_and_footers` 参数
+- 支持生成脚注和尾注：更新 `PDF2WordSettingData` 新增 `enable_generate_footnotes_and_endnotes` 参数
+- 支持克隆页面对象：新增 `GraphicsObject::Clone()` 实现 PDF 页面和文档间的对象克隆
+- 支持拆分文档：新增头文件 `fs_splitpdfdoc.h`
+- 支持表单状态和填充颜色变更通知：在 `JSFieldValueChangeType` 中新增 `e_JSFieldValueChangedBySetReadOnly` 和 `e_JSFieldValueChangedByFillColor` 枚举
+- 提供 Windows 和 Linux 上的 Node.js 库
+- 支持 AnyCPU：为 Dotnet/DotnetCore 新增 AnyCPU 平台目标支持
+- 增强骑缝章签名：更新 `PagingSealConfig::PagingSealConfig` 新增 `is_display_multiple_seal` 和 `page_count_for_each_seal` 参数
+- 增强 TableGenerator 功能：新增 `TableGeneratorCallback` 的 `Release` 和 `GetTableTopMarginToPage` 函数，更新 `TableCellData` 新增 `cell_fill_color` 属性
+- 增强 OCR 引擎：为 Linux CentOS 8 兼容性在 OCR Bin 目录新增 `libippccm7.so`
+- 增强 PowerPoint 文本块识别准确率
+- 增强 AddText 功能：更新 RichTextStyle 新增 `char_space` 和 `word_space` 属性，更新 `rotation` 参数接受整数值并新增 `disable_embed_font` 参数
+- 增强 XFA 表单支持：更新 `XFAWidget` 类新增 `IsReadOnly`、`IsRequired`、`IsAllowRichText`、`SetOptions` 等 API
+- 优化渲染效率：含重复路径的页面渲染时间显著缩短，效率提升约三倍
+- 优化页面解析效率：通过优化路径对象较多的页面，解析效率提升近 16%
+
+## 问题修复
+
+- 修复 Linux 上 Java SDK 因本机内存错误导致崩溃的问题
+- 修复调用 `ImportFromFDF` 函数时崩溃的问题
+- 修复使用 Linux Java SDK 将特定文件转为 PDF 图像时崩溃的问题
+- 修复表单字段中乘法计算错误的问题
+- 修复扁平化动态 XFA 表单后签名丢失的问题
+- 修复 PDFReader Demo 未对无效数据输入执行表单验证的问题
+- 修复特定表单字段值变更后关联表单字段文本行距改变的问题
+- 修复 Linux CentOS 8 上 OCR 执行异常的问题
+- 修复使用 Linux DotNetCore SDK 对特定 PDF 文档进行 OCR 后文本背景色丢失的问题
+- 修复对特定文档进行 OCR 后某些页面旋转 90° 的问题
+- 修复 OCR 后表格边框路径对象被转为图像的问题
+- 修复使用 SDK 插入单色位图水印后位图边缘出现多余黑线的问题
+- 修复使用 `setMatrix` 移动或调整图像大小时部分图像丢失的问题
+- 修复使用 pdf2image 对特定 PDF 文档转换后图像出现马赛克的问题
+- 修复 Linux ARM 上 Java SDK 初始化错误的问题
+- 修复含大量路径对象的文档中调用 `getLayers` 后页面释放效率低的问题
+- 修复 DotnetCore SDK 中 `TextPage.GetTextInRect` 方法将字符 '⁻' 解析为 '?' 的问题
+- 修复加载线性化文档后 `PDFDoc::isLinearized` 函数返回不正确结果的问题
+- 修复在 DIB_CMYK 格式下设置 `SetRenderTextAntiAliasing(false)` 渲染时文本不显示的问题
+
+---
+
+# 福昕 PDF SDK v9.2.0
+
+发布日期：2023 年 11 月 7 日
+
+## 新增功能与增强
+
+- 新增 `GetEditingTextCaretPosition()` API，用于在表单填写或编辑时获取文本字段中的光标位置
+- 增强字体嵌入灵活性：`Embed()` 函数新增 `is_add_all_unicodes` 参数，控制嵌入所有 Unicode 或指定 Unicode；新增 `AddUnicodes()` 方法按需添加嵌入字体的 Unicode
+- 新增 `XFAWidget::SetCheckState()` API，用于控制 XFA CheckBox 和 Radio 控件的选中状态
+- 增强签名 PDF/A 合规性：调整底层代码支持基于图片的签名，并新增 `EnableEmbedFont()` API 支持基于文本的签名
+- 增强 PDF JavaScript 支持：新增 cursor、printparams、icon、hostcontainer 和 fullscreen 对象
+- 新增 XFA 表单字段多行和多选属性检测：`IsSupportMultiline()`、`IsListBox()`、`IsSupportMultiSelect()`
+- 新增搜索结果可调上下文长度：`RetrieveSearchResult()` 新增 `sentence`、`match_sentence_start_text_index`、`match_sentence_end_text_index` 参数
+- 升级全文搜索引擎，显著提升搜索准确率
+- Office2PDF Linux 平台支持 LibreOffice 7.0
+
+## 问题修复
+
+- 修复 PDF 转 Word 多线程场景下 `ConvertCallback` 非空且需要暂停时崩溃的问题
+- 修复调用 `StartRenderXFAPage()` 渲染动态 XFA 表单后签名丢失的问题
+- 升级 OCR 引擎，修复 OCR 运行时错误和识别不准确的问题
+- 升级全文搜索引擎，修复搜索结果不正确的问题
+- 修复 HTML 转 PDF 时提示转换成功但未生成文件的问题
+- 修复 `GeneratePreviewBitmap()` 处理高 DPI 位图时内存占用过大的问题
+- 修复三角形 Polygon 注释重置外观后顶点被截断的问题
+- 修复使用 `InsertTablePagesToDocument` 插入跨页表格时单元格高度未自适应的问题
+- 修复 `InsertTablePagesToDocument` 处理过长单元格内容时出现内存不足（OOM）异常的问题
+
+---
+
+# 福昕 PDF SDK v9.1.0
+
+发布日期：2023 年 8 月 22 日
+
+## 新增功能与增强
+
+- 新增签名前设置外观的能力
+  相关 API：`Signature::GenerateAppearance()`
+- 新增使用共享字典添加签名的功能
+  相关 API：`PDFPage::AddSignatureWithExistedVDict()`
+- 新增签名前增量保存文档的能力
+  相关 API：`Signature::EnableIncrementalSaveForFirstSigning()`
+- 新增签名前修改未签名骑缝章外观的能力
+  相关 API：`Signature::GetPagingSealSignature()`
+- 新增使用共享字典添加骑缝章签名的功能
+  相关 API：`PagingSealConfig::PagingSealConfig()`
+- 新增全角字符搜索忽略
+  相关 API：`TextSearch::SearchFlags()`
+- 新增删除无效 PDF 索引的功能
+  相关 API：`FullTextSearch::StartUpdateIndex()`
+- 新增 PDF JavaScript 对象支持：`Doc.pageTransition`、`Doc.templates`、`Span` 和 `Soap`
+- [Office2PDF] 新增 Windows 平台 Office2PDF 转换时的 VBA 代码执行控制
+  相关 API：`Word2PDFSettingData::Word2PDFSettingData()`、`Word2PDFSettingData::Set()`
+- [HTML2PDF] 新增转换环境和 IP 黑名单控制
+  相关 API：`HTML2PDFSettingData::HTML2PDFSettingData()`、`HTML2PDFSettingData::Set()`
+- 新增多行平铺水印及可选配置
+  相关 API：`PDFDoc::StartAddTiledWatermark()`
+- 新增密文标注覆盖文本自动字号
+  相关 API：`Redact::EnableAutoFontSize()`
+- 新增 OCR 可疑结果获取能力
+  相关 API：`OCR::GetOCRSuspectsInfo()`
+- 新增保存文档时不更新日期元数据的选项
+  相关 API：`PDFDoc::SaveAs()`、`PDFDoc::StartSaveAs()`
+- 新增添加文本时的旋转支持
+  相关 API：`PDFPage::AddText()`
+- 新增对象级 PDF 结构树遍历类
+  新增头文件：`fs_pdfstructtree.h`
+- 新增 `PDFCompliance::Verify()` 验证功能
+- 新增 Image 转 PDF 功能，支持文件路径和流式输入
+  相关 API：`Convert::FromImage()`
+- 新增链接注释的 JavaScript Action 执行能力
+  相关 API：`Link::ExecuteJavaScriptAction()`
+- 新增 XFA Widget 默认值重置功能
+  相关 API：`XFAWidget::SetDefaultValue()`、`XFAWidget::GetDefaultValue()`
+- 新增 Linux 平台 PDF 打印接口
+  相关 API：`Renderer::Renderer()`
+- Java 库新增 Linux ARM 架构支持
+- 更新合规性库以增强整体处理能力
+- 增强 Windows C 库支持，修复兼容性问题
+
+## 问题修复
+
+1. 修复特定文档中部分链接注释获取到空 Destination 的问题
+2. 修复圆形注释重置外观后边缘被裁剪的问题
+3. 修复特定文件中便签注释渲染不正确的问题
+4. 修复图像压缩过程中暂停导致图像丢失的问题
+5. 修复 Linux 环境下运行 Office2PDF 报错 `"[Unknown error]: any unknown error occurs"` 的问题
+6. [Java] 修复在已有页眉页脚的文档中调用 `getEditableHeaderFooter` 添加页眉页脚时崩溃的问题
+7. 修复使用 `PDFDoc.SaveAs` 覆盖原始 PDF 文件时未抛出异常的问题
+8. 修复页眉页脚内容末两字符为单书名号时生成多余内容的问题
+9. [Java] 修复 `StructTreeEntity.getPage` 返回类型不正确的问题
+10. 修复 Linux 上使用 `PDFDoc.GetPageText` 获取特定文档文本时出现乱码的问题
+11. 修复渲染含透明度的 PDF 页面且 DIBFormat 设置为 `e_DIBCmyk` 时抛出 `e_ErrUnsupported` 异常的问题
+12. 修复 `PDFDoc::StartLoad` 在文档加载过程中无法准确获取加载进度的问题
+13. 修复 Android 系统上表单字段自动乘法计算结果不正确的问题
+14. 修复 `AdditionalAction::DoJSAction` 执行结果异常的问题
+15. 修复无法通过 JavaScript 清空受密码保护的文本字段的问题
+16. 修复 ViewDemo 中列表框选中后重新获取焦点时值对齐错位的问题
+17. 修复对特定文件调用 `Control.GetWidget()` 时崩溃的问题
+18. [Java] 修复 `Image.saveAs` 路径包含中文字符时报 "File cannot be found" 错误的问题
+19. 修复 `Page.AddImage` 处理大体积 TIF 文件时出错的问题
+20. 修复使用 `AddImageFromFilePath` 插入条码图片时出现多余灰色方块的问题
+21. 修复 Linux ArmV8 上 C++ 库兼容性问题
+22. 修复 Linux OCR 引擎因内存不足导致异常的问题
+23. 修复倾斜原始文档 OCR 输出文本重叠的问题
+24. 修复 ComplianceModule 将 OCR 处理后的 PDF 转换为 PDF/A 时抛出未处理异常的问题
+25. 修复转换特定 PDF 文件为 PDF/A 格式时崩溃的问题
+26. 修复转换特定 PDF 为 PDF/A 时出现 AccessViolationException 的问题
+27. 修复 XFA 文件调用 `Control.GetWidget()` 耗时过长的问题
+28. [PrintManager] 修复 `GetPrintJobStatus` 返回不正确打印状态的问题
+29. 修复打印特定文档时部分区域出现黑块的问题
+30. 修复全文搜索编码问题，使其可以正确搜索中文文本
+31. 修复全文搜索对已索引文件在未更新索引时搜索失败的问题
+
+---
+
+# 福昕 PDF SDK v9.0.0
+
+发布日期：2023 年 6 月 9 日
+
+本版本为主要版本更新。
+
+## 新增 API / 平台
+
+- OCR 引擎新增 Linux 64 位平台支持
+- Mac ARM M1 芯片语言支持从 C++ 扩展至 Java、DotNetCore、Objective-C 和 Python
+
+## 新增功能与增强
+
+- 新增福昕自研 PDF2Office 作为 SDK 附加组件
+  相关 API：`foxit::addon::conversion::pdf2office`
+- 新增跨平台 MAUI POC 项目，以 SDK 包、NuGet 包和 GitHub 仓库形式提供
+- 新增文本查找和替换功能
+  相关 API：`foxit::addon::pageeditor`
+- 新增 MRC 压缩技术用于压缩图像对象
+  相关 API：`ImageSettings::SetBackgroundDownScale()`、`SetForegroundDownScale()`、`SetTextSensitivity()`
+- 增强表格生成器，支持单元格内数据自适应填充
+  相关 API：`TableGenerator::InsertTablePagesToDocument()`
+- 新增表单控件注释外观克隆功能
+  相关 API：`Annot::ResetAppearanceStream()`
+- 新增 XFA 表单字段图片设置功能
+  相关 API：`XFAWidget::SetImage()`
+- 新增嵌入文档中所有未嵌入字体的功能
+  相关 API：`PDFDoc::StartEmbedAllFonts()`
+- 新增字体编码获取和设置功能
+  相关 API：`Font::SetEncoding()`、`Font::GetEncoding()`
+- 新增渲染时签名状态可见性管理
+  相关 API：`Renderer::SetRenderSignatureState()`
+- 新增获取当前骑缝章签名所有元素的功能
+  相关 API：`Signature::GetPagingSealGroupElements()`
+- 新增签名字段自定义字典
+  相关 API：`Signature::SetCustomObject()`
+- Form XObject 图像对象支持 `CloneBitmap()`
+  相关 API：`ImageObject::CloneBitmap()`
+- 新增 PDF 密文标注覆盖文本重复显示
+  相关 API：`Redact::EnableRepeatOverlayText()`
+- 新增注释移动时是否重置外观的选项
+  相关 API：`Annot::Move()`
+- 新增元数据 xmpMM 标识符的获取和设置功能
+  相关 API：`Metadata::SetValues()`、`Metadata::GetValues()`
+- 优化文本水印，避免文件体积增长
+  相关 API：`WatermarkSettings`
+- PDF TIFF 位图支持 LZW 压缩
+- 增强 PDF JavaScript 对象支持，提升 PDF 交互能力
+- 升级 OCR 引擎，改善文字和字体识别效果
+- 改进贝塞尔曲线尖角处的渲染效果
+
+## 问题修复
+
+- 修复对特定 PDF 文档多次调用 `StartRender` 时抛出异常的问题
+- 修复通过 `StartImportPagesFromFilePath()` 合并特定文档后保存优化时崩溃的问题
+- 修复调用 `Field::SetDefaultAppearance()` 修改文本字体和字号后签名外观未更新的问题
+- [PrintManager] 修复打印 PDF 文档时输出边距增大的问题
+- [C API] 修复调用 `SetRichTextStyle()` 对齐文本时崩溃的问题
+- 修复 `XFAWidget::SetValue()` 无法将任意字段设置为空字符串 ("") 的问题
+
+---
+
+# 福昕 PDF SDK v8.4.2
+
+本版本为维护更新。
+
+## 新增功能与增强
+
+- 更新 Mac ARM C++ 库以支持 macOS 11
+- 更新 Windows .NetCore 的 `Simple_Demo/pdfprint`，提升打印质量
+
+## 问题修复
+
+- 修复 `ColorSpace::ConvertColor()` 设置不支持的参数时未抛出异常的问题
+- 修复 Windows 7 上简单示例中 OCR 引擎初始化错误
+- 修复使用无效路径创建的 `PDFDoc` 调用 `LoadW()` 时返回异常错误字符串的问题
+- 修复特定 PDF 文档渲染时页面位图出现模糊水平线的问题
+- 修复 `GetSnappedPointAtPos()` 函数死循环问题
+- 修复导入包含特定注释的 FDF 文件时抛出异常的问题
+- 修复 `TabOrderMgr::GetNextAnnot(Annot)` 无法获取下一个注释对象的问题
+- 修复部分 TrueType 字体的 charCode 显示不正确的问题
+
+---
+
+# 福昕 PDF SDK v8.4.1
+
+本版本为维护更新。
+
+## 新增功能与增强
+
+- PrintManager 新增自动居中支持
+- 将表格生成器功能迁移至 `foxit::addon::tablegenerator` 命名空间
+- HTML2PDF 新增是否加载完整内容的选项
+
+## 问题修复
+
+- 修复 C API 的 `FSDK_ImageObject_CloneBitmap` 问题
+- 修复 `RetrieveSearchResult` 中文文件名错误的问题
+- 修复特定文件中 `PDFPage.GetAnnots()` 的问题
+- 修复仅使用 `Renderer.StartRender` 渲染时的显示问题
+- 修复部分 HTML2PDF 功能相关问题
+
+---
+
+# 福昕 PDF SDK v8.4.0
+
+## 新增 API / 平台
+
+- 新增 Mac ARM M1 处理器支持
+- 全面支持 Windows、Linux 和 Mac 上的 Python 及 Python Wheels
+
+## 新增功能与增强
+
+- 新增 PDF 表格生成能力
+  相关 API：`TableGenerator` 类
+- 新增 PDF 自动标签及图片替代文本功能
+  相关 API：`addon::accessibility`
+- 除 OCR 相关 API 外，SDK 全面支持线程安全
+- Office2PDF 新增 Linux 平台支持
+- 新增注释和表单字段缩放参数
+  相关 API：`PDFPage.Transform()`
+- 新增叠印模拟开关
+  相关 API：`OutputPreview.EnableSimulateOverprint()`
+- 新增设置表单字段值时的变更通知回调
+  相关 API：`ActionCallback::OnFieldValueChanged`
+- 新增仅比较注释的标记
+  相关 API：`Comparison::DoCompare()`
+- 新增从模板 FDF 文件导入表单字段的支持
+  相关 API：`PDFDoc::ImportFromFDF()`
+- 骑缝章签名输出类型调整为签名（而非注释）
+- 优化云朵注释，使 SDK 生成的云状效果与其他 PDF 编辑器一致
+- `OCRPDFDocuments()` 函数支持多进程
+- Linux GCC 编译器最低版本升级至 4.9.4
+
+## 问题修复
+
+- 修复 .Net framework 中多次加载 PDF 文件失败后崩溃的问题
+- 修复 `cloneBitmap` 从图形图像对象获取的图片色彩空间不正确的问题
+- 修复 DIB rgb 或 rgb32 格式渲染黑色文本时出现彩色像素的问题
+- 修复部分 Unicode 字符作为注释放置时渲染不正确的问题
+- 修复 XFA 文件在某些页面渲染失败的问题
+- 修复 Linux 上设置电话号码表单字段时出现 `std::regex_error` 的问题
+- 修复 .Net ViewDemo 中文本字段选择多行文本时页面移动的问题
+- 修复 .Net ViewDemo 中无法使用方向键移动光标位置的问题
+- 修复 Windows .Net Core 中多线程调用 `GetUserPermissions()` 和 `GetSignature()` 导致内存增长后崩溃或冻结的问题
+- [PrintManager] 修复 Windows .Net 中打印某些 PDF 页面时整页缩小为一半的问题
+- 修复 .Net 中对含有签名字段的文档签名后破坏已有签名和 PDF/A 合规性的问题
+- 修复 Linux 上设置阿拉伯语书签标题时的异常
+- 修复 NSimsun 字体无法嵌入的问题
+
+---
+
+# 福昕 PDF SDK v8.3.2
+
+本版本为维护更新。
+
+## 问题修复
+
+- [PrintManager] 修复使用 Ricoh 9001 打印机打印某些多页文档时的错误
+- [.Net] 修复从 `TextState` 获取文本变换矩阵时崩溃的问题
+- [Demo] 修复通过 `pdfprint` 示例打印特定文档时的异常
+- 修复合并文档后命名目标丢失的问题
+- 修复使用 `StartExtractPages` 从标记 PDF 提取页面后生成的文档不包含 `markinfo` 标记的问题
+- 修复目标名为空时 `GoToR` Action 解析到错误的命名目标的问题
+- 修复页面包含带遮罩的 1bpp 图像时的渲染问题
+- 修复 OCR 识别后文档文本变形且页面大小改变的问题
+- 修复字体嵌入导致输出文件大小增大的问题
+- 修复调用 `Field.SetDefaultAppearance` 设置外观时 `arialbd.ttf` 粗体无法渲染的问题
+
+## 改进
+
+- 优化云朵注释，使 SDK 生成的云状效果与其他 PDF 编辑器一致
+
+---
+
+# 福昕 PDF SDK v8.3.1
+
+本版本为维护更新。
+
+## 改进
+
+- 通过优化嵌入字体和 XRefStream 提高 PDF 优化压缩率
+
+## 问题修复
+
+- [HTML2PDF] 修复设置无效参数时未抛出异常的问题
+- [PrintManager] 修复未启用 "Print as Image" 时高亮注释颜色打印为不透明的问题
+- [PrintManager] 修复 .Net framework 中应用关闭后进程仍在运行的问题
+- [PrintManager] 修复启用 "print as bitmap" 后打印输出为空白的问题
+- 修复具有共享 AP 流的字段设置值后外观不正确的问题
+- 修复 .Net framework 中多线程打印的问题
+- 修复表单 ListBox 获取焦点时选项未被选中的问题
+- 修复 .NetCore framework 中 `GetPageText` 提取希伯来语文本返回乱码的问题
+- 修复特定文档缺少页面对象时调用 `getAnnotAtPoint` 崩溃的问题
+- [Python] 修复使用 `rundemo_python3.py` 运行示例时出现 `ImportError` 且实际未执行的问题
+
+---
+
+# 福昕 PDF SDK v8.3
+
+## 新增 API / 平台
+
+- 新增 Windows Python API
+  当前仅发布基于 Python 2.7 和 Python 3.9 的 Windows 版本
+
+## 新增功能与增强
+
+- FreeText 注释全面支持文本溢出
+  相关 API：`FreeText::AllowTextOverflow`
+- 新增骑缝章签名支持
+  相关类：`PagingSealSignature`
+- 新增显示所有文档比较结果图层的标记
+  相关 API：`Comparison::GenerateComparedDoc`
+- 新增图片字段支持
+- 新增组合图层名称设置
+- `Image.AddFrame()` 支持 1bpp RGB
+- HTML2PDF 新增输入编码格式指定
+  相关 API：`HTML2PDFSettingData`、`HTML2PDFEncodingFormat`
+- HTML2PDF 新增是否打印背景的标记
+- HTML2PDF 新增自定义页眉页脚
+- HTML2PDF 新增关闭图片捕获选项
+- HTML2PDF 新增标签优化选项
+- HTML2PDF 新增超链接去下划线选项
+- 增强 JavaScript 支持
+
+## 问题修复
+
+- 修复部分 XFA 刷新问题
+- 修复向 `ActionCallback::PopupMenu` 传入空 `MenuListArray` 时的问题
+- 修复部分 JavaScript 相关问题
+- 修复向 PDF 插入 PNG 文件时文件大小异常的问题
+- 修复电话号码格式表单字段输入 "xxx-xxx-xxxx" 的问题
+- 修复文件路径包含 `\\` 时 PDF 转 XML 功能的问题
+- 修复扁平化包含多个签名字段的文件时的问题
+
+---
+
+# 福昕 PDF SDK v8.2
+
+## 新增功能与增强
+
+- 目录（TOC）新增配置选项，控制是否包含目录页
+  相关 API：`TableOfContentsConfig::TableOfContentsConfig()`、`TableOfContentsConfig::Set()`
+- Office2PDF 扩展至 Windows/Linux ARMv8 平台支持（基于 WPS 引擎）
+- 新增时间戳回调函数，支持自定义时间戳服务
+  相关类：`TimeStampCallback`
+- 新增 `XFADoc::ImportData()` 从内存导入 XFA 数据（XML/XDP）
+- 新增获取表单字段无效值时用户输入数据的能力
+  相关 API：`FillerAssistCallback::ReportInvalidValue`
+- 新增 PDF 转 XML 功能
+  相关 API：`Convert::ToXML()`
+- HTML2PDF 新增页面缩放设置
+  相关 API：`HTML2PDFSettingData::HTML2PDFScalingMode`
+- 新增获取指定坐标点所有注释对象的方法
+  相关 API：`PDFPage::GetAnnotsAtPoint`、`PDFPage::GetAnnotsAtDevicePoint`
+- PrintManager 新增灰度渲染色彩模式，用于黑白打印
+
+## 改进
+
+- 优化 `StartImportPages()` 性能
+- 优化书签遍历性能
+- 新增 `e_FlagShareImageStream` 标记，减少添加图片水印时的内存消耗
+- 优化文本获取功能
+
+## 问题修复
+
+- 修复双色调图像的 CCITT 压缩问题
+- `SetLogFile()` 改为追加模式写入日志文件
+- 修复转换特定文件为 PDF/A 时挂起的问题
+- 修复转换特定文件为 PDF/A 时崩溃的问题
+- 修复 JavaScript 调用 `Field.setFocus()` 时抛出异常的问题
+- 修复 .NET 平台特定文件中 `TextObject::GetText()` 返回不正确文本的问题
+- 修复 .NET ViewDemo 缩放时跳转到页面开头的问题
+- 修复 `TextObject::GetRect().width` 返回不正确尺寸的问题
+- 修复 PrintManager 若干问题
+- 修复 HTML2PDF 进程空闲一段时间后无法终止的问题
+- 修复 .NET 中 PDF 文档含空白页时 `ExportToFDF` 抛出异常的问题
+- 修复 HTML2PDF 中 `e_PageModeSinglePage` 对部分 URL 不生效的问题
+- 修复特定 Type3 字体获取到不正确字符码的问题
+- 修复生成 EIA 外观时部分 InkList 点被忽略的问题
+- 修复特定文件的打印问题
+- 修复 `TextPage.GetText` 按外观顺序获取文本时显示不正确的问题
+
+---
+
+# 福昕 PDF SDK v8.1
+
+## 新增功能与增强
+
+- 新增 Mac 平台 Java API
+- .NET Nuget 包 "Foxit.SDK.Dotnet" 新增 .NET Core 目标
+- HTML2PDF 新增流式输出
+  相关 API：`Convert::FromHTML`
+- 新增页面模板支持
+  相关 API：`PDFDoc::AddPageFromTemplate`
+- 新增表单字段自动识别功能
+  相关 API：`PDFDoc::StartRecognizeForm`
+- `FillSignObject::Move` 新增文本对象移动支持
+- 新增文本字段/组合框的选择、剪切、复制、粘贴、删除回调
+  相关类：`FillerAssistCallback`
+- 新增 Action 回调的身份属性类
+  相关类/API：`IdentityProperties`、`ActionCallback::SetIdentityProperties`
+- 新增向页面添加多行文本的功能
+  相关 API：`PDFPage::AddText`
+- 注释新增 "Deferred" 和 "Future" 状态
+  相关枚举：`Markup::State`
+- 新增生成目录页时显示大纲层级的选项
+  相关 API：`PDFDoc::AddTableOfContents`
+- 新增文本表单字段行间距设置
+  相关 API：`Widget::SetLineSpacing`、`Widget::LineSpacingStyle`
+- 新增删除注释弹出对话框的方法
+  相关 API：`Markup::RemovePopup()`
+
+## 改进
+
+- 提升路径对象生成性能
+- 增强表单填写功能，支持社会保障号格式
+- 优化多线程场景下 `Signature.startVerify` 的内存使用
+- 提升 `Field::GetControlCount()` 性能
+- 增强特定 Excel 文档转 PDF 效果
+- 增强 Java、Objective-C、.NET、C 的 `graphic_objects` 示例
+- 增强图形对象插入方法
+
+## 问题修复
+
+- 修复 `ImportPage` 方法合并行为不正确的问题
+- 修复页眉页脚功能页边距调整不正确的问题
+- 修复 `SetRenderEnhanceThinLines` 设为 true 时的渲染问题
+- 修复特定文件的图片添加问题
+- 修复动态图章显示不正确的问题
+- 修复特定文件中墨迹签名显示不一致的问题
+- 修复墨迹注释 FXInkType 为 "PSI" 且宽度小于 1.0 时 `ResetAppearanceStream()` 抛出异常的问题
+- 修复 .NET PrintManager 打印机问题
+
+---
+
+# 福昕 PDF SDK v8.0
+
+本版本为主要版本更新。
+
+## 新增功能与增强
+
+- 新增 Linux ARM 平台支持
+- 新增签名前验证 PDF 文档权限的标记
+  相关 API：`PDFPage::AddSignature`
+- HTML2PDF 新增分页属性支持
+- HTML2PDF 新增书签创建功能
+  相关 API：`HTML2PDFSettingData::Set`
+- 标注（Callout）注释调整大小时支持文本自动溢出
+  相关 API：`FreeText::AllowTextOverflow`
+- 表单数据新增 CSV 格式导出
+  相关 API：`Form::ExportToCSV`
+- 新增表单设计助手——显示/隐藏建议表单字段位置
+  相关 API：`PDFPage::GetSuggestedRect`
+- 新增签名字段高亮开关
+  相关 API：`Filler::HighlightFormFields`
+- 新增文本字段富文本格式的获取/设置
+- 新增 ListBox 字段的排序和提交值
+  相关枚举：`Field::Flags`
+- 新增获取注释图像资源
+  相关 API：`Screen::GetBitmap`
+- 新增文本字段溢出指示器显示控制
+  相关 API：`Filler::ShowOverflowIndicator`
+- 新增 .NET 版 PrintManager 模块
+
+## 改进
+
+- 新增零宽度线条增强渲染选项
+- 新增条码外观文本字段显示支持
+- 优化 `Watermark.InsertToPage` 方法性能
+- 提供 Windows .Net SDK 的 NuGet 包
+- 增强 PSI 注释效果
+- 增强部分 XFA 文档的渲染性能
+- 增强文本搜索功能
+- 增强 SubmitForm Action
+
+## 问题修复
+
+- 修复 OCR Java 示例项目的问题
+- 修复多线程签名 PDF 的问题
+- 修复 TXT 转 PDF 的问题
+
+---
+
+# 福昕 PDF SDK v7.6
+
+## 新增功能与增强
+
+- HTML2PDF 新增 Linux 平台支持
+- 新增 TXT 转 PDF 功能
+  相关 API：`Convert::FromTXT()`、`TXT2PDFSettingData`
+- 新增在当前 PDF 文档前插入目录页
+  相关 API：`PDFDoc::AddTableOfContents()`、`PDFDoc::GetBookmarkLevelDepth()`
+- 新增注释摘要功能
+  相关类：`AnnotationSummary`
+- 新增 Portfolio（文档包）支持
+  相关类：`foxit::pdf::portfolio`
+- 新增获取分色空间指定组件的颜色值
+  相关 API：`OutputPreview::GetSpotPlateColor()`
+- 新增图像压缩 DPI 限制设置
+  相关 API：`ImageSettings::SetImageDPILimit()`、`MonoImageSettings::SetImageDPILim()`
+- PrintManager 新增按 PDF 页面大小选择纸盒功能（仅 Windows C++）
+- 新增渐进式渲染中单步渲染图形对象数量设置
+  相关 API：`Library::SetRenderConfig()`、`Library::GetRenderConfig()`
+- 新增渲染页面时是否对 JPX 图像进行降采样的设置
+  相关 API：`Renderer::SetJPXDownSample()`
+- 新增 `ActionCallback` 中的文件浏览回调
+  相关 API：`ActionCallback::BrowseFile()`
+- 新增 Markup 注释的富文本格式获取/设置
+  相关类：`Markup::***RichText`
+- 新增仅通过注释字典构造注释的方法
+  相关 API：`PDFPage::AddAnnot(PDFDictionary*)`
+- 新增表单控件对齐方式的获取/设置
+  相关 API：`Control::SetAlignment()`、`Control::GetAlignment()`
+- 新增页面标准化方法
+  相关 API：`PDFPage::Normalize()`
+- 新增路径特定点获取
+  相关类：`SnapPointMgr`
+- 新增文本字段 "文件选择" 和 "拼写检查" 标记的获取/设置
+  相关枚举：`Field::Flags`（`e_FlagTextNoSpellCheck`、`e_FlagTextFileSelect`）
+- 新增圆形和矩形注释的测量属性获取/设置
+  相关 API：`Square::GetMeasureRatio()`、`Circle::GetMeasureRatio()`、`SetMeasureRatio()`、`SetMeasureUnit()` 等
+
+## 改进
+
+- 调整注释和表单的渲染逻辑关系
+- 弃用 LTV 验证器 ETSI 模式（移除 `e_VerifyModeETS` 枚举值）
+
+## 问题修复
+
+- 修复 Java GC 释放问题
+- 修复 `RMSSecurityCallback` 方法相关问题
+- 修复注释富文本内容重置外观后空格丢失的问题
+- 修复 SDK 扁平化后的特定文档在 Adobe 中打开报错的问题
+- 修复使用文件字体添加 FreeText 注释时的访问违例异常
+- 修复特定文件 PDF 转 PDF/A 时崩溃的问题
+- 修复通过 JavaScript 添加的注释缺少 CreationDate 的问题
+- 修复 PrintManager 相关问题（仅 Windows C++）
+
+---
+
+# 福昕 PDF SDK v7.5.1（Windows Java）
+
+本版本为维护更新。
+
+- 修复从 Buffer 加载 `PDFDoc` 时的内存泄漏问题
+
+---
+
+# 福昕 PDF SDK v7.5
+
+## 新增 API 支持
+
+- Layout Recognition 附加组件全平台支持
+- 新增签名表单字段文本标签的设置方法
+  相关 API：`Signature::SetKeyLabel()`、`Signature::GetKeyLabel()`
+- 新增图形对象位置移动方法
+  相关 API：`GraphicsObjects::MoveGraphicsObjectByPosition()`、`GraphicsObjects::GetGraphicsObjectPosition()`
+- HTML2PDF 新增从内存加载 Cookies（仅 Windows）
+- 新增页眉页脚嵌入字体支持
+  相关类：`HeaderFooter`（新增 `is_embed_font`、`is_underline` 成员）
+- 新增 FreeText 注释富文本支持
+  相关类/API：`RichTextStyle`、`Markup::GetRichTextContent()`、`Markup::GetRichTextCount()`、`Markup::GetRichTextStyle()`、`Markup::RemoveRichText()`、`Markup::InsertRichText()`
+- 新增墨迹注释外观设置贝塞尔曲线开关
+  相关 API：`Ink::EnableUseBezier()`
+
+## 改进
+
+- 增强嵌入字体子集化，支持所有类型的 Type0 字体
+- `SetChecked` / `SetDefaultChecked` 对组合框字段新增异常提示
+- 改进 JavaScript API 中注释添加和矩形坐标标准化
+
+## 问题修复
+
+- 修复通过 JavaScript 添加的注释缺少 UniqueID 的问题
+- 修复 Snagit 打印机字体样式问题
+- 修复启用字体映射时不正确的页面解析导致崩溃的问题
+- 修复导入特定 XFDF 文件时参数不正确导致的错误
+- 修复特定文件中 `generateContent` 方法显示不正确字符的问题
+- 修复 XFA 表单扁平化问题
+- 修复使用 AES256 加密插入页面时崩溃的问题
+- 修复特定场景下签名回调未触发的问题
+
+---
+
+# 福昕 PDF SDK v7.4（Windows C++ PrintManager 扩展版）
+
+PrintManager：专为福昕 PDF SDK 开发的打印模块，提供一系列专业 API 使文档打印更便捷、灵活。
+
+---
+
+# 福昕 PDF SDK v7.4
+
+## 新增 API 支持
+
+- 新增 Windows C API SDK 版本
+
+## 新增功能与增强
+
+- 新增 PPT 转 PDF 功能（仅 Windows）
+  相关类：`PowerPoint2PDFSettingData`
+- 新增 Layout Recognition 附加组件（C++ 和 Java）
+  命名空间：`foxit::addon::layoutrecognition`
+- 新增获取分色名称及按分色渲染 PDF 的功能（输出预览）
+  相关 API：`Library::SetDefaultICCProfilesPath()`、`ColorSpace::IsSpotColorSpace()`、`ColorSpace::GetComponentNames()`
+  相关类：`OutputPreview`
+- 新增 PDF 合并高级 API
+  相关类：`Combination`
+- 新增 PDF 对象深度克隆
+  相关 API：`PDFObject::DeepCloneObject()`
+- 新增文档级搜索的起始字符索引设置
+  相关 API：`TextSearch::SetStartCharacter()`
+- 新增按流顺序或外观顺序执行文档级文本搜索的标记
+- 新增填写和签署功能 API
+  相关类：`FillSign`、`FillSignObject`
+- 新增获取指定矩形范围内图形对象的方法
+  相关 API：`PDFPage::GetGraphicsObjectsAtRectangle()`、`PDFPage::GetGraphicsObjectAtRectangle()`
+
+## 改进
+
+- 增强水印功能
+- 增强 JavaScript 功能
+- 增强含表单字段的 PDF 文件打印效果
+
+## 问题修复
+
+- 修复包含 JavaScript 代码的特定文件导致崩溃的问题
+
+## API 变更
+
+- `Markup` 注释类中以下 API 已替换：
+  `GetStateAnnotCount()`、`GetStateAnnot()`、`AddStateAnnot()` → 新增 `GetStateAnnots()`、`AddStateAnnot(title, model, state)`
+- 以下 API 已弃用：
+  `FreeText::GetTextMatrix()`、`FreeText::SetRotation()`
+
+---
+
+# 福昕 PDF SDK v7.3.0.0730
+
+本版本为热修复更新。
+
+- 修复压缩格式类型命名错误：`e_ImageCompressJPEG2` → `e_ImageCompressJBIG2`
+
+---
+
+# 福昕 PDF SDK v7.3
+
+## 新增功能与增强
+
+- 新增 Word/Excel 转 PDF 功能（仅 Windows）
+  相关 API/类：`Convert::FromExcel()`、`Convert::FromWord()`、`Excel2PDFSettingData`、`Word2PDFSettingData`
+- 新增向无图层 PDF 添加图层的功能
+  相关 API：`PDFDoc::HasLayer()`、`LayerTree::LayerTree()`
+- 新增按索引获取图形对象
+  相关 API：`GraphicsObjects::GetGraphicsObjectCount()`、`GraphicsObjects::GetGraphicsObjectIndex()`
+- 新增缩略图渲染时忽略 NoZoom/NoRotate 标记的选项
+  相关 API：`Renderer::SetRenderAnnotsForThumbnail()`
+- 新增签名权限获取/设置 API
+  相关枚举/API：`Signature::DocPermission`、`Signature::FieldMDPAction`、`Signature::SetDocPermission()` 等
+- 新增为图形对象设置不同色彩空间颜色的支持
+  相关类：`ColorSpace`、`ColorState`
+  相关 API：`Color::ConvertToCMYK()`、`Color::ConvertToRGB()`
+- 新增渲染标记 `e_ColorModeMappingGray`，按背景色和前景色映射颜色值
+- 新增嵌入字体子集化以减小文件大小
+  相关 API：`StartSubsetEmbedFont()`
+- 新增获取图层节点字典的方法
+  相关 API：`LayerNode::GetDict()`
+- 优化器附加组件新增选项
+  相关类：`OptimizerSettings::DiscardObjectsOptions`、`OptimizerSettings::DiscardUserDataOptions`
+
+## 变更日志
+
+- 新增 Java `*.so` 库路径设置方法
+- 恢复条码原始效果
+
+## 改进
+
+- 增强 OOM 错误报告功能
+- 优化表单加载性能
+
+## 问题修复
+
+- 修复签名文档后 PDF/A 无效的问题
+- 修复导出路径对象数据中增加贝塞尔曲线控制点的问题
+- 修复 ListBox 缩放时字号未正确变化的问题
+- 修复字体嵌入相关问题
+- 修复枚举拼写错误：`e_FlagChoiseMultiSelect` → `e_FlagChoiceMultiSelect`
+- 修复与图层节点关联的表单对象渲染到页面时坐标不正确的问题
+- 修复 `RectF.isEmpty()` 始终返回 true 的问题
+
+---
+
+# 福昕 PDF SDK v7.2
+
+## 新增功能与增强
+
+- 新增动态添加页眉页脚的功能
+  相关 API/类：`PDFDoc::AddHeaderFooter()`、`HeaderFooter`
+- 优化器附加组件增强：
+  - 新增 PDF 文档"清理"优化选项（移除无效链接、无效书签、用 Flate 编码替换未编码流和 LZW 编码流）
+  - 新增"丢弃对象"选项（丢弃表单操作、扁平化表单字段、丢弃 JavaScript 操作、丢弃缩略图、丢弃打印设置、丢弃书签）
+  相关类：`OptimizerSettings::CleanUpOptions`、`OptimizerSettings::DiscardObjectsOptions`
+- 新增从流/内存加载证书进行签名
+  相关 API：`Signature::StartSign()` （新增 `StreamCallback` 参数重载）
+- 新增图像任意角度旋转
+  相关 API：`GraphicsObject::Rotate()`
+- 新增 XFA 字段图片设置
+  相关 API：`XFAWidget::GetBitmap()`、`AppProviderCallback::LoadString()`、`AppProviderCallback::ShowFileDialog()`
+- 新增 Widget 注释默认外观的获取/设置方法
+  相关 API：`Control::GetDefaultAppearance()`、`Control::SetDefaultAppearance()`
+- 新增矩形对象水平/垂直方向相邻检测
+- 新增获取弹出注释父对象的方法
+  相关 API：`Popup::GetParent()`
+- 图像压缩设置新增渲染质量标记
+  相关 API：`ImageSettings::SetQuality()` 参数类型更改为 `ImageCompressQuality`
+
+## 问题修复
+
+- 修复导出密文标注注释到 XFDF 文件时缺少颜色属性的问题
+- 增强 XFDF/FDF 导入功能——文档中存在相同注释 ID 时更新注释数据
+- 修复 `PDFPage::GetBox` 获取从父对象继承的 MediaBox 失败的问题
+- 修复特定文件中 Checkbox 字段 `setValue` 方法的问题
+- 修复特定文件中已密文标注注释的持久化访问问题
+- 修复向 PDF 添加 TIFF 图像时缺少色彩空间的问题
+
+---
+
+# 福昕 PDF SDK v7.1.0.203（.NET）
+
+本版本为维护更新。
+
+## 问题修复
+
+- 修复 PFX 文件输入路径字符串含特殊字符时崩溃的问题
+
+---
+
+# 福昕 PDF SDK v7.1.0.1212
+
+本版本为维护更新。
+
+## 问题修复
+
+- 修复 Windows 上使用 `StartImportPages` 处理大量页面时崩溃的问题
+
+## 其他
+
+- 移除 ConnectedPDF 附加组件
+  相关类：`foxit::addon::ConnectedPDF`
+
+---
+
+# 福昕 PDF SDK v7.1
+
+## 新增功能与增强
+
+- 新增 XFA 表单字段边框（上、左、右、下）和圆角状态检查
+  相关 API：`XFAWidget::HasEdge`
+- 新增 XFA 表单字段工具提示获取
+  相关 API：`XFAWidget::GetToolTip`
+- 新增 XFA 表单字段对齐方式获取
+  相关 API：`XFAWidget::GetHAlign`、`XFAWidget::GetVAlign`
+- 新增 XFA 表单字段 Tab 顺序获取
+  相关 API：`XFAPage::GetFirstWidget`、`XFAPage::GetLastWidget`、`XFAPage::GetNextWidget`、`XFAPage::GetPrevWidget`
+- 新增声音类型注释访问
+  相关类：`Sound`
+
+## 改进
+
+- PDF 标准转换扩展参数
+  相关 API：`PDFCompliance::ConvertPDFFile`
+- 补充 PDF SDK v5.x 的方法和常量
+  `FSCRT_Library_SetFontMapperHandler` → `Library::SetFontMapperCallback`
+  `FSPDF_TextPage_GetCharInfo` → `TextPage::GetCharInfo`
+  `FSCRT_PathData_AddPointsCount` → `Path::IncreasePointCount`
+  新增位图格式：`e_DIB8bppGray`、`e_DIBAbgr`
+  `FSPDF_TextSelection_GetPieceCharRange` → `TextPage::GetCharRange`
+  `FSPDF_RenderContext_StartPageFormControls` → `Renderer::RenderFormControls`
+- 新增按布局或流顺序获取页面文本的方法
+  相关 API：`TextPage::GetText`
+- 优化 PDF 比较附加组件
+- 新增获取文本对象中字符边界框的方法
+  相关 API：`TextObject::GetCharWidthByIndex`、`TextObject::GetCharHeightByIndex`、`TextObject::GetCharCount`、`TextObject::GetCharPos`
+- 新增检查特定模块是否有有效授权的方法
+  相关 API：`Library::HasModuleLicenseRight`
+- 新增 Polyline/Polygon 注释测量属性的获取/设置
+  相关 API：`Polygon::SetMeasureRatio`、`PolyLine::GetMeasureRatio` 等
+- 优化 PDF 合并功能
+  相关 API：`PDFDoc::StartExtractPages`、`PDFDoc::InsertDocument`
+- 提供无需链接 OpenSSL 库的 PAdES 签名能力
+  相关 API：`Signature::GetPAdESLevel`
+- 新增获取表单控件 Widget 注释字典的方法
+  相关 API：`Control::GetWidgetDict`
+- 新增提取文本标记注释下方文本的方法
+  相关 API：`TextPage::GetTextUnderAnnot`
+- 新增检查是否使用标准或自定义加密方式的回调
+  相关 API：`CustomSecurityCallback::UseStandardCryptoMethod`
+- 新增更多文档/注释 JavaScript 方法和属性支持
+- 新增设置渲染时是否打印注释的方法
+  相关 API：`Renderer::EnableForPrint`
+
+## 问题修复
+
+- 修复通过 JavaScript 添加的注释仅在保存后可见的问题
+- 修复导入 FDF 文件时德语字符不显示的问题
+- 修复导入/导出 XFDF 文件时自定义图章内容不正确的问题
+- 修复在 PDF 1.7 合规下合并 PDF 文档时的合规性问题
+- 修复密文标注范围不正确的问题
+- 修复设置虚线边框时的问题
+- 修复设置 Polyline 注释填充颜色时颜色不正确的问题
+- 修复 HTML2PDF 示例中文件路径含空格的问题
+
+## 其他
+
+- Mac OS 最低支持版本更新至 v10.15
+
+---
+
+# 福昕 PDF SDK v7.0
+
+本版本为主要版本更新。
+
+## 新增功能与增强
+
+- 新增 PAdES 标准签名支持
+  相关类：`TimeStampServerMgr`、`TimeStampServer`
+  新增签名 filter/subfilter：`Adobe.PPKLite` / `ETSI.CAdES.detached`
+- 新增 PDF 2.0 签名长期验证（LTV）
+  相关类：`LTVVerifier`、`TimeStampServerMgr`、`TimeStampServer`
+  新增签名 filter/subfilter：`Adobe.PPKLite` / `ETSI.RFC3161`
+- 新增 PDF 文档优化器附加组件（图像压缩）
+  相关类：`foxit::addon::optimization`
+- 新增 PDF 文档转换附加组件——HTML2PDF（Windows/Mac）
+  相关类：`foxit::addon::conversion`
+- 新增更多文档/注释 JavaScript 方法和属性支持
+
+## 新增框架支持
+
+- 新增 .NET Core 支持
+  Windows/Mac/Linux 平台已有的全部功能均可在 .NET Core 上使用
+
+## 改进
+
+- PDF 文档比较新增图像/路径/注释/渐变比较
+  相关类：`foxit::addon::comparison`
+- 渲染时支持注释的 NoZoom 和 NoRotate 属性
+- 增强密文标注注释属性的获取/设置
+  相关 API：`Redact::SetQuadPoints`、`Redact::GetOverlayText`、`Redact::SetDefaultAppearance` 等
+- 新增 Widget 注释边框样式的获取/设置
+- 新增注释外观状态的获取/设置
+  相关 API：`Widget::GetAppearanceState`、`Widget::SetAppearanceState`
+- 新增获取注释外观 "ON" 状态名称
+  相关 API：`Widget::GetAppearanceOnStateName`
+- 增强大文件签名验证效率
+- 新增图形对象不透明度属性
+  相关 API：`GraphicsObject::GetFillOpacity`、`SetFillOpacity`、`GetStrokeOpacity`、`SetStrokeOpacity`
+- 新增使用 `StreamCallback` 扁平化 XFA 文档
+- 新增使用 `StreamCallback` 保存签名文档
+- 新增 Reflow 页面显示矩阵的宽高设置
+- 新增密文标注注释四边形区域的获取/设置
+- 新增加密过程中修改安全数据或密码的标记
+  相关 API：`StdSecurityHandler::SetAES256ModifyFlags`
+
+## 问题修复
+
+- 修复打印 PDF 页面时的叠印问题
+- 修复使用 `GetCharBBox` 方法时出现未知错误的问题
+- 修复扁平化特定 PDF 文档时崩溃的问题
+- 修复 Type3 字体问题
+- 修复使用 ViewDemo 时内存占用过高的问题
+- 修复添加动态图章时日期显示不正确的问题
+- 修复签名无效的问题
+
+---
+
+# 福昕 PDF SDK v6.4
+
+## 新增功能与增强
+
+- 新增 OCR 附加组件（Windows）
+  相关类：`foxit::addon::ocr`
+- 新增 PDF 比较附加组件（文本比较）
+  相关类：`foxit::addon::Comparison`
+- 新增 PDF 合规附加组件（PDF/A 转换和验证）
+  相关类：`foxit::addon::compliance`
+
+## 改进
+
+- 新增注释旋转属性（FreeText / Stamp / Screen）
+  相关 API：`FreeText::GetRotation`、`FreeText::Rotate`、`FreeText::SetRotation`、`Stamp::GetRotation`、`Stamp::Rotate`、`Stamp::SetRotation`
+- 新增注释扁平化支持
+  相关 API：`PDFPage::FlattenAnnot`
+- 新增获取 XFA 文档中已有签名字段上的签名对象
+  相关 API：`XFAWidget::GetSignature`
+- 新增单条密文标注注释的应用
+  相关 API：`Redact::Apply`
+- 新增在设备坐标系下获取指定点处图形对象的方法
+  相关 API：`PDFPage::GetGraphicsObjectAtDevicePoint`、`PDFPage::GetGraphicsObjectsAtDevicePoint`
+- 新增 XFA 字段更多属性获取
+  相关 API：`XFAWidget::GetName`、`XFAWidget::GetOptions`、`XFAWidget::IsChecked`
+- 新增将文件规范中的文件数据导出到文件流
+  相关 API：`FileSpec::ExportToFileStream`
+- 新增单独渲染图形对象
+  相关 API：`Renderer::RenderGraphicsObject`
+- 新增保存 PDF 时移除冗余对象的选项
+  相关 API：`PDFDoc::SaveAs`
+- 增强注释显示矩阵获取
+  新增 API：`Annot::GetDisplayMatrix`
+  弃用 API：`Renderer::SetTransformAnnotIcon`
+- 新增获取图层节点 "Locked" 属性
+  相关 API：`LayerNode::IsLocked`
+
+## 问题修复
+
+- 修复使用 `LoadSignature` 后渲染签名文件页面缓慢的问题
+- 修复获取特定 PDF 文件签名内容时崩溃的问题
+
+---
+
+# 福昕 PDF SDK v6.3
+
+## 新增功能与增强
+
+- 新增 `SignatureInfo` 和 `Doc/WillClose` JavaScript API 支持
+
+## 问题修复
+
+- 修复特定类型 PDF 文件签名后文件大小异常增长的问题
+- 修复含有效签名的 PDF 文件渲染时签名显示无效的问题
+- 修复使用 `event.change` 和 `event.value` 时 Keystroke 功能不正确的问题
+
+---
+
+# 福昕 PDF SDK v6.2.1
+
+本版本为维护更新。
+
+## 改进
+
+- 新增 XFA Widget 回调函数，用于创建和销毁消息通知
+
+## 问题修复
+
+- 修复打开 PDF 附件时 RMS 加密文件加载失败的问题
+- 修复特定打印模式下崩溃的问题
+- 修复 XFA 表单字段重置功能的问题
+
+---
+
+# 福昕 PDF SDK v6.2
+
+## 新增功能与增强
+
+- 新增 Mac 平台 Objective-C API
+- 新增 RMS V2 支持
+- 新增 PDF 2.0 合规的 Wrapper PDF 加载流程
+  相关 API：`PDFDoc::GetWrapperType`、`PDFDoc::GetPayLoadData`、`PDFDoc::StartGetPayloadFile`
+
+## 改进
+
+- `FillerAssistCallback` 新增更多表单字段类型支持（CheckBox、PushButton、RadioButton、ListBox）
+  相关 API：`FillerAssistCallback::FocusGotOnControl`、`FillerAssistCallback::FocusLostFromControl`
+- 新增 .Net 渲染页面到 DC 的支持
+  相关 API：`Renderer::Renderer`
+
+## 问题修复
+
+- 修复使用 `importFDF` 函数时崩溃的问题
+
+## 其他
+
+- 新增 `PDFNumberTree` 类，支持数字树属性
+  新增 API：`PageLabels::GetNumberTree`
+- XFA `ExportData()` 函数返回值调整为 `bool` 类型
+- 新增矩形选取文本区域功能
+  相关 API：`TextPage::GetTextRectArrayByRect`
+- 新增检测 XFA 表单控件是否可见的功能
+  相关 API：`XFAWidget::GetPresence`
+
+---
+
+# 福昕 PDF SDK v6.1.1
+
+## 新增功能与增强
+
+- 新增通过屏幕注释支持多媒体内容
+  相关类：`Rendition`、`MediaPlayer`、`Screen`
+- 新增图层节点在不同父节点间移动和重排序
+  相关 API：`LayerNode::MoveTo`
+- 新增检查 PDF 是否为标记 PDF 的方法
+  相关 API：`PDFDoc::IsTaggedPDF`
+
+## 改进
+
+- 签名验证通过后返回扩展签名状态信息
+  新增枚举：`Signature::States::e_StateVerifyNoChange`
+- 增强签名回调，新增 `IsNeedPadData()` 方法，由用户决定是否返回包含填充数据的签名内容
+- 增强图层示例
+- 统一 .NET 程序集命名规范
+- 增强 XFA 功能
+
+## 问题修复
+
+- 修复 TIFF 文件转换为其他格式时崩溃的问题
+  C++/Java/.Net 中 `Image::SaveAs` 的参数类型从 `WriterCallback` / `WriteCallback` 更改为 `StreamCallback`
+- 修复特定文件中 `getValues("CreationDate")` 和 `getValues("ModDate")` 返回不正确值的问题
+- 修复特定 PDF 文件中 `GetSignatureDic` 函数返回空值的问题
+- 修复 .Net ViewerDemo 在无 XFA 模块授权时崩溃的问题
+
+## 其他
+
+- `WatermarkSetting::Position` 枚举迁移至 `common::Position`
+- .NET API 部分函数返回类型变更：
+  `PDFObject.GetString` → 返回 `byte[]`
+  `SignatureCallback.GetDigest` → 返回 `byte[]`
+  `SignatureCallback.Sign` → 返回 `byte[]`
+
+---
+
+# 福昕 PDF SDK v6.1
+
+## 新增功能与增强
+
+- 新增字体嵌入功能
+  相关 API：`Font::Embed`
+- 新增删除关联文件的方法
+  相关 API：`AssociatedFiles::RemoveAssociatedFile`
+- 新增默认签名处理器
+  内置支持以下签名 filter/subfilter，无需注册安全验证代码即可自动完成签名验证：
+  (1) filter: `Adobe.PPKLite` / subfilter: `adbe.pkcs7.detached`
+  (2) filter: `Adobe.PPKLite` / subfilter: `adbe.pkcs7.sha1`
+
+## 改进与问题修复
+
+- 改进 API 参考文档
+- 增强特定文件的渲染效果
+- 修复签名验证问题（签名回调新增 `IsNeedPadData()` 方法）
+- 修复表单填写相关问题
+
+## 其他
+
+- .NET API 命名空间变更：
+  `foxit.pdf.filespec` / `foxit.pdf.watermark` / `foxit.pdf.signature` / `foxit.pdf.security` / `foxit.pdf.psi` / `foxit.pdf.layer` → 统一为 `foxit.pdf`
+
+---
+
+# 福昕 PDF SDK v6.0.0.0720
+
+本版本为维护更新。
+
+- 修复安全相关功能的授权校验问题
+
+---
+
+# 福昕 PDF SDK v6.0
+
+福昕 PDF SDK v6.0 全新架构设计，致力于为开发者提供更优质的开发体验、更强大的功能集和跨平台一致的 API。
+
+## 核心改进
+
+- 新增 XFA 表单字段支持
+- 新增 PDF v2.0 支持
+- 新增 ConnectedPDF 支持
+- 页面/文档对象的生命周期管理现由 SDK 内部自动处理
+- 全平台统一功能集和 API
+- 包含 PDF SDK v5.0 全部功能
+- v6.0 采用一个标准包加四个附加组件的架构
+- 新增索引全文搜索支持
+
+## 附加组件
+
+标准包包含 PDF 渲染、编辑、注释、AcroForm 表单等常用功能，另有四个专业附加组件：
+
+- XFA 附加组件：`foxit::addon::xfa`
+- 密文标注附加组件：`foxit::addon::Redaction`
+- ConnectedPDF 附加组件：`foxit::addon::ConnectedPDF`
+- RMS 附加组件：`RMSEncryptData`、`RMSSecurityCallback`、`RMSSecurityHandler`
+
+## 新增功能与增强
+
+### 未加密 Wrapper 文档（PDF 2.0）
+
+PDF 2.0 新增的未加密 Wrapper 文档功能，v6.0 支持以该方式保存 PDF。
+相关 API：`PDFDoc::StartSaveAsPayloadFile`
+
+### 256 位 AES 加密支持（PDF 2.0）
+
+相关 API：`SecurityHandler`
+
+### 关联文件（PDF 2.0）
+
+PDF 2.0 定义了"关联文件"概念，用于将其他格式的内容与 PDF 文件对象关联，并标识两者之间的关系。关联文件可链接到文档目录、页面字典、图形对象、结构元素、XObject、DPart、注释字典等。
+
+相关类：`AssociatedFiles`
+
+### XFA 附加组件
+
+XFA 表单是封装在 PDF 中的基于 XML 的表单，自 PDF 1.5 规范起可用。XFA 定义了静态表单（XFA 2.0 及之前）和动态表单（XFA 2.1/2.2 起）。本版本支持静态和动态 XFA 表单的填写。
+
+相关 API：`foxit::addon::xfa`
+
+### ConnectedPDF 附加组件
+
+福昕 PDF SDK 6.0 开始提供 ConnectedPDF 功能的部分 API，用于将 ConnectedPDF 功能集成到第三方应用中。

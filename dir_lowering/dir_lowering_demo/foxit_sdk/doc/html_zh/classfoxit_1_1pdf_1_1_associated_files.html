@@ -1,0 +1,878 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Foxit PDF SDK: foxit::pdf::AssociatedFiles类 参考</title>
+<meta name="description" content="Check out the API references for Foxit PDF SDK for C++ by clicking here. These references apply to C++ Windows, Linux and Mac." />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Foxit PDF SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classfoxit_1_1pdf_1_1_associated_files.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classfoxit_1_1pdf_1_1_associated_files-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">foxit::pdf::AssociatedFiles类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>在PDF 2.0中，定义了一个名为"关联文件"的新概念。关联文件提供了一种方法来 将其他格式的内容与PDF文件的对象关联，并识别内容与对象之间的关系。 此类关联文件使用文件规范字典（称为文件规范）指定。关联文件可以链接到PDF文档的目录、 页面字典、图形对象、结构元素、XObject、DParts、注释字典等。 特别地，与图形对象的关联文件意味着与标记内容项关联。<br />
+ 类 <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html">AssociatedFiles</a> 是管理关联文件的类。它提供了计算/获取PDF字典或图形对象中 关联文件的功能，将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与目录、PDF页面、图形对象、 表单XObject对象、注释对象等关联的功能。<br />
+ 特别地，当使用PDF文档构造关联文件对象时，相关PDF文档的文件版本将被设置为2.0。  
+ <a href="classfoxit_1_1pdf_1_1_associated_files.html#details">更多...</a></p>
+<div class="dynheader">
+类 foxit::pdf::AssociatedFiles 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classfoxit_1_1pdf_1_1_associated_files.png" usemap="#foxit::pdf::AssociatedFiles_map" alt=""/>
+  <map id="foxit::pdf::AssociatedFiles_map" name="foxit::pdf::AssociatedFiles_map">
+<area href="classfoxit_1_1_base.html" alt="foxit::Base" shape="rect" coords="0,0,154,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a088cc99487861072c3ef102d043d154c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a088cc99487861072c3ef102d043d154c">Relationship</a> { <br />
+&#160;&#160;<a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a088cc99487861072c3ef102d043d154ca768daa5d075f4c8cf09f4ea755a87f68">e_RelationshipUnspecified</a> = 0, 
+<a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a088cc99487861072c3ef102d043d154ca6cfd29f815b19026ac43d867f9312fa8">e_RelationshipSource</a> = 1, 
+<a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a088cc99487861072c3ef102d043d154caa108ccaaf27fe83224494b05f8224089">e_RelationshipData</a> = 2, 
+<a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a088cc99487861072c3ef102d043d154ca0a03053d15210f975dd77de9a1dfccf6">e_RelationshipAlternative</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a088cc99487861072c3ef102d043d154ca0ec673bc6636835b134a4de72a69aca7">e_RelationshipSupplement</a> = 4, 
+<a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a088cc99487861072c3ef102d043d154cae2c2170fd929549f4e94de8fc164dd9f">e_RelationshipEncryptedPayload</a> = 5, 
+<a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a088cc99487861072c3ef102d043d154ca088bce80c2cd376867e7314ef6025ab9">e_RelationshipFormData</a> = 6, 
+<a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a088cc99487861072c3ef102d043d154cacf2fdd760b52c084e0c5dc0452ed616f">e_RelationshipSchema</a> = 7
+<br />
+ }</td></tr>
+<tr class="memdesc:a088cc99487861072c3ef102d043d154c"><td class="mdescLeft">&#160;</td><td class="mdescRight">PDF文档与关联文件之间关系的枚举。  <a href="classfoxit_1_1pdf_1_1_associated_files.html#a088cc99487861072c3ef102d043d154c">更多...</a><br /></td></tr>
+<tr class="separator:a088cc99487861072c3ef102d043d154c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab1a7c6e458e3c5f6697b3216f0caa4e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#ab1a7c6e458e3c5f6697b3216f0caa4e2">AssociatedFiles</a> (const <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html">AssociatedFiles</a> &amp;other)</td></tr>
+<tr class="memdesc:ab1a7c6e458e3c5f6697b3216f0caa4e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，通过另一个关联文件对象。  <a href="#ab1a7c6e458e3c5f6697b3216f0caa4e2">更多...</a><br /></td></tr>
+<tr class="separator:ab1a7c6e458e3c5f6697b3216f0caa4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0349d0d17a2b7ca383ac23baf8b747d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#ac0349d0d17a2b7ca383ac23baf8b747d">AssociatedFiles</a> (const <a class="el" href="classfoxit_1_1pdf_1_1_p_d_f_doc.html">PDFDoc</a> &amp;pdf_doc)</td></tr>
+<tr class="memdesc:ac0349d0d17a2b7ca383ac23baf8b747d"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，使用PDF文档。  <a href="#ac0349d0d17a2b7ca383ac23baf8b747d">更多...</a><br /></td></tr>
+<tr class="separator:ac0349d0d17a2b7ca383ac23baf8b747d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf0c6874b678ab6afd1b0967a1360d69"><td class="memItemLeft" align="right" valign="top"><a id="adf0c6874b678ab6afd1b0967a1360d69"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#adf0c6874b678ab6afd1b0967a1360d69">~AssociatedFiles</a> ()</td></tr>
+<tr class="memdesc:adf0c6874b678ab6afd1b0967a1360d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数。 <br /></td></tr>
+<tr class="separator:adf0c6874b678ab6afd1b0967a1360d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ddec2bb8444236722f5d6a1d2239f72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a5ddec2bb8444236722f5d6a1d2239f72">AssociateFile</a> (<a class="el" href="classfoxit_1_1pdf_1_1objects_1_1_p_d_f_object.html">objects::PDFObject</a> *pdf_object, const <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> &amp;file_spec)</td></tr>
+<tr class="memdesc:a5ddec2bb8444236722f5d6a1d2239f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与PDF字典对象关联，该字典对象代表注释、PDF页面或PDF文档中其他对象的字典。  <a href="#a5ddec2bb8444236722f5d6a1d2239f72">更多...</a><br /></td></tr>
+<tr class="separator:a5ddec2bb8444236722f5d6a1d2239f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8488250a0a45e28152ab4e7c3de2fbe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a8488250a0a45e28152ab4e7c3de2fbe4">AssociateFile</a> (<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_graphics_object.html">foxit::pdf::graphics::GraphicsObject</a> *graphics_object, int mark_content_item_index, <a class="el" href="classfoxit_1_1pdf_1_1objects_1_1_p_d_f_object.html">foxit::pdf::objects::PDFObject</a> *current_resource, const char *property_name, const <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">foxit::pdf::FileSpec</a> &amp;file_spec)</td></tr>
+<tr class="memdesc:a8488250a0a45e28152ab4e7c3de2fbe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与指定图形对象的标记内容项关联。  <a href="#a8488250a0a45e28152ab4e7c3de2fbe4">更多...</a><br /></td></tr>
+<tr class="separator:a8488250a0a45e28152ab4e7c3de2fbe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acde2faabeb3630c20d48946accc6124f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#acde2faabeb3630c20d48946accc6124f">AssociateFile</a> (const <a class="el" href="classfoxit_1_1pdf_1_1_p_d_f_page.html">foxit::pdf::PDFPage</a> &amp;page, const <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">foxit::pdf::FileSpec</a> &amp;file_spec)</td></tr>
+<tr class="memdesc:acde2faabeb3630c20d48946accc6124f"><td class="mdescLeft">&#160;</td><td class="mdescRight">将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与PDF页面关联。  <a href="#acde2faabeb3630c20d48946accc6124f">更多...</a><br /></td></tr>
+<tr class="separator:acde2faabeb3630c20d48946accc6124f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7983806894b6add62dda2317f60008bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a7983806894b6add62dda2317f60008bb">AssociateFile</a> (<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_image_object.html">foxit::pdf::graphics::ImageObject</a> *image, const <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">foxit::pdf::FileSpec</a> &amp;file_spec)</td></tr>
+<tr class="memdesc:a7983806894b6add62dda2317f60008bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与图像图形对象关联。  <a href="#a7983806894b6add62dda2317f60008bb">更多...</a><br /></td></tr>
+<tr class="separator:a7983806894b6add62dda2317f60008bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbfbb48934a9ce59d3207dbc3072a82e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#acbfbb48934a9ce59d3207dbc3072a82e">AssociateFile</a> (<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_form_x_object.html">foxit::pdf::graphics::FormXObject</a> *form_xobject, const <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">foxit::pdf::FileSpec</a> &amp;file_spec)</td></tr>
+<tr class="memdesc:acbfbb48934a9ce59d3207dbc3072a82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与表单XObject图形对象关联。  <a href="#acbfbb48934a9ce59d3207dbc3072a82e">更多...</a><br /></td></tr>
+<tr class="separator:acbfbb48934a9ce59d3207dbc3072a82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ab3af61bab936b8d64a663fd432426"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a40ab3af61bab936b8d64a663fd432426">AssociateFile</a> (const <a class="el" href="classfoxit_1_1pdf_1_1annots_1_1_annot.html">foxit::pdf::annots::Annot</a> &amp;annot, const <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">foxit::pdf::FileSpec</a> &amp;file_spec)</td></tr>
+<tr class="memdesc:a40ab3af61bab936b8d64a663fd432426"><td class="mdescLeft">&#160;</td><td class="mdescRight">将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与PDF注释关联。  <a href="#a40ab3af61bab936b8d64a663fd432426">更多...</a><br /></td></tr>
+<tr class="separator:a40ab3af61bab936b8d64a663fd432426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82cd92ce41a4c6d5b54d79d5db2a4f46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a82cd92ce41a4c6d5b54d79d5db2a4f46">GetAssociatedFile</a> (<a class="el" href="classfoxit_1_1pdf_1_1objects_1_1_p_d_f_object.html">objects::PDFObject</a> *pdf_object, int index)</td></tr>
+<tr class="memdesc:a82cd92ce41a4c6d5b54d79d5db2a4f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过索引获取指定PDF字典对象中的关联文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）。  <a href="#a82cd92ce41a4c6d5b54d79d5db2a4f46">更多...</a><br /></td></tr>
+<tr class="separator:a82cd92ce41a4c6d5b54d79d5db2a4f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eeb3620fece4b81b8197fd0e96040da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a3eeb3620fece4b81b8197fd0e96040da">GetAssociatedFile</a> (<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_graphics_object.html">foxit::pdf::graphics::GraphicsObject</a> *graphics_object, int index)</td></tr>
+<tr class="memdesc:a3eeb3620fece4b81b8197fd0e96040da"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过索引获取图形对象中的关联文件。  <a href="#a3eeb3620fece4b81b8197fd0e96040da">更多...</a><br /></td></tr>
+<tr class="separator:a3eeb3620fece4b81b8197fd0e96040da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac335fc4de489912d4ee6af84190bb7c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#ac335fc4de489912d4ee6af84190bb7c1">GetAssociatedFilesCount</a> (<a class="el" href="classfoxit_1_1pdf_1_1objects_1_1_p_d_f_object.html">objects::PDFObject</a> *pdf_object)</td></tr>
+<tr class="memdesc:ac335fc4de489912d4ee6af84190bb7c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取PDF字典对象中关联文件的数量，该字典对象代表注释、PDF页面或PDF文档中其他对象的字典。  <a href="#ac335fc4de489912d4ee6af84190bb7c1">更多...</a><br /></td></tr>
+<tr class="separator:ac335fc4de489912d4ee6af84190bb7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa390334c9392ecebb2b4f65598e67a91"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#aa390334c9392ecebb2b4f65598e67a91">GetAssociatedFilesCount</a> (<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_graphics_object.html">foxit::pdf::graphics::GraphicsObject</a> *graphics_object)</td></tr>
+<tr class="memdesc:aa390334c9392ecebb2b4f65598e67a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取图形对象中关联文件的数量。  <a href="#aa390334c9392ecebb2b4f65598e67a91">更多...</a><br /></td></tr>
+<tr class="separator:aa390334c9392ecebb2b4f65598e67a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a102b94fc3af2e30fab1f5ac1adaaa3f8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a102b94fc3af2e30fab1f5ac1adaaa3f8">IsEmpty</a> () const</td></tr>
+<tr class="memdesc:a102b94fc3af2e30fab1f5ac1adaaa3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查当前对象是否为空。  <a href="#a102b94fc3af2e30fab1f5ac1adaaa3f8">更多...</a><br /></td></tr>
+<tr class="separator:a102b94fc3af2e30fab1f5ac1adaaa3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3f4823b53d8fc68cf47a936eab5449"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a0f3f4823b53d8fc68cf47a936eab5449">operator !=</a> (const <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html">AssociatedFiles</a> &amp;other) const</td></tr>
+<tr class="memdesc:a0f3f4823b53d8fc68cf47a936eab5449"><td class="mdescLeft">&#160;</td><td class="mdescRight">不等操作符。  <a href="#a0f3f4823b53d8fc68cf47a936eab5449">更多...</a><br /></td></tr>
+<tr class="separator:a0f3f4823b53d8fc68cf47a936eab5449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad1ed1caa0946a14aff05fbd9fd93044"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html">AssociatedFiles</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#aad1ed1caa0946a14aff05fbd9fd93044">operator=</a> (const <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html">AssociatedFiles</a> &amp;other)</td></tr>
+<tr class="memdesc:aad1ed1caa0946a14aff05fbd9fd93044"><td class="mdescLeft">&#160;</td><td class="mdescRight">赋值操作符。  <a href="#aad1ed1caa0946a14aff05fbd9fd93044">更多...</a><br /></td></tr>
+<tr class="separator:aad1ed1caa0946a14aff05fbd9fd93044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ca68a5b52ed40818cd0fe1574831a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#aa9ca68a5b52ed40818cd0fe1574831a7">operator==</a> (const <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html">AssociatedFiles</a> &amp;other) const</td></tr>
+<tr class="memdesc:aa9ca68a5b52ed40818cd0fe1574831a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">相等操作符。  <a href="#aa9ca68a5b52ed40818cd0fe1574831a7">更多...</a><br /></td></tr>
+<tr class="separator:aa9ca68a5b52ed40818cd0fe1574831a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa60aafe2e65eaae88eb000547e947254"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#aa60aafe2e65eaae88eb000547e947254">RemoveAssociatedFile</a> (<a class="el" href="classfoxit_1_1pdf_1_1objects_1_1_p_d_f_object.html">objects::PDFObject</a> *pdf_object, int index)</td></tr>
+<tr class="memdesc:aa60aafe2e65eaae88eb000547e947254"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过索引移除指定PDF字典对象中的关联文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）。  <a href="#aa60aafe2e65eaae88eb000547e947254">更多...</a><br /></td></tr>
+<tr class="separator:aa60aafe2e65eaae88eb000547e947254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1982fbcc3a7554238f7620fce230eb63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a1982fbcc3a7554238f7620fce230eb63">RemoveAssociatedFile</a> (<a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_graphics_object.html">foxit::pdf::graphics::GraphicsObject</a> *graphics_object, int index)</td></tr>
+<tr class="memdesc:a1982fbcc3a7554238f7620fce230eb63"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过索引移除图形对象中的关联文件。  <a href="#a1982fbcc3a7554238f7620fce230eb63">更多...</a><br /></td></tr>
+<tr class="separator:a1982fbcc3a7554238f7620fce230eb63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classfoxit_1_1_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classfoxit_1_1_base')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classfoxit_1_1_base.html">foxit::Base</a></td></tr>
+<tr class="memitem:af18c7b104b0192abd2ad899065ebce15 inherit pub_methods_classfoxit_1_1_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacefoxit.html#ab87b5c89cfd651df608cdc5a711b3202">FS_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfoxit_1_1_base.html#af18c7b104b0192abd2ad899065ebce15">Handle</a> () const</td></tr>
+<tr class="memdesc:af18c7b104b0192abd2ad899065ebce15 inherit pub_methods_classfoxit_1_1_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前对象的句柄。  <a href="classfoxit_1_1_base.html#af18c7b104b0192abd2ad899065ebce15">更多...</a><br /></td></tr>
+<tr class="separator:af18c7b104b0192abd2ad899065ebce15 inherit pub_methods_classfoxit_1_1_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>在PDF 2.0中，定义了一个名为"关联文件"的新概念。关联文件提供了一种方法来 将其他格式的内容与PDF文件的对象关联，并识别内容与对象之间的关系。 此类关联文件使用文件规范字典（称为文件规范）指定。关联文件可以链接到PDF文档的目录、 页面字典、图形对象、结构元素、XObject、DParts、注释字典等。 特别地，与图形对象的关联文件意味着与标记内容项关联。<br />
+ 类 <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html">AssociatedFiles</a> 是管理关联文件的类。它提供了计算/获取PDF字典或图形对象中 关联文件的功能，将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与目录、PDF页面、图形对象、 表单XObject对象、注释对象等关联的功能。<br />
+ 特别地，当使用PDF文档构造关联文件对象时，相关PDF文档的文件版本将被设置为2.0。 </p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a088cc99487861072c3ef102d043d154c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a088cc99487861072c3ef102d043d154c">&#9670;&nbsp;</a></span>Relationship</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#a088cc99487861072c3ef102d043d154c">foxit::pdf::AssociatedFiles::Relationship</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PDF文档与关联文件之间关系的枚举。 </p>
+<p>此枚举的值应单独使用。 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a088cc99487861072c3ef102d043d154ca768daa5d075f4c8cf09f4ea755a87f68"></a>e_RelationshipUnspecified&#160;</td><td class="fielddoc"><p>关系未知或无法用其他值描述。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a088cc99487861072c3ef102d043d154ca6cfd29f815b19026ac43d867f9312fa8"></a>e_RelationshipSource&#160;</td><td class="fielddoc"><p>关系是"源"，表示文件规范是关联内容的原始源材料。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a088cc99487861072c3ef102d043d154caa108ccaaf27fe83224494b05f8224089"></a>e_RelationshipData&#160;</td><td class="fielddoc"><p>关系是"数据"，表示文件规范代表用于派生视觉呈现的信息 - 例如表格或图形。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a088cc99487861072c3ef102d043d154ca0a03053d15210f975dd77de9a1dfccf6"></a>e_RelationshipAlternative&#160;</td><td class="fielddoc"><p>关系是"替代"，表示文件规范是内容的替代表示，例如音频。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a088cc99487861072c3ef102d043d154ca0ec673bc6636835b134a4de72a69aca7"></a>e_RelationshipSupplement&#160;</td><td class="fielddoc"><p>关系是"补充"，表示文件规范代表原始源或数据的补充表示，可能更容易使用。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a088cc99487861072c3ef102d043d154cae2c2170fd929549f4e94de8fc164dd9f"></a>e_RelationshipEncryptedPayload&#160;</td><td class="fielddoc"><p>关系是"加密负载"，表示文件规范是加密负载文档， 如果PDF处理器有解密文档所需的加密过滤器，则应向用户显示。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a088cc99487861072c3ef102d043d154ca088bce80c2cd376867e7314ef6025ab9"></a>e_RelationshipFormData&#160;</td><td class="fielddoc"><p>关系是"表单数据"，表示文件规范是与PDF文件中"AcroForm"字典关联的数据。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a088cc99487861072c3ef102d043d154cacf2fdd760b52c084e0c5dc0452ed616f"></a>e_RelationshipSchema&#160;</td><td class="fielddoc"><p>关系是"模式"，表示文件规范是关联对象的模式定义。 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ab1a7c6e458e3c5f6697b3216f0caa4e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a7c6e458e3c5f6697b3216f0caa4e2">&#9670;&nbsp;</a></span>AssociatedFiles() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">foxit::pdf::AssociatedFiles::AssociatedFiles </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html">AssociatedFiles</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数，通过另一个关联文件对象。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>另一个关联文件对象。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac0349d0d17a2b7ca383ac23baf8b747d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0349d0d17a2b7ca383ac23baf8b747d">&#9670;&nbsp;</a></span>AssociatedFiles() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">foxit::pdf::AssociatedFiles::AssociatedFiles </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1_p_d_f_doc.html">PDFDoc</a> &amp;&#160;</td>
+          <td class="paramname"><em>pdf_doc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数，使用PDF文档。 </p>
+<p>当通过此构造函数构造关联文件对象时，输入PDF文档的文件版本将被设置为2.0。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pdf_doc</td><td>有效的PDF文档对象。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a5ddec2bb8444236722f5d6a1d2239f72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ddec2bb8444236722f5d6a1d2239f72">&#9670;&nbsp;</a></span>AssociateFile() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void foxit::pdf::AssociatedFiles::AssociateFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1objects_1_1_p_d_f_object.html">objects::PDFObject</a> *&#160;</td>
+          <td class="paramname"><em>pdf_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> &amp;&#160;</td>
+          <td class="paramname"><em>file_spec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与PDF字典对象关联，该字典对象代表注释、PDF页面或PDF文档中其他对象的字典。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pdf_object</td><td>有效的PDF对象。它应该是PDF字典对象或引用PDF字典对象的PDF引用对象。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_spec</td><td>要与指定PDF字典关联的文件规范对象。它不应该是空字符串。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="a8488250a0a45e28152ab4e7c3de2fbe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8488250a0a45e28152ab4e7c3de2fbe4">&#9670;&nbsp;</a></span>AssociateFile() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void foxit::pdf::AssociatedFiles::AssociateFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_graphics_object.html">foxit::pdf::graphics::GraphicsObject</a> *&#160;</td>
+          <td class="paramname"><em>graphics_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mark_content_item_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1objects_1_1_p_d_f_object.html">foxit::pdf::objects::PDFObject</a> *&#160;</td>
+          <td class="paramname"><em>current_resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>property_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">foxit::pdf::FileSpec</a> &amp;&#160;</td>
+          <td class="paramname"><em>file_spec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与指定图形对象的标记内容项关联。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphics_object</td><td>有效的图形对象。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mark_content_item_index</td><td>输入图形对象中标记内容项的索引，指定的文件规范对象将与之关联。有效范围： 从0到（<em>count</em>-1）。<em>count</em> 由函数 <a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_marked_content.html#ac88f7f350571ea332d8ab103df57dfe7">graphics::MarkedContent::GetItemCount</a> 返回， 该函数用于与输入图形对象相关的标记内容。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">current_resource</td><td>与输入图形对象相关的PDF页面的资源字典。这也可以是引用此类PDF字典的PDF引用对象。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">property_name</td><td>在输入资源字典的"Properties"字典中使用的属性名称。它不应该是空字符串。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_spec</td><td>要与指定图形对象的指定标记内容项关联的文件规范对象。它不应该是空字符串。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>当此函数成功时，应调用函数 <a class="el" href="classfoxit_1_1pdf_1_1_graphics_objects.html#a7120bc0fa56054e2b2439b1330246c9e">GraphicsObjects::GenerateContent</a>。 请参考函数 <a class="el" href="classfoxit_1_1pdf_1_1_graphics_objects.html#a7120bc0fa56054e2b2439b1330246c9e">GraphicsObjects::GenerateContent</a> 了解更多详情。 </dd></dl>
+
+</div>
+</div>
+<a id="acde2faabeb3630c20d48946accc6124f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acde2faabeb3630c20d48946accc6124f">&#9670;&nbsp;</a></span>AssociateFile() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void foxit::pdf::AssociatedFiles::AssociateFile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1_p_d_f_page.html">foxit::pdf::PDFPage</a> &amp;&#160;</td>
+          <td class="paramname"><em>page</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">foxit::pdf::FileSpec</a> &amp;&#160;</td>
+          <td class="paramname"><em>file_spec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与PDF页面关联。 </p>
+<p>实际上，此函数等于将文件与PDF页面字典关联。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>有效的PDF页面。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_spec</td><td>要与指定PDF页面关联的文件规范对象。 它不应该是空字符串。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="a7983806894b6add62dda2317f60008bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7983806894b6add62dda2317f60008bb">&#9670;&nbsp;</a></span>AssociateFile() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void foxit::pdf::AssociatedFiles::AssociateFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_image_object.html">foxit::pdf::graphics::ImageObject</a> *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">foxit::pdf::FileSpec</a> &amp;&#160;</td>
+          <td class="paramname"><em>file_spec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与图像图形对象关联。 </p>
+<p>实际上，此函数等于将文件与图像图形对象的PDF字典关联。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>图像图形对象。它不应该是 <b>NULL</b>。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_spec</td><td>要与指定图像图形对象关联的文件规范对象。 它不应该是空字符串。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="acbfbb48934a9ce59d3207dbc3072a82e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbfbb48934a9ce59d3207dbc3072a82e">&#9670;&nbsp;</a></span>AssociateFile() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void foxit::pdf::AssociatedFiles::AssociateFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_form_x_object.html">foxit::pdf::graphics::FormXObject</a> *&#160;</td>
+          <td class="paramname"><em>form_xobject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">foxit::pdf::FileSpec</a> &amp;&#160;</td>
+          <td class="paramname"><em>file_spec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与表单XObject图形对象关联。 </p>
+<p>实际上，此函数等于将文件与表单XObject图形对象的PDF字典关联。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">form_xobject</td><td>表单XObject图形对象。它不应该是 <b>NULL</b>。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_spec</td><td>要与指定表单XObject图形对象关联的文件规范对象。 它不应该是空字符串。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="a40ab3af61bab936b8d64a663fd432426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40ab3af61bab936b8d64a663fd432426">&#9670;&nbsp;</a></span>AssociateFile() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void foxit::pdf::AssociatedFiles::AssociateFile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1annots_1_1_annot.html">foxit::pdf::annots::Annot</a> &amp;&#160;</td>
+          <td class="paramname"><em>annot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">foxit::pdf::FileSpec</a> &amp;&#160;</td>
+          <td class="paramname"><em>file_spec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）与PDF注释关联。 </p>
+<p>实际上，此函数等于将文件与PDF注释的PDF字典关联。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">annot</td><td>有效的PDF注释。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_spec</td><td>要与指定PDF注释对象关联的文件规范对象。 它不应该是空字符串。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="a82cd92ce41a4c6d5b54d79d5db2a4f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82cd92ce41a4c6d5b54d79d5db2a4f46">&#9670;&nbsp;</a></span>GetAssociatedFile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> foxit::pdf::AssociatedFiles::GetAssociatedFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1objects_1_1_p_d_f_object.html">objects::PDFObject</a> *&#160;</td>
+          <td class="paramname"><em>pdf_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通过索引获取指定PDF字典对象中的关联文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pdf_object</td><td>有效的PDF对象。它应该是PDF字典对象或引用PDF字典对象的PDF引用对象。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>指定PDF字典对象中关联文件的索引。 有效范围：从0到（<em>count</em>-1）。<em>count</em> 由函数 <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#ac335fc4de489912d4ee6af84190bb7c1">AssociatedFiles::GetAssociatedFilesCount</a> 返回，使用相同的参数 <em>object</em>。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>代表预期关联文件的文件规范对象。 </dd></dl>
+
+</div>
+</div>
+<a id="a3eeb3620fece4b81b8197fd0e96040da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eeb3620fece4b81b8197fd0e96040da">&#9670;&nbsp;</a></span>GetAssociatedFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> foxit::pdf::AssociatedFiles::GetAssociatedFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_graphics_object.html">foxit::pdf::graphics::GraphicsObject</a> *&#160;</td>
+          <td class="paramname"><em>graphics_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通过索引获取图形对象中的关联文件。 </p>
+<p>一个或多个文件可能通过将内容流中的这些部分包围在标记内容之间来与内容流中的内容部分关联。 因此，实际上，此函数是获取与图形对象相关的标记内容中的关联文件（由索引指定）。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphics_object</td><td>有效的PDF图形对象。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>指定PDF图形对象中关联文件的索引。 有效范围：从0到（<em>count</em>-1）。<em>count</em> 由函数 <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#ac335fc4de489912d4ee6af84190bb7c1">AssociatedFiles::GetAssociatedFilesCount</a> 返回， 使用相同的参数 <em>graphics_object</em>。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>代表预期关联文件的文件规范对象。 </dd></dl>
+
+</div>
+</div>
+<a id="ac335fc4de489912d4ee6af84190bb7c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac335fc4de489912d4ee6af84190bb7c1">&#9670;&nbsp;</a></span>GetAssociatedFilesCount() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int foxit::pdf::AssociatedFiles::GetAssociatedFilesCount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1objects_1_1_p_d_f_object.html">objects::PDFObject</a> *&#160;</td>
+          <td class="paramname"><em>pdf_object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取PDF字典对象中关联文件的数量，该字典对象代表注释、PDF页面或PDF文档中其他对象的字典。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pdf_object</td><td>有效的PDF对象。它应该是PDF字典对象或引用PDF字典对象的PDF引用对象。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>关联文件的数量。 </dd></dl>
+
+</div>
+</div>
+<a id="aa390334c9392ecebb2b4f65598e67a91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa390334c9392ecebb2b4f65598e67a91">&#9670;&nbsp;</a></span>GetAssociatedFilesCount() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int foxit::pdf::AssociatedFiles::GetAssociatedFilesCount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_graphics_object.html">foxit::pdf::graphics::GraphicsObject</a> *&#160;</td>
+          <td class="paramname"><em>graphics_object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取图形对象中关联文件的数量。 </p>
+<p>一个或多个文件可能通过将内容流中的这些部分包围在标记内容之间来与内容流中的内容部分关联。 因此，实际上，此函数是计算与图形对象相关的标记内容中的关联文件。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphics_object</td><td>有效的PDF图形对象。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>关联文件的数量。 </dd></dl>
+
+</div>
+</div>
+<a id="a102b94fc3af2e30fab1f5ac1adaaa3f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a102b94fc3af2e30fab1f5ac1adaaa3f8">&#9670;&nbsp;</a></span>IsEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool foxit::pdf::AssociatedFiles::IsEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查当前对象是否为空。 </p>
+<p>当前对象为空时，表示当前对象是无用的。</p>
+<dl class="section return"><dt>返回</dt><dd><b>true</b> 表示当前对象为空，<b>false</b> 表示不为空。 </dd></dl>
+
+</div>
+</div>
+<a id="a0f3f4823b53d8fc68cf47a936eab5449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f3f4823b53d8fc68cf47a936eab5449">&#9670;&nbsp;</a></span>operator !=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool foxit::pdf::AssociatedFiles::operator != </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html">AssociatedFiles</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>不等操作符。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>另一个关联文件对象。此函数将检查当前对象是否不等于这个对象。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b>true</b> 表示不相等，<b>false</b> 表示相等。 </dd></dl>
+
+</div>
+</div>
+<a id="aad1ed1caa0946a14aff05fbd9fd93044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad1ed1caa0946a14aff05fbd9fd93044">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html">AssociatedFiles</a>&amp; foxit::pdf::AssociatedFiles::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html">AssociatedFiles</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>赋值操作符。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>另一个关联文件对象，其值将被赋给当前对象。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>当前对象自身的引用。 </dd></dl>
+
+</div>
+</div>
+<a id="aa9ca68a5b52ed40818cd0fe1574831a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ca68a5b52ed40818cd0fe1574831a7">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool foxit::pdf::AssociatedFiles::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html">AssociatedFiles</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相等操作符。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>另一个关联文件对象。此函数将检查当前对象是否等于这个对象。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b>true</b> 表示相等，<b>false</b> 表示不相等。 </dd></dl>
+
+</div>
+</div>
+<a id="aa60aafe2e65eaae88eb000547e947254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa60aafe2e65eaae88eb000547e947254">&#9670;&nbsp;</a></span>RemoveAssociatedFile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void foxit::pdf::AssociatedFiles::RemoveAssociatedFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1objects_1_1_p_d_f_object.html">objects::PDFObject</a> *&#160;</td>
+          <td class="paramname"><em>pdf_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通过索引移除指定PDF字典对象中的关联文件（由 <a class="el" href="classfoxit_1_1pdf_1_1_file_spec.html">FileSpec</a> 表示）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pdf_object</td><td>有效的PDF对象。它应该是PDF字典对象或引用PDF字典对象的PDF引用对象。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>指定PDF字典对象中关联文件的索引。 有效范围：从0到（<em>count</em>-1）。<em>count</em> 由函数 <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#ac335fc4de489912d4ee6af84190bb7c1">AssociatedFiles::GetAssociatedFilesCount</a> 使用相同的参数 <em>object</em> 返回。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="a1982fbcc3a7554238f7620fce230eb63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1982fbcc3a7554238f7620fce230eb63">&#9670;&nbsp;</a></span>RemoveAssociatedFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void foxit::pdf::AssociatedFiles::RemoveAssociatedFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfoxit_1_1pdf_1_1graphics_1_1_graphics_object.html">foxit::pdf::graphics::GraphicsObject</a> *&#160;</td>
+          <td class="paramname"><em>graphics_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通过索引移除图形对象中的关联文件。 </p>
+<p>一个或多个文件可以通过在标记内容之间包围内容流的某些部分来与这些部分关联。 因此，实际上，此函数用于移除与图形对象相关的标记内容中的关联文件。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphics_object</td><td>有效的PDF图形对象。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>指定PDF图形对象中关联文件的索引。 有效范围：从0到（<em>count</em>-1）。<em>count</em> 由函数 <a class="el" href="classfoxit_1_1pdf_1_1_associated_files.html#ac335fc4de489912d4ee6af84190bb7c1">AssociatedFiles::GetAssociatedFilesCount</a> 使用 相同的参数 <em>graphics_object</em> 返回。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<html>
+<body>
+<div id="nav-path">
+<hr class="footer"/>
+<p align="right">
+	<center>
+	<img class="footer" src="logo.png" alt="Foxit Software Corporation Logo"/>
+	</center>
+	<center>
+	@2026 Foxit Software Incorporated. All rights reserved.
+	</center>
+</p>
+</div>
+</BODY></HTML>
