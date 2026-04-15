@@ -15,3 +15,11 @@ archive_before_materialized_queue_fix_2026-04-14_10-09-45/
 开发文档.md
 *.png
 *.deb
+
+# GitHub push blockers: keep local SDK blobs out of the repository history
+dir_lowering/dir_lowering_demo/foxit_sdk/lib/libfsdk_linux32.so
+dir_lowering/dir_lowering_demo/foxit_sdk/lib/libfsdk_linux64.so
+dir_lowering/dir_lowering_demo/foxitpdfsdk_11_1_linux.zip
+foxit_sdk
+dir_lowering_demo_sdk
+
