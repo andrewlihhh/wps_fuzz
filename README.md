@@ -351,3 +351,25 @@ python crashSummary.py
 - Nautilus 更适合作为“结构生成 + 覆盖反馈”的探索工具。
 - OpenXMolar 更适合作为“合法 Office 文档 + 内部部件变异”的 WPS/OOXML 测试工具。
 - 对 WPS 这类目标，样本规范度、进程生命周期控制、弹窗处理和定向部件选择，通常比单纯提高 grammar 复杂度更重要。
+
+
+
+### Linux下的debugger
+
+pydbg和winappdbg都是windows平台的工具，无法在linux平台使用。
+
+linux平台下，可以使用的类似工具有：
+
+python-ptrace、DGB Python API、pwntools+GDB、rr、Frida、r2+r2pipe。
+
+1. python-ptrace
+
+2. GDB Python API + pwntools
+
+
+
+# TODO
+
+- 在linux平台，重构OpenXMolar。其中的dbg替换为python-ptrace、GDB PythonAPI 两种。
+- 
+
